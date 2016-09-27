@@ -26,6 +26,29 @@ function kayesha_login_logo() { ?>
 		  background-attachment: fixed;
 		  background-position: center;
 		}
+
+        body.login .button-primary {
+            float: right;
+            background: #B5A4D1;
+            border: 0;
+            /*background: #0085ba;*/
+            /*border-color: #0073aa #006799 #006799;*/
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: #fff;
+            text-decoration: none;
+            text-shadow: none;
+        }
+
+        body.login .button-primary:hover {
+            background: #D1CEE9;
+        }
+
+        
+            
+
+
+
     </style>
 <?php }
 
