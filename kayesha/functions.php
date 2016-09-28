@@ -215,6 +215,43 @@ function kayesha_register_custom_post_types() {
             'menu_icon'          => 'dashicons-format-gallery',
         );
         register_post_type( 'portfolio', $args );
+
+        //Testimonials CPT (Custom Post Types)
+
+        $labels = array(
+            'name'               => _x( 'Testimonials', 'post type general name' ),
+            'singular_name'      => _x( 'Testimonials', 'post type singular name'),
+            'menu_name'          => _x( 'Testimonials', 'admin menu' ),
+            'name_admin_bar'     => _x( 'Testimonials', 'add new on admin bar' ),
+            'add_new'            => _x( 'Add New', 'testimonials piece' ),
+            'add_new_item'       => __( 'Add New Testimonials piece' ),
+            'new_item'           => __( 'New Testimonials Piece' ),
+            'edit_item'          => __( 'Edit Testimonials Piece' ),
+            'view_item'          => __( 'View Testimonials' ),
+            'all_items'          => __( 'All Testimonials' ),
+            'search_items'       => __( 'Search Testimonials' ),
+            'parent_item_colon'  => __( 'Parent Testimonials:' ),
+            'not_found'          => __( 'No testimonials found.' ),
+            'not_found_in_trash' => __( 'No testimonials found in Trash.' ),
+        );
+
+        $args = array(
+            'labels'             => $labels,
+            'public'             => true,
+            'publicly_queryable' => true,
+            'show_ui'            => true,
+            'show_in_menu'       => true,
+            'show_in_nav_menus'  => true,
+            'query_var'          => true,
+            'rewrite'            => array( 'slug' => 'testimonials' ),
+            'capability_type'    => 'post',
+            'has_archive'        => true,
+            'hierarchical'       => false,
+            'menu_position'      => 5,
+            'supports'           => array( 'title', 'editor' ),
+            'menu_icon'          => 'dashicons-format-chat',
+        );
+        register_post_type( 'testimonial', $args );
     }
     add_action( 'init', 'kayesha_register_custom_post_types' );
 
