@@ -19,20 +19,40 @@ get_header(); ?>
 
 			<?php
 			while ( have_posts() ) : the_post();
-
 				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
 			endwhile; // End of the loop.
 			?>
+
+	<?php //while ( have_posts() ) : the_post(); ?>
+    <?php endwhile; // End of the loop. ?>
+
+			<section class="home-page">   
+            	<section class="about">
+	                <h2>About</h2>
+		              <?php  
+		              if (function_exists('get_field')){
+
+		                if(get_field('about')){
+		                the_field('about');
+		                    }
+		                }?>
+		            </section><!--.about  -->
+		            
+		            <section class="services">
+		                <h2>Services</h2>
+		                 <?php  if (function_exists('get_field')){
+
+		                if(get_field('services')){
+		                the_field('services');
+		                    }
+		                } ?>
+		            </section><!--.servcices  -->
+	           
+
+            </section><!--.home-page  -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
