@@ -414,6 +414,28 @@ textarea {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+header.site-header {
+  border-bottom: 7px solid #B5A4D1; }
+
+div.menu-main-menu-container ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style-type: none;
+  padding: 20px 20px 35px; }
+
+ul.nav-menu li.menu-item {
+  margin: 0 35px 0 0; }
+
+ul.nav-menu li.menu-item a {
+  font-size: 18px;
+  font-family: "Dosis", Arial, san-serif;
+  font-weight: 600;
+  text-transform: uppercase; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -703,5 +725,7 @@ object {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+footer.site-footer {
+  background: #B5A4D1; }
 
 /*# sourceMappingURL=style.css.map */

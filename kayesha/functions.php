@@ -43,9 +43,11 @@ function kayesha_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'kayesha' ),
-	) );
+    register_nav_menus( array(
+        'primary' => esc_html__( 'Primary', 'kayesha' ),
+        'footer' => esc_html__( 'Footer Menu', 'mindset' ),
+        'socialmenu' => esc_html__( 'Social Menu', 'mindset' ),
+    ) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
