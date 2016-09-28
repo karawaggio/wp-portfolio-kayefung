@@ -174,7 +174,7 @@ function kayesha_register_custom_post_types() {
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 5,
-            'supports'           => array( 'title', 'editor' ),
+            'supports'           => array( 'title', 'editor', 'post-thumbnail' ),
             'menu_icon'          => 'dashicons-portfolio',
         );
         register_post_type( 'service', $args );
