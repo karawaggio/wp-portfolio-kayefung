@@ -20,6 +20,10 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
+			echo "<div class=profilepic>";
+			the_post_thumbnail();
+			echo "</div>";
+
 				get_template_part( 'template-parts/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -34,5 +38,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

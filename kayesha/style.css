@@ -288,6 +288,9 @@ body {
   background: white;
   /* Fallback for when there is no custom background color defined. */ }
 
+div #content {
+  margin: 50px 50px 30px; }
+
 blockquote, q {
   quotes: "" ""; }
   blockquote:before, blockquote:after, q:before, q:after {
@@ -727,5 +730,17 @@ object {
 --------------------------------------------------------------*/
 footer.site-footer {
   background: #B5A4D1; }
+
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+.post-9 {
+  width: 60%;
+  float: right;
+  padding-left: 50px; }
+
+.profilepic {
+  width: 40%;
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
