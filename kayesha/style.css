@@ -731,4 +731,11 @@ object {
 footer.site-footer {
   background: #B5A4D1; }
 
+/*--------------------------------------------------------------
+# Home Page
+--------------------------------------------------------------*/
+section.home-page {
+  margin: auto;
+  width: 75%; }
+
 /*# sourceMappingURL=style.css.map */
