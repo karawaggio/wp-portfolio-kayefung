@@ -27,12 +27,22 @@ get_header(); ?>
 				get_template_part( 'template-parts/content', 'page' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				// if ( comments_open() || get_comments_number() ) :
+				// 	comments_template();
+				// endif;
 
 			endwhile; // End of the loop.
 			?>
+
+			<div class="aboutpagelinks">
+				<div class="portfoliolink">
+					<a href="../portfolio"><h3> See My Portfolio... </h3></a>
+				</div>
+
+				<div class="bloglink">
+					<a href="../blog"><h3> Read My Blog... </h3></a>
+				</div>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
