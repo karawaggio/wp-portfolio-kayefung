@@ -288,6 +288,9 @@ body {
   background: white;
   /* Fallback for when there is no custom background color defined. */ }
 
+div #content {
+  margin: 50px 50px 30px; }
+
 blockquote, q {
   quotes: "" ""; }
   blockquote:before, blockquote:after, q:before, q:after {
