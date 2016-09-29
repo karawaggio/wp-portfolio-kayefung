@@ -18,10 +18,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<section class="home-page">   
 			<?php
-			while ( have_posts() ) : the_post();
-				the_post_thumbnail('medium');
-				get_template_part( 'template-parts/content', 'notitle' );
-			?>
+			while ( have_posts() ) : the_post(); ?>
+				<div class="home-image">
+				<?php the_post_thumbnail('medium'); ?>
+				</div><!--.home-image  -->
+				<?php get_template_part( 'template-parts/content', 'notitle' );?>
 			 </section><!--.home-page  -->
 	
   
@@ -34,7 +35,7 @@ get_header(); ?>
 
 						//show image with ID return value : able to display a certain size 
 						$about_image = get_field('about_feature_image');							
-						$size = 'medium';
+						$size = 'thumbnail';
 							// echo '<pre>';
 							// var_dump( $about_image );
 							// echo '</pre>';
@@ -44,9 +45,16 @@ get_header(); ?>
 					
 						echo "</div>";
 
-						echo "<div class='about-info'>";
+						echo "<div class='info'>";
 						if(get_field('about') ){
 							the_field('about');
+						}
+						echo "</div>";
+						echo "<div class='blog-link'>";
+						if(get_field('blog_link') ){
+							echo "<a href='../about'/>";
+							the_field('blog_link');
+							echo "</a>";
 						}
 						echo "</div>";
 
@@ -60,7 +68,7 @@ get_header(); ?>
 
 							//show image with ID return value : able to display a certain size 
 							$services_image = get_field('services_feature_image');							
-							$size = 'medium';
+							$size = 'thumbnail';
 								// echo '<pre>';
 								// var_dump( $about_image );
 								// echo '</pre>';
@@ -71,12 +79,20 @@ get_header(); ?>
 						echo "</div>";
 
 
-						echo "<div class='about-info'>";
+						echo "<div class='info'>";
 		                if(get_field('services')){
 			                the_field('services');
 		                    }
 		                } 
-		               echo "</div>";?>
+		               echo "</div>";
+		               echo "<div class='services-link'>";
+						if(get_field('services_link') ){
+							echo "<a href='../services'/>";
+							the_field('services_link');
+							echo "</a>";
+						}
+						echo "</div>";?>
+
 
 		            </section><!--.servcices  -->
 	           
