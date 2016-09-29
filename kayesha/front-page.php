@@ -18,34 +18,54 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
-
-
-
 			while ( have_posts() ) : the_post();
 				the_post_thumbnail('medium');
 				get_template_part( 'template-parts/content', 'page' );
-		
 			?>
 
 	<?php //while ( have_posts() ) : the_post(); ?>
-    <?php endwhile; // End of the loop. ?>
-
+  
 			<section class="home-page">   
             	<section class="about">
 	                <h2>About</h2>
+	               <?php if (function_exists('get_field')){
+
+						echo "<div class='about-image'>";
+
+						//show image with ID return value : able to display a certain size 
+						$about_image = get_field('about__feature_image');
+					
+						$size = 'medium';
+						if ($about_image){
+							var_dump($about_image);
+
+							echo wp_get_attachment_image( $about_image, $size);
+							
+						}
+					
+						echo "</div>";
+
+						echo "<div class='about-info'>";
+						if(get_field('about') ){
+							the_field('about');
+						}
+						echo "</div>";
+
+					}?>
+
 		              <?php  
-		              if (function_exists('get_field')){
+		              // if (function_exists('get_field')){
 
-		                if(get_field('about')){
-		                	echo '<a href="';	
-			                the_field('about_feature_image');
-			           		echo '"><img src="';
-			               	the_field('about_feature_image');
-			               	echo '"></a>;';     
-			                the_field('about');
+		              //   if(get_field('about')){
+		              //   	echo '<a href="';	
+			             //    the_field('about_feature_image');
+			           		// echo '"><img src="';
+			             //   	the_field('about_feature_image');
+			             //   	echo '"></a>;';     
+			             //    the_field('about');
 
-		                    }
-		                }?>
+		              //       }
+		               // }?>
 		            </section><!--.about  -->
 		            
 		            <section class="services">
@@ -67,6 +87,8 @@ get_header(); ?>
 	           
 
             </section><!--.home-page  -->
+              <?php endwhile; // End of the loop. ?>
+
 
             <section class="front-slider">
                 <h2>Compliments</h2>
