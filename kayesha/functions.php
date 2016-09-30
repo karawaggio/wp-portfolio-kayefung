@@ -45,8 +45,8 @@ function kayesha_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'kayesha' ),
-        'footer' => esc_html__( 'Footer Menu', 'mindset' ),
-        'socialmenu' => esc_html__( 'Social Menu', 'mindset' ),
+        'footer' => esc_html__( 'Footer Menu', 'kayesha' ),
+        'socialmenu' => esc_html__( 'Social Menu', 'kayesha' ),
 	) );
 
 	/*
@@ -105,6 +105,12 @@ add_action( 'widgets_init', 'kayesha_widgets_init' );
  */
 function kayesha_scripts() {
 	wp_enqueue_style( 'kayesha-style', get_stylesheet_uri() );
+
+    wp_enqueue_style('kayesha-googlefonts', 'https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:400,700');
+
+    wp_enqueue_style( 'kayesha-fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
+          
+    wp_enqueue_style( 'kayesha-fontawesome-cloud', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');   
 
 	wp_enqueue_script( 'kayesha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
