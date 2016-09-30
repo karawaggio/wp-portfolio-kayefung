@@ -20,8 +20,18 @@ ul.nav-menu li.menu-item {
 }
 
 ul.nav-menu li.menu-item a{
+	color: $darklav;
 	font-size: 18px;
-	font-family: $darklav;
+	font-family: $font_heading;
 	font-weight: 600;
 	text-transform: uppercase;
+}
+
+ul.menu li.menu-item {
+	margin: 0 15px 0 0;
+}
+
+ul.nav-menu li.menu-item a {
+	color: $darklav;
+	font-size: 18px;
 }
