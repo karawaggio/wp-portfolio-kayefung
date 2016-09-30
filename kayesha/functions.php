@@ -313,5 +313,15 @@ function kayesha_register_custom_post_types() {
             'rewrite'           => array( 'slug' => 'service-types' ),
         );
         register_taxonomy( 'service-type', array( 'service' ), $args );
+}
+add_action( 'init', 'kayesha_register_taxonomies', 0);
+
+function replace_howdy( $wp_admin_bar ) {
+    $my_account=$wp_admin_bar->get_node('my-account');
+    $newtitle = str_replace( 'Howdy,', 'Hello ', $my_account->title );
+    $wp_admin_bar->add_node( array(
+        'id' => 'my-account',
+        'title' => $newtitle,
+    ) );
     }
-    add_action( 'init', 'kayesha_register_taxonomies', 0);
+add_filter( 'admin_bar_menu', 'replace_howdy',25 );
