@@ -15,7 +15,7 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link href="https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:400,700" rel="stylesheet">
+<link href= rel="stylesheet">
 
 <?php wp_head(); ?>
 </head>
@@ -41,10 +41,47 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kayesha' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<section class="inner-head-wrapper">
+			<div class="logo">
+			<?php 
+		        if (function_exists ('get_field')){
+		          if (get_field('logo_kayesha')){
+		            $logo = get_field('logo_kayesha');
+		            //var_dump($logo);
+		            if ($logo){ 
+		              //variables to show the image with choosen size
+		              $url = $logo['url'];
+		              $alt = $logo['alt'];
+
+		              $size = 'large';
+		              $mylogo = $logo['sizes'][ $size ];
+		              $width = $logo['sizes'][ $size . '-width' ];
+		              $height = $logo['sizes'][ $size . '-height' ];
+
+		              echo '<img src="';
+		              echo $mylogo;
+		              echo '" alt="';
+		              echo $alt;
+		              echo '" width="';
+		              echo $width;
+		              echo '" height="';
+		              echo $height;
+		              echo '">';
+		            }
+		          }
+		        }
+      		?>
+      		</div><!-- end of .logo -->
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kayesha' ); ?></button>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+
+			<nav id="social-navigation" class="social-navigation">
+			    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
+		    </nav>
+		</section><!-- end of .inner-head-wrapper -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
