@@ -101,10 +101,12 @@ get_header(); ?>
               <?php endwhile; // End of the loop. ?>
               		</div> 		<!-- .split-wrapper -->
 
+<!-- display the testimonials in a slider if there are any -->
             <section class="front-slider">
-                <h2>Compliments</h2>
+               
 
                 <div class="slider">
+                	 <h2>Compliments</h2>
                   <div class="flexslider">
                     <ul class="slides">
                       
