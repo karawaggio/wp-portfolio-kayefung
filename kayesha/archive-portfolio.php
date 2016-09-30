@@ -43,9 +43,79 @@ get_header(); ?>
 
 		endif; ?>
 
+		<!-- <section class="portfolio-slider"> -->
+               
+		<section class="slider">
+		        <div id="slider" class="flexslider slider-portfolio">
+		          <ul class="slides">
+                        <?php
+                          $args = array (
+                                          'post_type' => 'portfolio',
+                                          'posts_per_page' => -1
+                                           );
+
+                          $portfolio = new WP_Query($args);
+
+
+                          if($portfolio->have_posts()){
+                          	while($portfolio->have_posts()){
+                          		$portfolio->the_post();
+                          		 echo "<li>";
+                          	    //display images, if exists
+                          		the_post_thumbnail('thumbnail');
+                          		 echo " </li>";
+
+
+                          	}//end while
+                          	wp_reset_postdata(); 
+                          }//end if
+
+                        
+                          ?>
+                     
+                    </ul>
+                  </div><!-- .flexslider -->
+                </div><!-- .slider -->
+                  <div id="carousel" class="flexslider slider-portfolio">
+		          <ul class="slides">
+                        <?php
+                          $args = array (
+                                          'post_type' => 'portfolio',
+                                          'posts_per_page' => -1
+                                           );
+
+                          $portfolio = new WP_Query($args);
+
+
+                          if($portfolio->have_posts()){
+                          	while($portfolio->have_posts()){
+                          		$portfolio->the_post();
+                          		 echo "<li data-thumb='";
+                          		 the_post_thumbnail('thumbnail');
+                          		 echo "'>";
+                          	    //display images, if exists
+                          		the_post_thumbnail('medium');
+                          		 echo " </li>";
+
+
+                          	}//end while
+                          	wp_reset_postdata(); 
+                          }//end if
+
+                        
+                          ?>
+                     
+                    </ul>
+                  </div><!-- .flexslider -->
+                </div><!-- .slider -->
+
+
+            </section> <!-- front-slider -->
+
+
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

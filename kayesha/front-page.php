@@ -153,7 +153,7 @@ get_header(); ?>
 
 
 
-            </section>
+            </section> <!-- front-slider -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
