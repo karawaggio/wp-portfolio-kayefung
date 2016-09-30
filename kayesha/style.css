@@ -732,29 +732,39 @@ footer.site-footer {
   background: #B5A4D1; }
 
 /*--------------------------------------------------------------
-# About Page
+# Home Page
 --------------------------------------------------------------*/
-.post-9 {
-  width: 70%;
-  float: right;
-  padding-left: 50px; }
+section.home-page {
+  margin: auto;
+  width: 75%;
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
-.profilepic {
-  width: 30%;
-  display: inline-block; }
+.home-image img {
+  margin: auto; }
 
-.aboutpagelinks {
-  width: 70%;
-  float: right; }
+.split-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
 
-.page-id-9 .portfoliolink {
-  width: 50%;
-  display: inline-block;
-  text-align: center; }
+section.services,
+section.about {
+  width: calc(75%/2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em; }
 
-.page-id-9 .bloglink {
-  width: 50%;
-  float: right;
-  text-align: center; }
+section.services h2,
+section.about h2,
+.about-image,
+.service-image,
+.split-wrapper .info {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

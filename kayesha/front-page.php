@@ -16,16 +16,17 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-				the_post_thumbnail('medium');
-				get_template_part( 'template-parts/content', 'page' );
-			?>
-
-	<?php //while ( have_posts() ) : the_post(); ?>
-  
 			<section class="home-page">   
+			<?php
+			while ( have_posts() ) : the_post(); ?>
+				<div class="home-image">
+				<?php the_post_thumbnail('medium'); ?>
+				</div><!--.home-image  -->
+				<?php get_template_part( 'template-parts/content', 'notitle' );?>
+			 </section><!--.home-page  -->
+	
+  
+				<div class="split-wrapper">
             	<section class="about">
 	                <h2>About</h2>
 	               <?php if (function_exists('get_field')){
@@ -33,67 +34,79 @@ get_header(); ?>
 						echo "<div class='about-image'>";
 
 						//show image with ID return value : able to display a certain size 
-						$about_image = get_field('about__feature_image');
-					
-						$size = 'medium';
+						$about_image = get_field('about_feature_image');							
+						$size = 'thumbnail';
+							// echo '<pre>';
+							// var_dump( $about_image );
+							// echo '</pre>';
 						if ($about_image){
-							var_dump($about_image);
-
 							echo wp_get_attachment_image( $about_image, $size);
-							
 						}
 					
 						echo "</div>";
 
-						echo "<div class='about-info'>";
+						echo "<div class='info'>";
 						if(get_field('about') ){
 							the_field('about');
 						}
 						echo "</div>";
+						echo "<div class='blog-link'>";
+						if(get_field('blog_link') ){
+							echo "<a href='../about'/>";
+							the_field('blog_link');
+							echo "</a>";
+						}
+						echo "</div>";
 
 					}?>
-
-		              <?php  
-		              // if (function_exists('get_field')){
-
-		              //   if(get_field('about')){
-		              //   	echo '<a href="';	
-			             //    the_field('about_feature_image');
-			           		// echo '"><img src="';
-			             //   	the_field('about_feature_image');
-			             //   	echo '"></a>;';     
-			             //    the_field('about');
-
-		              //       }
-		               // }?>
 		            </section><!--.about  -->
 		            
 		            <section class="services">
 		                <h2>Services</h2>
 		                 <?php  if (function_exists('get_field')){
+		                 	echo "<div class='service-image'>";
 
+							//show image with ID return value : able to display a certain size 
+							$services_image = get_field('services_feature_image');							
+							$size = 'thumbnail';
+								// echo '<pre>';
+								// var_dump( $about_image );
+								// echo '</pre>';
+							if ($about_image){
+								echo wp_get_attachment_image( $services_image, $size);
+						}
+					
+						echo "</div>";
+
+
+						echo "<div class='info'>";
 		                if(get_field('services')){
-
-		                		the_field('services_feature_image');
-		                	echo '<a href="';
-			               	the_field('services_feature_image');
-			               	echo '"><img src="';
-			               	the_field('services_feature_image');
-			               	echo '"></a>;';
 			                the_field('services');
 		                    }
-		                } ?>
+		                } 
+		               echo "</div>";
+		               echo "<div class='services-link'>";
+						if(get_field('services_link') ){
+							echo "<a href='../services'/>";
+							the_field('services_link');
+							echo "</a>";
+						}
+						echo "</div>";?>
+
+
 		            </section><!--.servcices  -->
 	           
 
-            </section><!--.home-page  -->
+           
               <?php endwhile; // End of the loop. ?>
+              		</div> 		<!-- .split-wrapper -->
 
-
+<!-- display the testimonials in a slider if there are any -->
             <section class="front-slider">
-                <h2>Compliments</h2>
+               
 
                 <div class="slider">
+                	 <h2>Compliments</h2>
                   <div class="flexslider">
                     <ul class="slides">
                       
@@ -140,7 +153,7 @@ get_header(); ?>
 
 
 
-            </section>
+            </section> <!-- front-slider -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
