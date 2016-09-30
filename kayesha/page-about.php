@@ -17,33 +17,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
+			<div class="aboutsection">
+				<?php
+				while ( have_posts() ) : the_post();
 
-			echo "<div class=profilepic>";
-			the_post_thumbnail();
-			echo "</div>";
+				echo "<div class=profilepic>";
+				the_post_thumbnail();
+				echo "</div>";
 
-				get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				// if ( comments_open() || get_comments_number() ) :
-				// 	comments_template();
-				// endif;
+					// If comments are open or we have at least one comment, load up the comment template.
+					// if ( comments_open() || get_comments_number() ) :
+					// 	comments_template();
+					// endif;
 
-			endwhile; // End of the loop.
-			?>
+				endwhile; // End of the loop.
+				?>
 
-			<div class="aboutpagelinks">
-				<div class="portfoliolink">
-					<a href="../portfolio"><h3> See My Portfolio... </h3></a>
+				<div class="aboutpagelinks">
+					<div class="portfoliolink">
+						<h3><a href="../portfolio"> See My Portfolio... </a></h3>
+					</div>
+
+					<div class="bloglink">
+						<h3><a href="../blog"> Read My Blog... </a></h3>
+					</div>
 				</div>
-
-				<div class="bloglink">
-					<a href="../blog"><h3> Read My Blog... </h3></a>
-				</div>
-			</div>
-
+			</div><!-- end of aboutsection -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
