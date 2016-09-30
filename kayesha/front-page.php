@@ -50,10 +50,10 @@ get_header(); ?>
 							the_field('about');
 						}
 						echo "</div>";
-						echo "<div class='blog-link'>";
-						if(get_field('blog_link') ){
+						echo "<div class='about-link'>";
+						if(get_field('about_link') ){
 							echo "<a href='../about'/>";
-							the_field('blog_link');
+							the_field('about_link');
 							echo "</a>";
 						}
 						echo "</div>";
@@ -85,10 +85,10 @@ get_header(); ?>
 		                    }
 		                } 
 		               echo "</div>";
-		               echo "<div class='services-link'>";
-						if(get_field('services_link') ){
+		               echo "<div class='service-link'>";
+						if(get_field('service_link') ){
 							echo "<a href='../services'/>";
-							the_field('services_link');
+							the_field('service_link');
 							echo "</a>";
 						}
 						echo "</div>";?>
