@@ -40,17 +40,21 @@ div.menu-footer-menu-container ul {
 	margin: 0;
 }
 
-ul.menu li.menu-item {
+ul#menu-footer-menu li.menu-item {
 	margin: 0 35px 0 0;
 }
 
-ul.menu li.menu-item a {
+ul#menu-footer-menu li.menu-item a {
 	color: $textColor;
 	font-size: 18px;
 	font-family: $font_heading;
 	font-weight: 600;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+
+ul#menu-footer-menu li.menu-item a:hover {
+	color: $lightlav;
 }
 
 // Social Nav and Contact Info
