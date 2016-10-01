@@ -1,9 +1,11 @@
+// Navigation Styling
+
 /*--------------------------------------------------------------
-## Links
+Links
 --------------------------------------------------------------*/
 
 a {
-	color: $color__link;
+	color: $textColor;
 
 	&:visited {
 		color: $color__link-visited;
@@ -23,113 +25,308 @@ a {
 }
 
 /*--------------------------------------------------------------
-## Menus
+Main Navigation
 --------------------------------------------------------------*/
 
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
-
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+	font-family: $font_heading;
+	font-size: 1em;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation ul ul {
+	display: none;
+	margin-left: 0.8em;
+}
+
+.main-navigation a {
+	position: relative;
+	display: block;
+	padding: 0.8em 1em;
+	text-decoration: none;
+	line-height: 1.6;
+	color: $textColor;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	background: #f0f0f0;
+	color: $color__link-visited;
+}
+
+.main-navigation a:visited {
+	color: $color__link-visited;
+	text-decoration: underline;
+}
+
+.main-navigation a:active {
+  	color: $lightlav;
+}
+
+.main-navigation ul li:last-child a {
+	border-bottom: none;
+}
+
+.main-navigation ul .toggled-on {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.main-navigation .current-menu-item > a {
+	font-weight: 700;
+}
+
+.main-navigation .nav-menu > ul > li:first-child,
+.main-navigation .nav-menu > li:first-child {
+	border-top: 0;
+}
+
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a{
+	padding-right: 48px;
+}
+
+.no-js .main-navigation ul ul {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+Social Nav
+--------------------------------------------------------------*/
+
+ul#menu-social-menu {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	list-style-type: none;
+	margin: 50px auto 35px; 
+}
+
+/*--------------------------------------------------------------
+Mobile Nav
+--------------------------------------------------------------*/
+
+.menu-toggle {
+	position: fixed;
+	z-index: 999;
+	bottom: 1em;
+	left: 1em;
+	font-family: $font_heading;
+	font-size: 17px;
+	text-transform: uppercase;
+	background-color: $textColor;
+	color: $white;
+	border: solid 1.5px #bcbec0;
+	transition: all ease-out 400ms;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
+.menu-toggle.hide {
+	bottom: -2.5em;
+}
+
+.toggled .menu-toggle.hide {
+	bottom: 1em;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+Toggled Menu and Submenus
+--------------------------------------------------------------*/
+
+.main-navigation.toggled {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-menu {
+	padding: 1em;
+	margin-bottom: 3em;
+}
+
+.main-navigation.toggled ul {
+	max-height: calc(100vh - 8em);
+	overflow-y: auto;
+}
+
+.main-navigation.toggled ul ul {
+	display: none;
+}
+
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+	.main-navigation ul {
+		background-color: $lightlav;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
-		display: block;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		list-style-type: none;
+		margin: 50px auto 35px; 
 	}
 }
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+/*--------------------------------------------------------------
+Additional Media Queries
+--------------------------------------------------------------*/
 
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
+/* Horizontal menu on wide screens */
 
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
+// @media screen and (min-width: 770px) {
 
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
+// 	/* Position the menu in the header */
+// 	.main-navigation,
+// 	.main-navigation.toggled {
+// 		position: relative;
+//         margin: 0 .5em;
+//         padding: 0;
+//         width: auto;
+// 	}
+
+// 	.nav-menu {
+// 		padding: .3em 0 0 0;
+// 		background-color: transparent;
+// 	}
+
+// 	.main-navigation ul,
+// 	.main-navigation.toggled ul {
+//         display: flex;
+//         flex-wrap: wrap;
+// 		margin: 0;
+// 		padding: .5em 0;
+// 	}
+
+// 	/* Display the menu items in a horizontal order */
+// 	.main-navigation li {
+// 		border: none;
+// 	}
+
+// 	/* Add an outline to the drop-down menus */
+// 	.main-navigation ul ul {
+// 		outline: 1px solid #333;
+// 	}
+
+// 	/* Left-align drop-down menu items */
+// 	.main-navigation li li {
+// 		display: block;
+// 		text-align: left;
+// 	}
+
+//     .main-navigation a,
+//     .dropdown-toggle {
+//         color: hsl(0, 0%, 20%);
+//     }
+
+// 	.main-navigation a,
+// 	.main-navigation ul ul li:last-child a {
+// 		border-bottom: none;
+// 	}
+
+// 	/* Add an outline on hovered and focused menu items */
+// 	.main-navigation a:hover,
+// 	.main-navigation a:focus {
+// 		background: transparent;
+// 		color: #333;
+// 		text-decoration: underline;
+// 		outline: solid 1px #b3b3b3;
+// 	}
+
+//     .main-navigation li li a {
+//         color: hsl(0, 0%, 90%);
+//     }
+
+// 	/* Create hover and focus contrast on drop-down items */
+// 	.main-navigation li li a:hover,
+// 	.main-navigation li li a:focus {
+// 		background: #eee;
+// 		color: #000;
+// 		text-decoration: none;
+// 	}
+
+// 	/* Position drop-down menus absolutely */
+// 	.main-navigation ul ul.toggled-on {
+// 		position: absolute;
+// 		width: 12em;
+// 		display: block;
+// 		z-index: 10;
+// 		margin-left: 0;
+//         padding: 0;
+// 		background: #000;
+// 	}
+
+// 	.main-navigation ul ul ul.toggled-on {
+// 		position: relative;
+// 	}
+
+// 	/* Indent 3rd level drop-down menus */
+// 	.main-navigation ul ul ul a {
+// 		padding-left: 2em;
+// 	}
+
+// 	/* Simplify the drop-down toggle */
+// 	.dropdown-toggle {
+// 		top: 13px;
+// 		right: 12px;
+// 		border: none;
+// 	}
+
+//     .dropdown-toggle:hover, .dropdown-toggle:focus {
+//         background-color: inherit;
+//         outline: solid 1px #b3b3b3;
+//     }
+
+// 	.dropdown-toggle::after {
+// 		line-height: 27px;
+// 		width: 27px;
+// 	}
+
+// }
