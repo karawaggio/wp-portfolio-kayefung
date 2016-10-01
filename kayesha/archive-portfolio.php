@@ -62,21 +62,19 @@ get_header(); ?>
                           		$portfolio->the_post();
                           		 echo "<li>";
                           	    //display images, if exists
-                          		the_post_thumbnail('thumbnail');
+                          		the_post_thumbnail('large');
                           		 echo " </li>";
-
-
                           	}//end while
                           	wp_reset_postdata(); 
-                          }//end if
-
-                        
+                          }//end if                      
                           ?>
                      
                     </ul>
                   </div><!-- .flexslider -->
                 </div><!-- .slider -->
-                  <div id="carousel" class="flexslider slider-portfolio">
+
+                <!-- thumbnails navigation under main slider-portfolio -->
+ 				<div id="carousel" class="flexslider slider-portfolio">
 		          <ul class="slides">
                         <?php
                           $args = array (
@@ -90,27 +88,20 @@ get_header(); ?>
                           if($portfolio->have_posts()){
                           	while($portfolio->have_posts()){
                           		$portfolio->the_post();
-                          		 echo "<li data-thumb='";
-                          		 the_post_thumbnail('thumbnail');
-                          		 echo "'>";
+                          		 echo "<li>";
                           	    //display images, if exists
-                          		the_post_thumbnail('medium');
+                          		the_post_thumbnail('thumbnail');
                           		 echo " </li>";
-
-
                           	}//end while
                           	wp_reset_postdata(); 
-                          }//end if
-
-                        
+                          }//end if                      
                           ?>
                      
                     </ul>
                   </div><!-- .flexslider -->
                 </div><!-- .slider -->
 
-
-            </section> <!-- front-slider -->
+         </section> <!-- .slider -->
 
 
 
