@@ -25,15 +25,15 @@ ul.menu li.menu-item {
 	margin: 0 35px 0 0;
 }
 
-ul.menu li.menu-item a{
-	color: $darklav;
+ul.menu li.menu-item a {
+	color: $textColor;
 	font-size: 18px;
 	font-family: $font_heading;
 	font-weight: 600;
 	text-transform: uppercase;
 }
 
-div.menu-social-menu-container ul {
+div.menu-social-menu-container ul#menu-social-menu {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -49,7 +49,7 @@ ul#menu-social-menu li.menu-item {
 }
 
 ul#menu-social-menu li.menu-item a {
-	color: $darklav;
+	color: $textColor		;
 	font-size: 20px;
 }
 
