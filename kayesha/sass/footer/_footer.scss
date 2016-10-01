@@ -7,6 +7,15 @@ footer.site-footer {
 	background: $darklav;
 }
 
+div.container {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
 section.inner-container {
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -14,6 +23,9 @@ section.inner-container {
 	-webkit-justify-content: space-between;
 	-ms-flex-pack: space-between;
 	justify-content: space-between;
+	-webkit-flex-flow: wrap;
+	-ms-flex-flow: wrap;
+	flex-flow: wrap;
 }
 
 //Footer Nav and Copyright
