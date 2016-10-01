@@ -41,12 +41,11 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<section class="inner-head-wrapper">
 			<div class="logo">
 			<?php 
 		        if (function_exists ('get_field')){
-		          if (get_field('logo_kayesha')){
-		            $logo = get_field('logo_kayesha');
+		          if (get_field('logo_kayesha', 18)){
+		            $logo = get_field('logo_kayesha', 18);
 		            //var_dump($logo);
 		            if ($logo){ 
 		              //variables to show the image with choosen size
@@ -74,14 +73,14 @@
       		</div><!-- end of .logo -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kayesha' ); ?></button>
+
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
 
 			<nav id="social-navigation" class="social-navigation">
 			    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
 		    </nav>
-		</section><!-- end of .inner-head-wrapper -->
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
