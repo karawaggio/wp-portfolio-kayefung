@@ -1,47 +1,7 @@
 // Main Navigation Styling
 
 header.site-header {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: space-between;
-	justify-content: space-between;
 	border-bottom: 7px solid $darklav; 
-}
-
-div.menu-main-menu-container ul {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	list-style-type: none;
-	margin: 50px auto 35px; 
-}
-
-ul.menu li.menu-item {
-	margin: 0 35px 0 0;
-}
-
-ul.menu li.menu-item a {
-	color: $textColor;
-	font-size: 18px;
-	font-family: $font_heading;
-	font-weight: 600;
-	text-transform: uppercase;
-}
-
-div.menu-social-menu-container ul#menu-social-menu {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	list-style-type: none;
-	margin: 50px auto 35px; 
 }
 
 ul#menu-social-menu li.menu-item {
@@ -49,10 +9,12 @@ ul#menu-social-menu li.menu-item {
 }
 
 ul#menu-social-menu li.menu-item a {
-	color: $textColor		;
+	color: $darklav;		;
 	font-size: 20px;
 }
 
 span.icon-title {
 	display: none;
 }
+
+

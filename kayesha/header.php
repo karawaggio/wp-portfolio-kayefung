@@ -14,6 +14,10 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>KayeFung | Artistry</title>
+<meta name="description" content="KayeFung Artustry by Kayesha Fung is a website about makeup, beauty and fashion"/>
+
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href= rel="stylesheet">
 
@@ -41,46 +45,54 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-			<div class="logo">
-			<?php 
-		        if (function_exists ('get_field')){
-		          if (get_field('logo_kayesha', 18)){
-		            $logo = get_field('logo_kayesha', 18);
-		            //var_dump($logo);
-		            if ($logo){ 
-		              //variables to show the image with choosen size
-		              $url = $logo['url'];
-		              $alt = $logo['alt'];
+		<div class="container">
+			<section class="inner-head-container">
 
-		              $size = 'large';
-		              $mylogo = $logo['sizes'][ $size ];
-		              $width = $logo['sizes'][ $size . '-width' ];
-		              $height = $logo['sizes'][ $size . '-height' ];
+				<div class="logo">
+					<?php 
+				        if (function_exists ('get_field')){
+				          if (get_field('logo_kayesha', 18)){
+				            $logo = get_field('logo_kayesha', 18);
+				            //var_dump($logo);
+				            if ($logo){ 
+				              //variables to show the image with choosen size
+				              $url = $logo['url'];
+				              $alt = $logo['alt'];
 
-		              echo '<img src="';
-		              echo $mylogo;
-		              echo '" alt="';
-		              echo $alt;
-		              echo '" width="';
-		              echo $width;
-		              echo '" height="';
-		              echo $height;
-		              echo '">';
-		            }
-		          }
-		        }
-      		?>
-      		</div><!-- end of .logo -->
+				              $size = 'large';
+				              $mylogo = $logo['sizes'][ $size ];
+				              $width = $logo['sizes'][ $size . '-width' ];
+				              $height = $logo['sizes'][ $size . '-height' ];
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+				              echo '<img src="';
+				              echo $mylogo;
+				              echo '" alt="';
+				              echo $alt;
+				              echo '" width="';
+				              echo $width;
+				              echo '" height="';
+				              echo $height;
+				              echo '">';
+				            }
+				          }
+				        }
+		      		?>
+	      		</div><!-- end of .logo -->
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation" role="navigation">
 
-			<nav id="social-navigation" class="social-navigation">
-			    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
-		    </nav>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+						<?php esc_html_e( 'Menu', 'kayesha' ); ?>
+					</button>
 
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+
+				<nav id="social-navigation" class="social-navigation">
+				    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
+			    </nav>
+			
+		</div><!-- end of container -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
