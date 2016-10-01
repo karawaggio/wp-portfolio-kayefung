@@ -49,9 +49,10 @@
   -webkit-backface-visibility: hidden;
 }
 .flexslider .slides img {
-  width: 35%;
+  width: 65%;
   display: block;
   margin: auto;
+  height: 75%;
 }
 .flexslider .slides:after {
   content: "\0020";
@@ -95,7 +96,7 @@ html[xmlns] .flexslider .slides {
   -moz-user-select: none;
 }
 .flex-viewport {
-  max-height: 2000px;
+  max-height: 750px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -ms-transition: all 1s ease;
@@ -275,7 +276,58 @@ html[xmlns] .flexslider .slides {
     right: 10px;
   }
 }
+/* Layout
+***********************/
+#container {padding: 60px 40px 100px;}
+/*header {width: 420px;*/
+   /*float: left;}*/
+#main {
+  margin-left: 120px; 
+  margin-top: -25px;
+  overflow: hidden;
+  /*margin: auto;*/
+}
 
+/* Media Queries
+***********************/
+@media screen and (max-width: 960px) {
+  #container {padding: 35px;}
+  /*header {width: 380px;}*/
+  #main {margin-left: 50px;}
+  /*aside h3  {
+    float: none;
+    font-size: 20px;
+  }*/
+  .toggle  {
+    margin-left: 0;
+    float: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #container {padding: 20px 30px;}
+  /*header {width: 100%; float: none; text-align: center;}
+  header img  {width:120px;}
+  header h1  { margin: 0 auto 10px; font-size: 32px; }
+  header h2  { font-size: 16px; }
+  header .button  { margin-bottom: 28px; }*/
+
+  #main {margin-left: 0;}
+  /*h3.nav-header { margin: 0 auto 10px; font-size: 16px; }*/
+ 
+}
+
+
+/* ====================================================================================*/
 section.slider {
   margin: 1em 5.5em  !important;
+  width: 650px;
 }
+
+.main-container {
+  height: 520px;
+}
+.slider { margin: 50px 0 10px!important;}
+#carousel li {margin-right: 5px;}
+#carousel img {display: block; opacity: .5; cursor: pointer;}
+#carousel img:hover {opacity: 1;}
+#carousel .flex-active-slide img {opacity: 1; cursor: default;}

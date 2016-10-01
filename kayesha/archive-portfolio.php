@@ -18,9 +18,10 @@ get_header(); ?>
 				<h1 class="page-title">My Portfolio</h1>
 			</header><!-- .page-header -->
 
+<div class="wrapper-slider">
 		<!-- Main  -->             
 		<section class="slider">
-		       <div id="slider" class="flexslider slider-portfolio">
+		       <div id="slider" class="flexslider slider-portfolio main-container">
 		          <ul class="slides">
                         <?php
                           $args = array (
@@ -75,7 +76,7 @@ get_header(); ?>
                   </div><!-- .flexslider -->
 
          </section> <!-- .slider -->
-
+</div>
 
 
 		</main><!-- #main -->
