@@ -47,7 +47,7 @@
 
 		<div class="container">
 			<section class="inner-head-container">
-			<!-- <div class="nav-wrapper"> -->
+
 				<div class="logo">
 					<?php 
 				        if (function_exists ('get_field')){
@@ -59,7 +59,7 @@
 				              $url = $logo['url'];
 				              $alt = $logo['alt'];
 
-				              $size = 'medium';
+				              $size = 'large';
 				              $mylogo = $logo['sizes'][ $size ];
 				              $width = $logo['sizes'][ $size . '-width' ];
 				              $height = $logo['sizes'][ $size . '-height' ];
@@ -79,10 +79,6 @@
 		      		?>
 	      		</div><!-- end of .logo -->
 
-	      		
-
-			  	<!-- </div>	 -->  <!-- end of .nav-wrapper -->
-
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
@@ -95,7 +91,6 @@
 				<nav id="social-navigation" class="social-navigation">
 				    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
 			    </nav>
-			</section>	
 			
 		</div><!-- end of container -->
 	</header><!-- #masthead -->

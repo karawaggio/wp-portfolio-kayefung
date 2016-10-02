@@ -4,45 +4,5 @@ header.site-header {
 	border-bottom: 7px solid $darklav; 
 }
 
-header .container {
-	display: flex;
-	flex-direction: column;
-}
-.inner-head-container {
-	display: inline-flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-}
-.logo,
-.main-navigation,
-.social-navigation {
-	flex-wrap: nowrap;
-}
-.logo {
-	flex: 1;
 
-}
-.main-navigation {
-	flex: 2;
-	flex-wrap: nowrap;
-}
-.social-navigation {
-	flex:0;
-}
- 
-@media screen and (max-width: 970px) {
 
-	.logo {
-		flex: 2;
-
-	}
-	.main-naviation {
-		flex: 3;
-		flex-wrap: nowrap;
-	}
-	.social-navigation {
-		flex: 0;
-	}
-
-}
