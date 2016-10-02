@@ -115,6 +115,19 @@ ul#menu-social-menu {
 	margin: 50px auto 35px; 
 }
 
+ul#menu-social-menu li.menu-item {
+	margin: 0 15px 0 0;
+}
+
+ul#menu-social-menu li.menu-item a {
+	color: $darklav;		;
+	font-size: 20px;
+}
+
+span.icon-title {
+	display: none;
+}
+
 /*--------------------------------------------------------------
 Mobile Nav
 --------------------------------------------------------------*/
@@ -127,7 +140,7 @@ Mobile Nav
 	font-family: $font_heading;
 	font-size: 17px;
 	text-transform: uppercase;
-	background-color: $textColor;
+	background-color: #666;
 	color: $white;
 	border: solid 1.5px #bcbec0;
 	transition: all ease-out 400ms;
