@@ -309,6 +309,9 @@ li > ol {
   margin-bottom: 0;
   margin-left: 1.5em; }
 
+a {
+  text-decoration: none; }
+
 dt {
   font-weight: bold; }
 
@@ -416,28 +419,14 @@ header.site-header {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-Links
---------------------------------------------------------------*/
 a {
   color: #38353b; }
-  a:visited {
-    color: #9041a6; }
   a:hover, a:focus, a:active {
     color: #d1cee9; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
-
-/*--------------------------------------------------------------
-Main Navigation
---------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  font-family: "Dosis", Arial, san-serif;
-  font-size: 1em; }
 
 .main-navigation ul {
   display: none;
@@ -452,48 +441,12 @@ Main Navigation
   margin-left: 0.8em; }
 
 .main-navigation a {
-  position: relative;
-  display: block;
-  padding: 0.8em 1em;
   text-decoration: none;
   line-height: 1.6;
-  color: #38353b; }
+  color: #38353b;
+  font-family: "Dosis", Arial, san-serif;
+  text-transform: uppercase; }
 
-.main-navigation a:hover,
-.main-navigation a:focus {
-  background: #f0f0f0;
-  color: #9041a6; }
-
-.main-navigation a:visited {
-  color: #9041a6;
-  text-decoration: underline; }
-
-.main-navigation a:active {
-  color: #d1cee9; }
-
-.main-navigation ul li:last-child a {
-  border-bottom: none; }
-
-.main-navigation ul .toggled-on {
-  display: block; }
-
-.main-navigation .current-menu-item > a {
-  font-weight: 700; }
-
-.main-navigation .nav-menu > ul > li:first-child,
-.main-navigation .nav-menu > li:first-child {
-  border-top: 0; }
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a {
-  padding-right: 48px; }
-
-.no-js .main-navigation ul ul {
-  display: block; }
-
-/*--------------------------------------------------------------
-Social Nav
---------------------------------------------------------------*/
 ul#menu-social-menu {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -501,7 +454,6 @@ ul#menu-social-menu {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  list-style-type: none;
   margin: 50px auto 35px; }
 
 ul#menu-social-menu li.menu-item {
@@ -514,9 +466,6 @@ ul#menu-social-menu li.menu-item a {
 span.icon-title {
   display: none; }
 
-/*--------------------------------------------------------------
-Mobile Nav
---------------------------------------------------------------*/
 .menu-toggle {
   position: fixed;
   z-index: 999;
@@ -549,9 +498,6 @@ Mobile Nav
 .menu-toggle:focus {
   text-decoration: underline; }
 
-/*--------------------------------------------------------------
-Toggled Menu and Submenus
---------------------------------------------------------------*/
 .main-navigation.toggled {
   position: fixed;
   bottom: 0;
@@ -575,17 +521,94 @@ Toggled Menu and Submenus
 .main-navigation.toggled ul ul.toggled-on > ul {
   display: block; }
 
-/*--------------------------------------------------------------
-Media Queries
---------------------------------------------------------------*/
-@media screen and (min-width: 300px) and (max-width: 768px) {
+.dropdown-toggle {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  top: 12px;
+  right: 6px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 0;
+  background-color: inherit;
+  border: 1px solid #fff;
+  content: "";
+  color: #fff;
+  text-transform: lowercase;
+  /* Stop screen readers from reading the text as capital letters */ }
+
+.dropdown-toggle::after {
+  content: "+";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 27px;
+  position: relative;
+  top: 0;
+  width: 27px; }
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+  background-color: #fff;
+  color: #000; }
+
+.dropdown-toggle.toggle-on:after {
+  content: "-"; }
+
+.main-navigation a:hover ~ .dropdown-toggle,
+.main-navigation a:focus ~ .dropdown-toggle {
+  color: #333333; }
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
   .main-navigation ul {
-    background-color: #d1cee9; } }
+    background-color: #d1cee9; }
+
+  .main-navigation a {
+    position: relative;
+    display: block;
+    padding: 0.8em 1em;
+    text-decoration: none;
+    line-height: 1.6;
+    color: #38353b;
+    font-size: 16px;
+    text-transform: uppercase; }
+
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    background: #f0f0f0;
+    color: #9041a6; }
+
+  .main-navigation a:visited {
+    text-decoration: underline;
+    color: #9041a6; }
+
+  .main-navigation a:active {
+    color: #d1cee9; }
+
+  .main-navigation ul li:last-child a {
+    border-bottom: none; }
+
+  .main-navigation ul .toggled-on {
+    display: block; }
+
+  .main-navigation .current-menu-item > a {
+    font-weight: 700; }
+
+  .main-navigation .nav-menu > ul > li:first-child,
+  .main-navigation .nav-menu > li:first-child {
+    border-top: 0; }
+
+  .main-navigation .menu-item-has-children > a,
+  .main-navigation .page_item_has_children > a {
+    padding-right: 48px; }
+
+  .no-js .main-navigation ul ul {
+    display: block; } }
 @media screen and (min-width: 768px) {
   .menu-toggle {
     display: none; }
 
-  .main-navigation ul {
+  div.menu-main-menu-container ul {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -593,11 +616,102 @@ Media Queries
     -ms-flex-pack: center;
     justify-content: center;
     list-style-type: none;
-    margin: 50px auto 35px; } }
-/*--------------------------------------------------------------
-Additional Media Queries
---------------------------------------------------------------*/
-/* Horizontal menu on wide screens */
+    margin: 50px auto 35px; }
+
+  div.menu-main-menu-container ul.menu li.menu-item {
+    margin: 0 25px 0 0; }
+
+  div.menu-main-menu-container ul.menu li.menu-item a {
+    font-size: 20px; } }
+@media screen and (min-width: 770px) {
+  /* Position the menu in the header */
+  .main-navigation,
+  .main-navigation.toggled {
+    position: relative;
+    margin: 0 .5em;
+    padding: 0;
+    width: auto; }
+
+  .nav-menu {
+    padding: .3em 0 0 0;
+    background-color: transparent; }
+
+  .main-navigation ul,
+  .main-navigation.toggled ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: .5em 0; }
+
+  /* Display the menu items in a horizontal order */
+  .main-navigation li {
+    border: none; }
+
+  /* Add an outline to the drop-down menus */
+  .main-navigation ul ul {
+    outline: 1px solid #333; }
+
+  /* Left-align drop-down menu items */
+  .main-navigation li li {
+    display: block;
+    text-align: left; }
+
+  .main-navigation a,
+  .dropdown-toggle {
+    color: #333333; }
+
+  .main-navigation a,
+  .main-navigation ul ul li:last-child a {
+    border-bottom: none; }
+
+  /* Add an outline on hovered and focused menu items */
+  .main-navigation a:hover,
+  .main-navigation a:focus {
+    background: transparent;
+    color: #333;
+    text-decoration: underline;
+    outline: solid 1px #b3b3b3; }
+
+  .main-navigation li li a {
+    color: #e6e6e6; }
+
+  /* Create hover and focus contrast on drop-down items */
+  .main-navigation li li a:hover,
+  .main-navigation li li a:focus {
+    background: #eee;
+    color: #000;
+    text-decoration: none; }
+
+  /* Position drop-down menus absolutely */
+  .main-navigation ul ul.toggled-on {
+    position: absolute;
+    width: 12em;
+    display: block;
+    z-index: 10;
+    margin-left: 0;
+    padding: 0;
+    background: #000; }
+
+  .main-navigation ul ul ul.toggled-on {
+    position: relative; }
+
+  /* Indent 3rd level drop-down menus */
+  .main-navigation ul ul ul a {
+    padding-left: 2em; }
+
+  /* Simplify the drop-down toggle */
+  .dropdown-toggle {
+    top: 13px;
+    right: 12px;
+    border: none; }
+
+  .dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: inherit;
+    outline: solid 1px #b3b3b3; }
+
+  .dropdown-toggle::after {
+    line-height: 27px;
+    width: 27px; } }
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -869,7 +983,7 @@ div.social-nav-info {
   -ms-flex-pack: flex-end;
   justify-content: flex-end; }
 
-div.menu-social-menu-container ul#menu-social-menu-1 {
+ul#menu-social-menu-1 {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -974,6 +1088,27 @@ section.about h2,
 /*--------------------------------------------------------------
 # Blog Page
 --------------------------------------------------------------*/
+ul#menu-blog-menu {
+  display: none;
+  margin: 30px auto 80px; }
+
+ul#menu-blog-menu li.menu-item {
+  margin: 0 30px 0 0; }
+
+ul#menu-blog-menu li.menu-item a {
+  color: #38353b;
+  font-size: 17px;
+  font-family: "Dosis", Arial, san-serif;
+  text-transform: uppercase; }
+
+@media screen and (min-width: 768px) {
+  ul#menu-blog-menu {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
