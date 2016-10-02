@@ -47,6 +47,7 @@ function kayesha_setup() {
 		'primary' => esc_html__( 'Primary', 'kayesha' ),
         'footer' => esc_html__( 'Footer Menu', 'kayesha' ),
         'socialmenu' => esc_html__( 'Social Menu', 'kayesha' ),
+        'blogmenu' => esc_html__( 'Blog Menu', 'kayesha' ),
 	) );
 
 	/*
