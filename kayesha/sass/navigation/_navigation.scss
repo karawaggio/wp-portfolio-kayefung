@@ -1,13 +1,11 @@
 // Navigation Styling
 
-/* ============= Links ============= */
+
+// ** Links **
 
 a {
 	color: $textColor;
 
-	&:visited {
-		color: $color__link-visited;
-	}
 	&:hover,
 	&:focus,
 	&:active {
@@ -22,15 +20,8 @@ a {
 	}
 }
 
-/* ============= Main Navigation ============= */
 
-
-.main-navigation {
-	clear: both;
-	display: block;
-	font-family: $font_heading;
-	font-size: 1em;
-}
+// ** Main Navigation **
 
 .main-navigation ul {
 	display: none;
@@ -48,57 +39,15 @@ a {
 }
 
 .main-navigation a {
-	position: relative;
-	display: block;
-	padding: 0.8em 1em;
 	text-decoration: none;
 	line-height: 1.6;
 	color: $textColor;
-}
+	font-family: $font_heading;
+	text-transform: uppercase;
+}	
 
-.main-navigation a:hover,
-.main-navigation a:focus {
-	background: #f0f0f0;
-	color: $color__link-visited;
-}
 
-.main-navigation a:visited {
-	color: $color__link-visited;
-	text-decoration: underline;
-}
-
-.main-navigation a:active {
-  	color: $lightlav;
-}
-
-.main-navigation ul li:last-child a {
-	border-bottom: none;
-}
-
-.main-navigation ul .toggled-on {
-	display: block;
-}
-
-.main-navigation .current-menu-item > a {
-	font-weight: 700;
-}
-
-.main-navigation .nav-menu > ul > li:first-child,
-.main-navigation .nav-menu > li:first-child {
-	border-top: 0;
-}
-
-.main-navigation .menu-item-has-children > a,
-.main-navigation .page_item_has_children > a{
-	padding-right: 48px;
-}
-
-.no-js .main-navigation ul ul {
-	display: block;
-}
-
-/* ============= Social Nav ============= */
-
+// Social Nav Header 
 
 ul#menu-social-menu {
 	display: -webkit-flex;
@@ -107,7 +56,6 @@ ul#menu-social-menu {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	list-style-type: none;
 	margin: 50px auto 35px; 
 }
 
@@ -124,8 +72,8 @@ span.icon-title {
 	display: none;
 }
 
-/* ============= Mobile Nav ============= */
 
+// Mobile Nav
 
 .menu-toggle {
 	position: fixed;
@@ -164,7 +112,7 @@ span.icon-title {
 	text-decoration: underline;
 }
 
-/* ============= Toggled Menu and Submenus ============= */
+// Toggled Menu and Submenus 
 
 
 .main-navigation.toggled {
@@ -195,22 +143,117 @@ span.icon-title {
 	display: block;
 }
 
+.dropdown-toggle {
+	position: absolute;
+	height: 27px;
+	width: 27px;
+	top: 12px;
+	right: 6px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 0;
+	background-color: inherit;
+	border: 1px solid #fff;
+	content: "";
+	color: #fff;
+	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
+}
 
-/* ============= Navigation Media Queries ============= */
+.dropdown-toggle::after {
+	content: "+";
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 27px;
+	position: relative;
+	top: 0;
+	width: 27px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #fff;
+	color: #000;
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "-";
+}
+
+.main-navigation a:hover ~ .dropdown-toggle,
+.main-navigation a:focus ~ .dropdown-toggle {
+    color: hsl(0, 0%, 20%);
+}
 
 
-@media screen and (min-width: 300px) and (max-width: 768px) {
+// ** Navigation Media Queries ** 
+
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
 	.main-navigation ul {
 		background-color: $lightlav;
+	}
+
+	.main-navigation a {
+		position: relative;
+		display: block;
+		padding: 0.8em 1em;
+		text-decoration: none;
+		line-height: 1.6;
+		color: $textColor;
+		font-size: 16px;
+		text-transform: uppercase;
+	}	
+
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: #f0f0f0;
+		color: $color__link-visited;
+	}
+
+	.main-navigation a:visited {
+		text-decoration: underline;
+		color: $theDarkestlav;
+	}
+
+	.main-navigation a:active {
+	  	color: $lightlav;
+	}
+
+	.main-navigation ul li:last-child a {
+		border-bottom: none;
+	}
+
+	.main-navigation ul .toggled-on {
+		display: block;
+	}
+
+	.main-navigation .current-menu-item > a {
+		font-weight: 700;
+	}
+
+	.main-navigation .nav-menu > ul > li:first-child,
+	.main-navigation .nav-menu > li:first-child {
+		border-top: 0;
+	}
+
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a{
+		padding-right: 48px;
+	}
+
+	.no-js .main-navigation ul ul {
+		display: block;
 	}
 }
 
 @media screen and (min-width: 768px) {
+
 	.menu-toggle {
 		display: none;
 	}
 
-	.main-navigation ul {
+	div.menu-main-menu-container ul {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -220,9 +263,18 @@ span.icon-title {
 		list-style-type: none;
 		margin: 50px auto 35px; 
 	}
+
+	div.menu-main-menu-container ul.menu li.menu-item {
+		margin: 0 25px 0 0;
+	}
+
+	div.menu-main-menu-container ul.menu li.menu-item a {
+		font-size: 20px;
+	}
+
 }
 
-/* ============= Horizontal menu on wide screens ============= */
+// Horizontal menu on wide screens 
 
 
 @media screen and (min-width: 770px) {
