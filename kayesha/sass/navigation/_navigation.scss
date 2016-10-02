@@ -1,8 +1,6 @@
 // Navigation Styling
 
-/*--------------------------------------------------------------
-Links
---------------------------------------------------------------*/
+/* ============= Links ============= */
 
 a {
 	color: $textColor;
@@ -24,9 +22,8 @@ a {
 	}
 }
 
-/*--------------------------------------------------------------
-Main Navigation
---------------------------------------------------------------*/
+/* ============= Main Navigation ============= */
+
 
 .main-navigation {
 	clear: both;
@@ -100,9 +97,8 @@ Main Navigation
 	display: block;
 }
 
-/*--------------------------------------------------------------
-Social Nav
---------------------------------------------------------------*/
+/* ============= Social Nav ============= */
+
 
 ul#menu-social-menu {
 	display: -webkit-flex;
@@ -128,9 +124,8 @@ span.icon-title {
 	display: none;
 }
 
-/*--------------------------------------------------------------
-Mobile Nav
---------------------------------------------------------------*/
+/* ============= Mobile Nav ============= */
+
 
 .menu-toggle {
 	position: fixed;
@@ -169,9 +164,8 @@ Mobile Nav
 	text-decoration: underline;
 }
 
-/*--------------------------------------------------------------
-Toggled Menu and Submenus
---------------------------------------------------------------*/
+/* ============= Toggled Menu and Submenus ============= */
+
 
 .main-navigation.toggled {
 	position: fixed;
@@ -201,9 +195,9 @@ Toggled Menu and Submenus
 	display: block;
 }
 
-/*--------------------------------------------------------------
-Media Queries
---------------------------------------------------------------*/
+
+/* ============= Navigation Media Queries ============= */
+
 
 @media screen and (min-width: 300px) and (max-width: 768px) {
 	.main-navigation ul {
@@ -228,118 +222,114 @@ Media Queries
 	}
 }
 
-/*--------------------------------------------------------------
-Additional Media Queries
---------------------------------------------------------------*/
+/* ============= Horizontal menu on wide screens ============= */
 
-/* Horizontal menu on wide screens */
 
-// @media screen and (min-width: 770px) {
+@media screen and (min-width: 770px) {
 
-// 	/* Position the menu in the header */
-// 	.main-navigation,
-// 	.main-navigation.toggled {
-// 		position: relative;
-//         margin: 0 .5em;
-//         padding: 0;
-//         width: auto;
-// 	}
+	/* Position the menu in the header */
+	.main-navigation,
+	.main-navigation.toggled {
+		position: relative;
+        margin: 0 .5em;
+        padding: 0;
+        width: auto;
+	}
 
-// 	.nav-menu {
-// 		padding: .3em 0 0 0;
-// 		background-color: transparent;
-// 	}
+	.nav-menu {
+		padding: .3em 0 0 0;
+		background-color: transparent;
+	}
 
-// 	.main-navigation ul,
-// 	.main-navigation.toggled ul {
-//         display: flex;
-//         flex-wrap: wrap;
-// 		margin: 0;
-// 		padding: .5em 0;
-// 	}
+	.main-navigation ul,
+	.main-navigation.toggled ul {
+        display: flex;
+        flex-wrap: wrap;
+		margin: 0;
+		padding: .5em 0;
+	}
 
-// 	/* Display the menu items in a horizontal order */
-// 	.main-navigation li {
-// 		border: none;
-// 	}
+	/* Display the menu items in a horizontal order */
+	.main-navigation li {
+		border: none;
+	}
 
-// 	/* Add an outline to the drop-down menus */
-// 	.main-navigation ul ul {
-// 		outline: 1px solid #333;
-// 	}
+	/* Add an outline to the drop-down menus */
+	.main-navigation ul ul {
+		outline: 1px solid #333;
+	}
 
-// 	/* Left-align drop-down menu items */
-// 	.main-navigation li li {
-// 		display: block;
-// 		text-align: left;
-// 	}
+	/* Left-align drop-down menu items */
+	.main-navigation li li {
+		display: block;
+		text-align: left;
+	}
 
-//     .main-navigation a,
-//     .dropdown-toggle {
-//         color: hsl(0, 0%, 20%);
-//     }
+    .main-navigation a,
+    .dropdown-toggle {
+        color: hsl(0, 0%, 20%);
+    }
 
-// 	.main-navigation a,
-// 	.main-navigation ul ul li:last-child a {
-// 		border-bottom: none;
-// 	}
+	.main-navigation a,
+	.main-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
 
-// 	/* Add an outline on hovered and focused menu items */
-// 	.main-navigation a:hover,
-// 	.main-navigation a:focus {
-// 		background: transparent;
-// 		color: #333;
-// 		text-decoration: underline;
-// 		outline: solid 1px #b3b3b3;
-// 	}
+	/* Add an outline on hovered and focused menu items */
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: transparent;
+		color: #333;
+		text-decoration: underline;
+		outline: solid 1px #b3b3b3;
+	}
 
-//     .main-navigation li li a {
-//         color: hsl(0, 0%, 90%);
-//     }
+    .main-navigation li li a {
+        color: hsl(0, 0%, 90%);
+    }
 
-// 	/* Create hover and focus contrast on drop-down items */
-// 	.main-navigation li li a:hover,
-// 	.main-navigation li li a:focus {
-// 		background: #eee;
-// 		color: #000;
-// 		text-decoration: none;
-// 	}
+	/* Create hover and focus contrast on drop-down items */
+	.main-navigation li li a:hover,
+	.main-navigation li li a:focus {
+		background: #eee;
+		color: #000;
+		text-decoration: none;
+	}
 
-// 	/* Position drop-down menus absolutely */
-// 	.main-navigation ul ul.toggled-on {
-// 		position: absolute;
-// 		width: 12em;
-// 		display: block;
-// 		z-index: 10;
-// 		margin-left: 0;
-//         padding: 0;
-// 		background: #000;
-// 	}
+	/* Position drop-down menus absolutely */
+	.main-navigation ul ul.toggled-on {
+		position: absolute;
+		width: 12em;
+		display: block;
+		z-index: 10;
+		margin-left: 0;
+        padding: 0;
+		background: #000;
+	}
 
-// 	.main-navigation ul ul ul.toggled-on {
-// 		position: relative;
-// 	}
+	.main-navigation ul ul ul.toggled-on {
+		position: relative;
+	}
 
-// 	/* Indent 3rd level drop-down menus */
-// 	.main-navigation ul ul ul a {
-// 		padding-left: 2em;
-// 	}
+    /* Indent 3rd level drop-down menus */
+	.main-navigation ul ul ul a {
+		padding-left: 2em;
+	}
 
-// 	/* Simplify the drop-down toggle */
-// 	.dropdown-toggle {
-// 		top: 13px;
-// 		right: 12px;
-// 		border: none;
-// 	}
+	/* Simplify the drop-down toggle */
+	.dropdown-toggle {
+		top: 13px;
+		right: 12px;
+		border: none;
+	}
 
-//     .dropdown-toggle:hover, .dropdown-toggle:focus {
-//         background-color: inherit;
-//         outline: solid 1px #b3b3b3;
-//     }
+    .dropdown-toggle:hover, .dropdown-toggle:focus {
+        background-color: inherit;
+        outline: solid 1px #b3b3b3;
+    }
 
-// 	.dropdown-toggle::after {
-// 		line-height: 27px;
-// 		width: 27px;
-// 	}
-
-// }
+	.dropdown-toggle::after {
+		line-height: 27px;
+		width: 27px;
+	}
+}
