@@ -161,23 +161,23 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 function kayesha_register_custom_post_types() {
-    //SERVICES CPT (Custom Post Types)
+    //FAQ CPT (Custom Post Types)
 
         $labels = array(
-            'name'               => _x( 'Services', 'post type general name' ),
-            'singular_name'      => _x( 'Service', 'post type singular name'),
-            'menu_name'          => _x( 'Services', 'admin menu' ),
-            'name_admin_bar'     => _x( 'Service', 'add new on admin bar' ),
-            'add_new'            => _x( 'Add New', 'service' ),
-            'add_new_item'       => __( 'Add New Service' ),
-            'new_item'           => __( 'New Service' ),
-            'edit_item'          => __( 'Edit Service' ),
-            'view_item'          => __( 'View Service' ),
-            'all_items'          => __( 'All Services' ),
-            'search_items'       => __( 'Search Services' ),
-            'parent_item_colon'  => __( 'Parent Services:' ),
-            'not_found'          => __( 'No services found.' ),
-            'not_found_in_trash' => __( 'No services found in Trash.' ),
+            'name'               => _x( 'FAQ', 'post type general name' ),
+            'singular_name'      => _x( 'FAQ', 'post type singular name'),
+            'menu_name'          => _x( 'FAQ', 'admin menu' ),
+            'name_admin_bar'     => _x( 'FAQ', 'add new on admin bar' ),
+            'add_new'            => _x( 'Add New', 'FAQ' ),
+            'add_new_item'       => __( 'Add New FAQ' ),
+            'new_item'           => __( 'New FAQ' ),
+            'edit_item'          => __( 'Edit FAQ' ),
+            'view_item'          => __( 'View FAQ' ),
+            'all_items'          => __( 'All FAQ' ),
+            'search_items'       => __( 'Search FAQ' ),
+            'parent_item_colon'  => __( 'Parent FAQ:' ),
+            'not_found'          => __( 'No FAQ found.' ),
+            'not_found_in_trash' => __( 'No FAQ found in Trash.' ),
         );
 
         $args = array(
@@ -188,15 +188,15 @@ function kayesha_register_custom_post_types() {
             'show_in_menu'       => true,
             'show_in_nav_menus'  => true,
             'query_var'          => true,
-            'rewrite'            => array( 'slug' => 'services' ),
+            'rewrite'            => array( 'slug' => 'faq' ),
             'capability_type'    => 'post',
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 5,
             'supports'           => array( 'title', 'editor', 'thumbnail' ),
-            'menu_icon'          => 'dashicons-portfolio',
+            'menu_icon'          => 'dashicons-info',
         );
-        register_post_type( 'service', $args );
+        register_post_type( 'faq', $args );
 
         //PORTFOLIO CPT (Custom Post Types)
 
