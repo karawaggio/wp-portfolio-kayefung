@@ -13,7 +13,11 @@ body {
 }
 
 div#content {
-	margin: 100px 40px 80px;
+	margin: 80px 40px 80px;
+}
+
+div.rmc-nav ul {
+	font-family: $font_heading;
 }
 
 blockquote, q {

@@ -46,6 +46,7 @@
 		</div><!-- .site-branding -->
 
 		<div class="container">
+
 			<section class="inner-head-container">
 
 				<div class="logo">
@@ -88,14 +89,18 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 
-				<nav id="social-navigation" class="social-navigation">
-				    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
-			    </nav>
+				<div class="searchbar-social-nav">
+					<nav id="social-navigation" class="social-navigation">
+					    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
+				    </nav>
+
+					<div class="searchbar">
+						<?php get_sidebar(); ?>
+					</div>
+				</div>
 			</section> <!--end of .inner-head-container -->
 
-			<div class="searchbar">
-				<?php get_sidebar(); ?>
-			</div>
+
 
 		</div><!-- end of container -->
 	</header><!-- #masthead -->
