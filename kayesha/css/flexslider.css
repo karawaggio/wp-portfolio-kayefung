@@ -281,7 +281,8 @@ html[xmlns] .flexslider .slides {
 #container {padding: 60px 40px 100px;}
 /*header {width: 420px;*/
    /*float: left;}*/
-#main {
+body.post-type-archive-portfolio #main,
+body.page-id-18 .front-slider {
   margin-left: 120px; 
   margin-top: -25px;
   overflow: hidden;
@@ -292,12 +293,11 @@ html[xmlns] .flexslider .slides {
 ***********************/
 @media screen and (max-width: 960px) {
   #container {padding: 35px;}
-  /*header {width: 380px;}*/
-  #main {margin-left: 50px;}
-  /*aside h3  {
-    float: none;
-    font-size: 20px;
-  }*/
+  body.post-type-archive-portfolio #main,
+  body.page-id-18 .front-slider {
+    margin-left: 50px;
+  }
+  
   .toggle  {
     margin-left: 0;
     float: none;
@@ -305,15 +305,11 @@ html[xmlns] .flexslider .slides {
 }
 @media screen and (max-width: 768px) {
   #container {padding: 20px 30px;}
-  /*header {width: 100%; float: none; text-align: center;}
-  header img  {width:120px;}
-  header h1  { margin: 0 auto 10px; font-size: 32px; }
-  header h2  { font-size: 16px; }
-  header .button  { margin-bottom: 28px; }*/
 
-  #main {margin-left: 0;}
-  /*h3.nav-header { margin: 0 auto 10px; font-size: 16px; }*/
- 
+ body.post-type-archive-portfolio #main,
+ body.page-id-18 .front-slider   {
+  margin-left: 0;
+  } 
 }
 
 

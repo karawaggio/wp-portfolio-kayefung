@@ -29,6 +29,7 @@ get_header(); ?>
 				<div class="split-wrapper">
             	<section class="about">
 	                <h2>About</h2>
+
 	               <?php if (function_exists('get_field')){
 
 						echo "<div class='about-image'>";
@@ -95,18 +96,16 @@ get_header(); ?>
 
 
 		            </section><!--.servcices  -->
-	           
-
            
               <?php endwhile; // End of the loop. ?>
-              		</div> 		<!-- .split-wrapper -->
+              	</div> 		<!-- .split-wrapper -->
 
 <!-- display the testimonials in a slider if there are any -->
+		<div class="front-wrapper">
             <section class="front-slider">
                
 
                 <div class="slider">
-                	 <h2>Compliments</h2>
                   <div class="flexslider">
                     <ul class="slides">
                       
@@ -154,6 +153,7 @@ get_header(); ?>
 
 
             </section> <!-- front-slider -->
+         </div> <!-- front-wrapper -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
