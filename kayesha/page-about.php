@@ -22,7 +22,7 @@ get_header(); ?>
 				while ( have_posts() ) : the_post();
 
 				echo "<div class=profilepic>";
-				the_post_thumbnail();
+				the_post_thumbnail('medium');
 				echo "</div>";
 
 					get_template_part( 'template-parts/content', 'page' );

@@ -27,16 +27,6 @@
 	float: left;
 	margin-top: 20px;
 }
-// #smformcont-132 {
-// 	width: 50%;
-// 	float: right;
-//}
-
-.phone {
-	margin-top: 20px;
-}
-
-
 
 .question {
 	background-color: $darklav;
@@ -55,13 +45,38 @@
 }
 
 .faq li {
-	//background-color: $lightlav;
 	margin-top: 10px;
 }
 
+@media screen and (max-width: 767px) {
 
+	.contactimage {
+		display: none;
+	}
 
-// .page-id-20 #content {
-// 	margin: 0 50px 30px 50px;
-// }
+	.maincontact {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.post-20 {
+		width: 100%;
+		order: 2;
+	}
+
+	.contactinfo {
+		width: 100%;
+		order: 1;
+	}
+
+	.phone {
+		width: 50%;
+		float: left;
+	}
+
+	.email {
+		width: 50%;
+		float: right;
+	}
+}
 

@@ -40,16 +40,20 @@ get_header(); ?>
         	if (function_exists ('get_field')){
             	if(get_field('phone_number')){
             	
-            	echo "<h3 class'phone'> Phone </h3>";
+            	echo "<div class='phone'>";
+            	echo "<h3> Phone </h3>";
             	echo "<p>";
                 the_field('phone_number');
-                echo "</p>";	
+                echo "</p>";
+                echo "</div>";	
             	}
             	if(get_field('email')){
-            	echo "<h3 class='email'> Email </h3>";
+            	echo "<div class='email'>";
+            	echo "<h3> Email </h3>";
             	echo "<p>";
                 the_field('email');
                 echo "</p>";
+                echo "</div>";
                 	
             	}
         	}

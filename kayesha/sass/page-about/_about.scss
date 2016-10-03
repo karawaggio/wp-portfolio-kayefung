@@ -28,3 +28,20 @@
 	float: right;
 	text-align: center;
 }
+
+@media screen and (max-width: 945px) {
+
+	.profilepic {
+		width: 100%;
+		text-align: center;
+		margin-top: 0;
+	}
+
+	.post-9 {
+		width: 100%;
+	}
+
+	.aboutpagelinks {
+		width: 100%;
+	}
+}
