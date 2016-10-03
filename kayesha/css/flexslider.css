@@ -278,9 +278,9 @@ html[xmlns] .flexslider .slides {
 }
 /* Layout
 ***********************/
-#container {padding: 60px 40px 100px;}
-/*header {width: 420px;*/
-   /*float: left;}*/
+body.post-type-archive-portfolio #container {
+  padding: 60px 40px 100px;
+}
 body.post-type-archive-portfolio #main,
 body.page-id-18 .front-slider {
   margin-left: 120px; 
@@ -296,15 +296,16 @@ body.page-id-18 .front-slider {
   body.post-type-archive-portfolio #main,
   body.page-id-18 .front-slider {
     margin-left: 50px;
-  }
-  
+  } 
   .toggle  {
     margin-left: 0;
     float: none;
   }
 }
 @media screen and (max-width: 768px) {
-  #container {padding: 20px 30px;}
+  body.post-type-archive-portfolio #container {
+    padding: 20px 30px;
+  }
 
  body.post-type-archive-portfolio #main,
  body.page-id-18 .front-slider   {
@@ -312,7 +313,13 @@ body.page-id-18 .front-slider {
   } 
 }
 
-
+body.post-type-archive-portfolio h1.page-title {
+  text-align: center;
+}
+div.wrapper-slider {
+  display: flex;
+    justify-content: center;
+}
 /* ====================================================================================*/
 section.slider {
   margin: 1em 5.5em  !important;
