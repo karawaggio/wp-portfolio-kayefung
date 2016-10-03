@@ -10,13 +10,16 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		border-bottom: $theDarkestlav;
 	}
 	&:focus {
 		outline: thin dotted;
+		border-bottom: $theDarkestlav;
 	}
 	&:hover,
 	&:active {
 		outline: 0;
+		border-bottom: $theDarkestlav;
 	}
 }
 
@@ -190,9 +193,11 @@ span.icon-title {
 
 
 @media screen and (min-width: 300px) and (max-width: 767px) {
+	
 	.main-navigation ul {
 		background-color: $lightlav;
 	}
+
 
 	.main-navigation a {
 		position: relative;
@@ -218,6 +223,7 @@ span.icon-title {
 
 	.main-navigation a:active {
 	  	color: $lightlav;
+	  	border-bottom: $theDarkestlav;
 	}
 
 	.main-navigation ul li:last-child a {

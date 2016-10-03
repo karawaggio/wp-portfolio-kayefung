@@ -91,7 +91,7 @@
 				<nav id="social-navigation" class="social-navigation">
 				    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
 			    </nav>
-			
+			</section> <!--end of .inner-head-container -->
 		</div><!-- end of container -->
 	</header><!-- #masthead -->
 
