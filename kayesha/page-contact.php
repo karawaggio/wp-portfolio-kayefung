@@ -64,7 +64,8 @@ get_header(); ?>
 			<?php
                 $args = array (
                     'post_type' => 'faq',
-                    'posts_per_page' => -1
+                    'posts_per_page' => -1,
+                    'order' => ASC
                      );
 
     		$faq = new WP_Query($args);
