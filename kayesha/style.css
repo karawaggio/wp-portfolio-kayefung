@@ -291,9 +291,7 @@ body {
   /* Fallback for when there is no custom background color defined. */ }
 
 div#content {
-  margin: 80px 40px 80px;
-  max-width: 1300px;
-  margin: auto; }
+  margin: 80px 40px 80px; }
 
 div.rmc-nav ul {
   font-family: "Dosis", Arial, san-serif; }
@@ -432,10 +430,7 @@ header .container {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  max-width: 1600px;
-  margin: auto; }
+  align-items: center; }
 
 .logo,
 .main-navigation,
@@ -532,7 +527,7 @@ ul#menu-social-menu {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: -20px auto 20px; }
+  margin: 50px auto 35px; }
 
 ul#menu-social-menu li.menu-item {
   margin: 0 15px 0 0; }
@@ -1120,7 +1115,7 @@ section.home-page {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 1500px;
+  max-width: 1700px;
   width: 100%;
   margin: auto;
   align-items: baseline; }
@@ -1236,6 +1231,11 @@ ul#menu-blog-menu li.menu-item a {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; } }
+article#post-164 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
@@ -1261,13 +1261,14 @@ ul#menu-blog-menu li.menu-item a {
   margin-top: 20px; }
 
 .question {
-  background-color: #d1cee9;
+  background-color: #b5a4d1;
   margin: 0;
-  padding: 10px; }
+  padding: 10px 0 10px; }
 
 .answer p {
   padding: 10px;
-  margin: 0; }
+  margin: 0;
+  background-color: #d1cee9; }
 
 .faq ul {
   padding: 0; }
