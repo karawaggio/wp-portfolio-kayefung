@@ -13,6 +13,12 @@
  */
 
 get_header(); ?>
+    
+    <section class="blog-navigation">
+		<nav id="blog-sub-nav" class="blog-sub-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'blogmenu') ); ?>
+		</nav>
+	</section>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -52,5 +58,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
