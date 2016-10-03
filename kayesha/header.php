@@ -87,7 +87,7 @@
 					</button>
 
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
+				</nav><!-- #site-navigation .main-navigation-->
 
 				<div class="searchbar-social-nav">
 					<nav id="social-navigation" class="social-navigation">
@@ -97,7 +97,7 @@
 					<div class="searchbar">
 						<?php get_sidebar(); ?>
 					</div>
-				</div>
+				</div> <!-- end .searchbar-social-nav-->
 			</section> <!--end of .inner-head-container -->
 
 

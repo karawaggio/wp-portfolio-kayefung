@@ -430,7 +430,10 @@ header .container {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden;
+  max-width: 1600px;
+  margin: auto; }
 
 .logo,
 .main-navigation,
@@ -527,7 +530,7 @@ ul#menu-social-menu {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 50px auto 35px; }
+  margin: -20px auto 20px; }
 
 ul#menu-social-menu li.menu-item {
   margin: 0 15px 0 0; }
@@ -1193,6 +1196,17 @@ section.about h2,
   float: right;
   text-align: center; }
 
+@media screen and (max-width: 945px) {
+  .profilepic {
+    width: 100%;
+    text-align: center;
+    margin-top: 0; }
+
+  .post-9 {
+    width: 100%; }
+
+  .aboutpagelinks {
+    width: 100%; } }
 /*--------------------------------------------------------------
 # Blog Page
 --------------------------------------------------------------*/
@@ -1244,9 +1258,6 @@ ul#menu-blog-menu li.menu-item a {
   float: left;
   margin-top: 20px; }
 
-.phone {
-  margin-top: 20px; }
-
 .question {
   background-color: #b5a4d1;
   margin: 0;
@@ -1262,5 +1273,29 @@ ul#menu-blog-menu li.menu-item a {
 
 .faq li {
   margin-top: 10px; }
+
+@media screen and (max-width: 767px) {
+  .contactimage {
+    display: none; }
+
+  .maincontact {
+    display: flex;
+    flex-direction: column; }
+
+  .post-20 {
+    width: 100%;
+    order: 2; }
+
+  .contactinfo {
+    width: 100%;
+    order: 1; }
+
+  .phone {
+    width: 50%;
+    float: left; }
+
+  .email {
+    width: 50%;
+    float: right; } }
 
 /*# sourceMappingURL=style.css.map */
