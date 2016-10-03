@@ -1,7 +1,67 @@
 // Contact Page Styling
 
+.page-id-20 #main {
+	margin-left: 0;
+}
 
-#smformcont-132 {
+.post-20 {
 	width: 50%;
 	float: right;
 }
+
+.maincontact img {
+	margin-top: 50px;
+
+}
+
+.contactimage {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+
+.contactinfo {
+	//margin-top: 24px;
+	text-align: center;
+	width: 50%;
+	float: left;
+	margin-top: 20px;
+}
+// #smformcont-132 {
+// 	width: 50%;
+// 	float: right;
+//}
+
+.phone {
+	margin-top: 20px;
+}
+
+
+
+.question {
+	background-color: $darklav;
+	margin: 0;
+	padding: 10px 0 10px;
+}
+
+.answer p{
+	padding: 10px;
+	margin: 0;
+	background-color: $lightlav;
+}
+
+.faq ul {
+	padding: 0;
+}
+
+.faq li {
+	//background-color: $lightlav;
+	margin-top: 10px;
+}
+
+
+
+// .page-id-20 #content {
+// 	margin: 0 50px 30px 50px;
+// }
+
