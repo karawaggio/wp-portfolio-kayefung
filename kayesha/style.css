@@ -221,12 +221,17 @@ th {
 --------------------------------------------------------------*/
 body,
 button,
-input,
 select,
 textarea {
   color: #404040;
   font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
+  line-height: 1.5; }
+
+input {
+  color: #38353b;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 12px;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -284,8 +289,8 @@ body {
   background: white;
   /* Fallback for when there is no custom background color defined. */ }
 
-div #content {
-  margin: 50px 50px 30px; }
+div#content {
+  margin: 100px 40px 80px; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -437,6 +442,22 @@ header .container {
 
 .social-navigation {
   flex: 0; }
+
+.searchbar {
+  display: flex;
+  justify-content: flex-end; }
+
+input.search-field {
+  width: 90px;
+  height: 25px; }
+
+input.search-submit {
+  width: 60px;
+  height: 25px; }
+
+section#search-2 {
+  margin: 0;
+  padding: 0 10px 20px 0; }
 
 @media screen and (max-width: 970px) {
   .logo {
@@ -1077,8 +1098,8 @@ div.developers-info p a:hover {
 section.home-page {
   margin: auto;
   width: 75%;
-  max-width: 1000px;
   margin: auto;
+  width: 75%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -1089,15 +1110,7 @@ section.home-page {
 .split-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  max-width: 1700px;
-  width: 100%;
-  margin: auto;
-  align-items: baseline; }
-
-.front-wrapper {
-  margin: auto;
-  max-width: 1100px; }
+  justify-content: center; }
 
 section.services,
 section.about {
@@ -1105,8 +1118,7 @@ section.about {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 3em;
-  padding: 0 4em; }
+  margin: 1em; }
 
 section.services h2,
 section.about h2,
@@ -1116,31 +1128,6 @@ section.about h2,
   display: flex;
   justify-content: center; }
 
-@media screen and (max-width: 1300px) {
-  .split-wrapper {
-    padding: 0 1em;
-    margin: 0em; }
-
-  section.services,
-  section.about {
-    margin: 0em;
-    padding: 0 2em; } }
-@media screen and (max-width: 825px) {
-  .split-wrapper {
-    flex-direction: column;
-    align-items: center; }
-
-  section.services,
-  section.about {
-    width: 80%;
-    margin: 1em;
-    padding: 0 4em; } }
-@media screen and (max-width: 650px) {
-  section.services,
-  section.about {
-    width: 100%;
-    margin: 1em;
-    padding: 0 2em; } }
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
@@ -1187,7 +1174,8 @@ ul#menu-blog-menu li.menu-item a {
   color: #38353b;
   font-size: 17px;
   font-family: "Dosis", Arial, san-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none; }
 
 @media screen and (min-width: 768px) {
   ul#menu-blog-menu {

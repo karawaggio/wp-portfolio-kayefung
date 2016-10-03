@@ -92,6 +92,11 @@
 				    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
 			    </nav>
 			</section> <!--end of .inner-head-container -->
+
+			<div class="searchbar">
+				<?php get_sidebar(); ?>
+			</div>
+
 		</div><!-- end of container -->
 	</header><!-- #masthead -->
 
