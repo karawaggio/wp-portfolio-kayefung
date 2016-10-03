@@ -291,7 +291,9 @@ body {
   /* Fallback for when there is no custom background color defined. */ }
 
 div#content {
-  margin: 80px 40px 80px; }
+  margin: 80px 40px 80px;
+  max-width: 1300px;
+  margin: auto; }
 
 div.rmc-nav ul {
   font-family: "Dosis", Arial, san-serif; }
@@ -430,7 +432,10 @@ header .container {
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden;
+  max-width: 1600px;
+  margin: auto; }
 
 .logo,
 .main-navigation,
@@ -527,7 +532,7 @@ ul#menu-social-menu {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin: 50px auto 35px; }
+  margin: -20px auto 20px; }
 
 ul#menu-social-menu li.menu-item {
   margin: 0 15px 0 0; }
@@ -1261,14 +1266,13 @@ article#post-164 {
   margin-top: 20px; }
 
 .question {
-  background-color: #b5a4d1;
+  background-color: #d1cee9;
   margin: 0;
-  padding: 10px 0 10px; }
+  padding: 10px; }
 
 .answer p {
   padding: 10px;
-  margin: 0;
-  background-color: #d1cee9; }
+  margin: 0; }
 
 .faq ul {
   padding: 0; }
