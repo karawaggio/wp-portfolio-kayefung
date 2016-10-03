@@ -44,7 +44,7 @@ function kayesha_setup() {
     add_image_size( 'kayesha-slider', 1140, 550, true );
     add_image_size( 'kayesha-thumbnail', 750, 500, true );
     add_image_size( 'kayesha-thumbs', 170, 170, true );
-
+    add_image_size( 'custom-size', 220, 220, array( 'right', 'top' ) );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -330,3 +330,15 @@ function replace_howdy( $wp_admin_bar ) {
     ) );
     }
 add_filter( 'admin_bar_menu', 'replace_howdy',25 );
+
+//Change Excerpt read More
+function kayesha_excerpt_more( $more ) {
+    return '<a class="read-more" href="' . get_permalink() . '">Read More</a>';
+}
+add_filter( 'excerpt_more', 'kayesha_excerpt_more' );
+
+//Change the length of the excerpt
+function mindset_excerpt_length( $length ) {
+        return 0;
+}
+add_filter( 'excerpt_length', 'kayesha_excerpt_length', 999 );

@@ -23,36 +23,33 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
-		if ( have_posts() ) :
-
+		<?php if ( have_posts() ) : 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
 
-			<?php
-			endif;
+			<header>
+				<h1 class="page-title screen-reader-text">
+					<?php single_post_title(); ?>
+				</h1>
+			</header>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+		<?php endif; ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
+		<section class="blog-main-page">
+			<?php while ( have_posts() ) : the_post();
+
 				get_template_part( 'template-parts/content', get_post_format() );
 
-			endwhile;
+				endwhile;
 
-			the_posts_navigation();
+				the_posts_navigation();
 
-		else :
+				else :
 
-			get_template_part( 'template-parts/content', 'none' );
+				get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+				endif; 
+			?>
+		</section><!-- end of .blog-main-page -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

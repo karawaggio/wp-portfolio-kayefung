@@ -33,3 +33,11 @@ ul#menu-blog-menu li.menu-item a {
 		justify-content: center;
 	}
 }
+
+// Blog Layout
+
+article#post-164 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
