@@ -1306,5 +1306,11 @@ article#post-164 {
   .email {
     width: 50%;
     float: right; } }
+/*--------------------------------------------------------------
+# Services Page
+--------------------------------------------------------------*/
+body.page-id-136 .services-page-image {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

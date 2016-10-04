@@ -18,8 +18,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
+			echo '<div class="services-page-image">';
 			the_post_thumbnail('large');
+			echo '</div>';
 			while ( have_posts() ) : the_post();
+	
 
 				get_template_part( 'template-parts/content', 'page' );
 
