@@ -1,0 +1,393 @@
+// Navigation Styling
+
+
+// ** Links **
+
+a {
+	color: $textColor;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		border-bottom: $theDarkestlav;
+	}
+	&:focus {
+		outline: thin dotted;
+		border-bottom: $theDarkestlav;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+		border-bottom: $theDarkestlav;
+	}
+}
+
+
+// ** Main Navigation **
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+}
+
+.main-navigation ul ul {
+	display: none;
+	margin-left: 0.8em;
+}
+
+.main-navigation a {
+	text-decoration: none;
+	line-height: 1.6;
+	color: $textColor;
+	font-family: $font_heading;
+	text-transform: uppercase;
+}	
+
+
+// Social Nav Header 
+
+ul#menu-social-menu {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: -20px auto 20px; 
+}
+
+ul#menu-social-menu li.menu-item {
+	margin: 0 15px 0 0;
+}
+
+ul#menu-social-menu li.menu-item a {
+	color: $darklav;		;
+	font-size: 20px;
+}
+
+span.icon-title {
+	display: none;
+}
+
+
+// Mobile Nav
+
+.menu-toggle {
+	position: fixed;
+	z-index: 999;
+	bottom: 1.5em;
+	left: 1em;
+	font-family: $font_heading;
+	font-size: 17px;
+	text-transform: uppercase;
+	background-color: #666;
+	color: $white;
+	border: solid 1.5px #bcbec0;
+	transition: all ease-out 400ms;
+}
+
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
+.menu-toggle.hide {
+	bottom: -2.5em;
+}
+
+.toggled .menu-toggle.hide {
+	bottom: 1em;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	text-decoration: underline;
+}
+
+// Toggled Menu and Submenus 
+
+
+.main-navigation.toggled {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-menu {
+	padding: 1em;
+	margin-bottom: 3em;
+}
+
+.main-navigation.toggled ul {
+	max-height: calc(100vh - 8em);
+	overflow-y: auto;
+}
+
+.main-navigation.toggled ul ul {
+	display: none;
+}
+
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+	display: block;
+}
+
+.dropdown-toggle {
+	position: absolute;
+	height: 27px;
+	width: 27px;
+	top: 12px;
+	right: 6px;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 0;
+	background-color: inherit;
+	border: 1px solid #fff;
+	content: "";
+	color: #fff;
+	text-transform: lowercase; /* Stop screen readers from reading the text as capital letters */
+}
+
+.dropdown-toggle::after {
+	content: "+";
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 27px;
+	position: relative;
+	top: 0;
+	width: 27px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #fff;
+	color: #000;
+}
+
+.dropdown-toggle.toggle-on:after {
+	content: "-";
+}
+
+.main-navigation a:hover ~ .dropdown-toggle,
+.main-navigation a:focus ~ .dropdown-toggle {
+    color: hsl(0, 0%, 20%);
+}
+
+
+// ** Navigation Media Queries ** 
+
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+	
+	.main-navigation ul {
+		background-color: $lightlav;
+	}
+
+
+	.main-navigation a {
+		position: relative;
+		display: block;
+		padding: 0.8em 1em;
+		text-decoration: none;
+		line-height: 1.6;
+		color: $textColor;
+		font-size: 16px;
+		text-transform: uppercase;
+	}	
+
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: #f0f0f0;
+		color: $color__link-visited;
+	}
+
+	.main-navigation a:visited {
+		text-decoration: underline;
+		color: $theDarkestlav;
+	}
+
+	.main-navigation a:active {
+	  	color: $lightlav;
+	  	border-bottom: $theDarkestlav;
+	}
+
+	.main-navigation ul li:last-child a {
+		border-bottom: none;
+	}
+
+	.main-navigation ul .toggled-on {
+		display: block;
+	}
+
+	.main-navigation .current-menu-item > a {
+		font-weight: 700;
+	}
+
+	.main-navigation .nav-menu > ul > li:first-child,
+	.main-navigation .nav-menu > li:first-child {
+		border-top: 0;
+	}
+
+	.main-navigation .menu-item-has-children > a,
+	.main-navigation .page_item_has_children > a{
+		padding-right: 48px;
+	}
+
+	.no-js .main-navigation ul ul {
+		display: block;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	ul#primary-menu {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		list-style-type: none;
+		margin: 50px auto 35px; 
+	}
+
+	ul#primary-menu li.menu-item {
+		margin: 0 25px 0 0;
+	}
+
+	ul#primary-menu li.menu-item a {
+		font-size: 20px;
+	}
+
+}
+
+// Horizontal menu on wide screens 
+
+
+@media screen and (min-width: 770px) {
+
+	/* Position the menu in the header */
+	.main-navigation,
+	.main-navigation.toggled {
+		position: relative;
+        margin: 0 .5em;
+        padding: 0;
+        width: auto;
+	}
+
+	.nav-menu {
+		padding: .3em 0 0 0;
+		background-color: transparent;
+	}
+
+	.main-navigation ul,
+	.main-navigation.toggled ul {
+        display: flex;
+        flex-wrap: wrap;
+		margin: 0;
+		padding: .5em 0;
+	}
+
+	/* Display the menu items in a horizontal order */
+	.main-navigation li {
+		border: none;
+	}
+
+	/* Add an outline to the drop-down menus */
+	.main-navigation ul ul {
+		outline: 1px solid #333;
+	}
+
+	/* Left-align drop-down menu items */
+	.main-navigation li li {
+		display: block;
+		text-align: left;
+	}
+
+    .main-navigation a,
+    .dropdown-toggle {
+        color: hsl(0, 0%, 20%);
+    }
+
+	.main-navigation a,
+	.main-navigation ul ul li:last-child a {
+		border-bottom: none;
+	}
+
+	/* Add an outline on hovered and focused menu items */
+	.main-navigation a:hover,
+	.main-navigation a:focus {
+		background: transparent;
+		color: #333;
+		text-decoration: underline;
+		outline: solid 1px #b3b3b3;
+	}
+
+    .main-navigation li li a {
+        color: hsl(0, 0%, 90%);
+    }
+
+	/* Create hover and focus contrast on drop-down items */
+	.main-navigation li li a:hover,
+	.main-navigation li li a:focus {
+		background: #eee;
+		color: #000;
+		text-decoration: none;
+	}
+
+	/* Position drop-down menus absolutely */
+	.main-navigation ul ul.toggled-on {
+		position: absolute;
+		width: 12em;
+		display: block;
+		z-index: 10;
+		margin-left: 0;
+        padding: 0;
+		background: #000;
+	}
+
+	.main-navigation ul ul ul.toggled-on {
+		position: relative;
+	}
+
+    /* Indent 3rd level drop-down menus */
+	.main-navigation ul ul ul a {
+		padding-left: 2em;
+	}
+
+	/* Simplify the drop-down toggle */
+	.dropdown-toggle {
+		top: 13px;
+		right: 12px;
+		border: none;
+	}
+
+    .dropdown-toggle:hover, .dropdown-toggle:focus {
+        background-color: inherit;
+        outline: solid 1px #b3b3b3;
+    }
+
+	.dropdown-toggle::after {
+		line-height: 27px;
+		width: 27px;
+	}
+}
