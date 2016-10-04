@@ -59,13 +59,16 @@
 				              //variables to show the image with choosen size
 				              $url = $logo['url'];
 				              $alt = $logo['alt'];
+				              $home = home_url();
 
 				              $size = 'large';
 				              $mylogo = $logo['sizes'][ $size ];
 				              $width = $logo['sizes'][ $size . '-width' ];
 				              $height = $logo['sizes'][ $size . '-height' ];
 
-				              echo '<img src="';
+				              echo '<a href="';
+				              echo esc_url( $home );
+				              echo '"><img src="';
 				              echo $mylogo;
 				              echo '" alt="';
 				              echo $alt;
@@ -73,11 +76,13 @@
 				              echo $width;
 				              echo '" height="';
 				              echo $height;
-				              echo '">';
+				              echo '"></a>';
+				               
 				            }
 				          }
 				        }
 		      		?>
+		      		<a href=""><img src=""></a>
 	      		</div><!-- end of .logo -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
