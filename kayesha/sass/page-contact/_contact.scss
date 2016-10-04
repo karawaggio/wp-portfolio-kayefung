@@ -20,6 +20,16 @@
 	text-align: center;
 }
 
+.specialmessage {
+	background-color: $lightlav;
+	border: 2px solid $darklav;
+	min-height: 100px;
+	width: 300px;
+	text-align: center;
+	margin: auto;
+	font-weight: bold;
+}
+
 .contactinfo {
 	//margin-top: 24px;
 	text-align: center;
