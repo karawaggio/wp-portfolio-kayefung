@@ -12,10 +12,14 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
-div#content,
-footer div.container {
+div#content {
 	margin: 60px auto 85px;
 	max-width: 1300px;
+}
+
+footer div.container {
+	margin: 30px auto 45px;
+	max-width: 1500px;
 }
 
 div.rmc-nav ul {
