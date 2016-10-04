@@ -33,6 +33,7 @@
 			</section><!-- end of .footer-inner-container -->
 
 			<div class="developers-info">
+				<p class="mobile-only">&copy; 2016 Kayefung Artistry. All rights reserved.</p>
 				<p>Developed by:&nbsp;&nbsp;<a href="#">Arlene Ata</a>,<a href="#"> Greg Voth</a>, and <a href="#">Sergey Karavaev</a></p>
 			</div><!-- .developers-info -->
 
