@@ -338,7 +338,7 @@ function kayesha_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'kayesha_excerpt_more' );
 
 //Change the length of the excerpt
-function mindset_excerpt_length( $length ) {
+function kayesha_excerpt_length( $length ) {
         return 0;
 }
 add_filter( 'excerpt_length', 'kayesha_excerpt_length', 999 );
