@@ -291,9 +291,8 @@ body {
   /* Fallback for when there is no custom background color defined. */ }
 
 div#content {
-  margin: 80px 40px 80px;
-  max-width: 1300px;
-  margin: auto; }
+  margin: 60px auto 85px;
+  max-width: 1300px; }
 
 div.rmc-nav ul {
   font-family: "Dosis", Arial, san-serif; }
@@ -1178,6 +1177,9 @@ section.about h2,
   width: 70%;
   float: right;
   padding-left: 50px; }
+
+.page-id-9 #content {
+  min-height: 500px; }
 
 .profilepic {
   width: 30%;
