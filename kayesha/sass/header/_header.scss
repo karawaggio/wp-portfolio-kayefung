@@ -40,19 +40,111 @@ header .container {
 	justify-content: flex-end;
 }
 
-input.search-field {
-	width: 90px;
-	height: 25px;
-}
-
-input.search-submit {
-	width: 60px;
-	height: 25px;
-}
-
 section#search-2 {
 	margin: 0;
 	padding: 0 10px 20px 0;
+}
+
+// Header Media Queries
+
+@media screen and (min-width: 320px) {
+
+	.logo {
+	    max-width: 78%;
+	    margin: 0 0 30px 5px; 
+	}
+
+	.searchbar {
+		margin: 30px 40px 10px ;
+	}
+
+	input.search-field {
+	    width: 100px;
+	    height: 28px;
+	}
+
+	input.search-submit {
+	    width: 65px;
+	    height: 28px;
+	}
+}
+
+@media screen and (min-width: 420px) {
+
+	.logo {
+	    max-width: 72%;
+	}
+}
+
+@media screen and (min-width: 500px) {
+
+	.logo {
+	    max-width: 68%;
+	    margin: 10px auto 30px; 
+	}
+
+	.searchbar {
+		margin: 40px 50px 15px 40px;
+	}
+
+	input.search-field {
+	    width: 135px;
+	    height: 30px;
+	}
+
+	input.search-submit {
+	    width: 75px;
+	    height: 30px;
+	}
+}
+
+@media screen and (min-width: 570px) {
+
+	.logo {
+	    max-width: 65%;
+	}
+}
+
+@media screen and (min-width: 600px) {
+
+	.logo {
+	    max-width: 62%; 
+	}
+}
+
+@media screen and (min-width: 650px) {
+
+	.logo {
+	    max-width: 60%; 
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.logo {
+	    max-width: 52%; 
+	}
+
+	.searchbar {
+		margin: 40px auto 20px;
+	}
+}
+
+@media screen and (min-width: 946px) {
+
+	.searchbar {
+		margin: 30px auto 20px;
+	}
+
+	input.search-field {
+		width: 90px;
+		height: 25px;
+	}
+
+	input.search-submit {
+		width: 60px;
+		height: 25px;
+	}
 }
  
 @media screen and (max-width: 970px) {
@@ -68,10 +160,8 @@ section#search-2 {
 	.social-navigation {
 		flex: 0;
 	}
-
-
-
 }
+
 @media screen and (max-width: 945px) {
 	header .container {
 		flex-direction: column;
@@ -82,7 +172,6 @@ section#search-2 {
 	}
 	.logo {
 		flex: 0;
-	
 	}
 	.social-navigation {
 		flex: 0;
