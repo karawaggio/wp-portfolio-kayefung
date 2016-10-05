@@ -1,5 +1,9 @@
 // Contact Page Styling
 
+.page-id-20 #content {
+	margin-top: 0;
+}
+
 .page-id-20 #main {
 	margin-left: 0;
 }
@@ -22,13 +26,14 @@
 }
 
 .specialmessage {
-	background-color: $lightlav;
-	border: 2px solid $darklav;
+	background-color: $theDarkestlav;
+	border: 5px solid fuchsia;
 	min-height: 50px;
-	width: 300px;
+	width: 100%;
 	text-align: center;
 	margin: auto;
-	font-weight: bold;
+	//font-weight: bold;
+	color: white;
 }
 
 .contactinfo {
