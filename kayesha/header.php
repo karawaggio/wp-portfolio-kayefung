@@ -100,7 +100,7 @@
 				    </nav>
 
 					<div class="searchbar">
-						<?php get_sidebar(); ?>
+						<?php get_search_form(); ?>
 					</div>
 				</div> <!-- end .searchbar-social-nav-->
 			</section> <!--end of .inner-head-container -->
