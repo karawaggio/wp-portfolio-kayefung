@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post(); ?>
 				<div class="home-image">
-				<?php the_post_thumbnail('medium'); ?>
+				<?php the_post_thumbnail('large'); ?>
 				</div><!--.home-image  -->
 				<?php get_template_part( 'template-parts/content', 'notitle' );?>
 			 </section><!--.home-page  -->
@@ -36,7 +36,7 @@ get_header(); ?>
 
 						//show image with ID return value : able to display a certain size 
 						$about_image = get_field('about_feature_image');							
-						$size = 'thumbnail';
+						$size = 'medium';
 							// echo '<pre>';
 							// var_dump( $about_image );
 							// echo '</pre>';
@@ -69,7 +69,7 @@ get_header(); ?>
 
 							//show image with ID return value : able to display a certain size 
 							$services_image = get_field('services_feature_image');							
-							$size = 'thumbnail';
+							$size = 'medium';
 								// echo '<pre>';
 								// var_dump( $about_image );
 								// echo '</pre>';
