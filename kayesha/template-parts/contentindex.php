@@ -12,7 +12,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php the_post_thumbnail('medium', array('class' => 'center')); ?>
+		<?php the_post_thumbnail('', array('class' => 'center')); ?>
+
+		<footer class="entry-footer">
+		<?php kayesha_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 
 		<header class="entry-header">
 			<?php
@@ -47,7 +51,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php kayesha_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

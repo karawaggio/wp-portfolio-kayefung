@@ -25,26 +25,141 @@ ul#menu-blog-menu li.menu-item a {
 	text-decoration: none;
 }
 
+// Main Blog Layout
+
 .blog-main-page article {
-	width: 50%;
+	width: 40%;
 	float: right;
 	text-align: center;
 	//background-color: $blogPostsColor;
-	//margin: 20px;
+	margin: 50px;
 }
 
 .blog-main-page article:first-child {
 	text-align: center;
 	float: none;
 	width: 100%;
+	margin: 0;
 }
 
 .blog-main-page article:nth-child(even) {
 	text-align: center;
-	width: 50%;
+	width: 40%;
 	float: left;
 }
 
+.blog img {
+	width: 80%;
+}
+
+.blog article:first-child img {
+	width: 60%;
+}
+
+.blog .entry-footer .comments-link, 
+.blog .posted-on,
+.entry-meta .byline  {
+	display: none;
+}
+
+
+.blog .entry-footer,
+.blog .entry-header,
+.blog .entry-content p  {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+}
+
+.blog article:first-child .entry-footer,
+.blog article:first-child .entry-header,
+.blog article:first-child .entry-content p  {
+	width: 60%;
+	margin: auto;
+	text-align: left;
+}
+
+
+
+// Blog Category Layout
+
+.archive article {
+	width: 40%;
+	float: right;
+	text-align: center;
+	background-color: $blogPostsColor;
+	margin: 50px;
+}
+
+// .archive article:first-child {
+// 	text-align: center;
+// 	float: none;
+// 	width: 100%;
+// }
+
+.archive article:nth-child(even) {
+	text-align: center;
+	width: 40%;
+	float: left;
+}
+
+.archive img {
+	width: 80%;
+}
+
+.archive .entry-footer .comments-link, 
+.archive .posted-on,
+.archive.group-blog .byline  {
+	display: none;
+}
+
+
+.archive .entry-footer,
+.archive .entry-header,
+.archive .entry-content p  {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+}
+
+
+
+.cat-links a {
+	color: $darklav;
+	font-weight: bold;
+}
+
+.cat-links a:hover {
+	color: $lightlav;
+}
+
+
+// Single-Post Blog Layout
+
+.single article {
+	width: 60%;
+	margin: auto;
+}
+
+.comments-title {
+	width: 60%;
+	margin: 50px auto;
+}
+
+.comment-list {
+	list-style-type: none;
+}
+
+.comment-list li {
+	margin-bottom: 10px;
+}
+
+.comment-list li article {
+	border: 1px solid $lightlav;
+}
+// .single .nav-links {
+// 	display: none;
+// }
 
 @media screen and (min-width: 768px) {
 
