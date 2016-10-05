@@ -74,6 +74,10 @@ ul#menu-social-menu li.menu-item a {
 	color: $darklav;
 }
 
+ul#menu-social-menu li.menu-item a:hover {
+	color: $lightlav;
+}
+
 span.icon-title {
 	display: none;
 }

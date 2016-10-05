@@ -600,6 +600,9 @@ ul#menu-social-menu li.menu-item {
 ul#menu-social-menu li.menu-item a {
   color: #b5a4d1; }
 
+ul#menu-social-menu li.menu-item a:hover {
+  color: #d1cee9; }
+
 span.icon-title {
   display: none; }
 
