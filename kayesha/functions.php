@@ -113,6 +113,8 @@ function kayesha_scripts() {
 
     wp_enqueue_style('kayesha-googlefonts', 'https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans:400,700');
 
+    wp_enqueue_style('kayesha-googlefonts-more', 'https://fonts.googleapis.com/css?family=Catamaran:400,700|Heebo:400,700|Yantramanav');
+    
     wp_enqueue_style( 'kayesha-fontawesome', get_template_directory_uri() . '/fonts/font-awesome/css/font-awesome.min.css');
           
     wp_enqueue_style( 'kayesha-fontawesome-cloud', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');   
@@ -120,6 +122,7 @@ function kayesha_scripts() {
 	wp_enqueue_script( 'kayesha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'kayesha-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
 
     if( is_front_page() || is_page('portfolio') ) {
         wp_enqueue_style('kayesha-flexslider', get_template_directory_uri() . '/css/flexslider.css');
