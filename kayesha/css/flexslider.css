@@ -339,6 +339,12 @@ section.slider {
   div#carousel.flexslider {
     display: none;
   }
+  .flexslider.main-container {
+    height: auto;
+  }
+  .section.slider {
+    margin: 1em !important;
+  }
   .flexslider.main-container img{
     width: 100%;
     margin: 0 0.5em 0 0.5em;
