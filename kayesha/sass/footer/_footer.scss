@@ -7,7 +7,12 @@ footer.site-footer {
 	background: $darklav;
 }
 
-div.container {
+footer div.container {
+	margin: 0 auto;
+	padding: 30px 30px 45px;
+}
+
+footer div.container {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -16,21 +21,29 @@ div.container {
 	flex-flow: column wrap;
 }
 
-section.inner-container {
+section.footer-main-content {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+
+div.inner-container {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 	-webkit-justify-content: space-between;
 	-ms-flex-pack: space-between;
 	justify-content: space-between;
-	-webkit-flex-flow: wrap;
-	-ms-flex-flow: wrap;
-	flex-flow: wrap;
+	margin-top: 25px;
 }
 
-//Footer Nav and Copyright
 
-div.footer-nav-copyright {
+//Footer Copyright and Developers Info
+
+div.footer-copyright-developers {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -42,64 +55,86 @@ div.footer-nav-copyright {
 	flex-flow: column wrap;
 }
 
-// Social Nav and Contact Info
-
-div.social-nav-info {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: flex-end;
-	-ms-flex-pack: flex-end;
-	justify-content: flex-end;
-	// -webkit-flex-flow: column wrap;
-	// -ms-flex-flow: column wrap;
-	// flex-flow: column wrap;
+p.footer-copyright {
+	margin: 0;
+	font-size: 15px;
 }
 
-div.menu-social-menu-container ul#menu-social-menu-1 {
+p.developers-info {
+	font-size: 12px;
+	margin: 0;
+}
+
+p.developers-info a{
+	color: $textColor;
+	text-decoration: none;
+	font-family: $font__main;
+	font-size: 12px;
+}
+
+p.developers-info a:hover{
+	color: $lightlav;
+}
+
+
+// Social Navigation
+
+ul#menu-social-menu-1 {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+}
+
+ul#menu-social-menu-1 {
 	list-style-type: none;
 	padding-left: 0;
-	margin: 0;
+	margin-top: 25px;
 	line-height: 1;
 }
 
 ul#menu-social-menu-1 li.menu-item {
-	margin: 15px 15px 0 0;
-	font-size: 20px;
+	margin: 0 20px 0 0;
+	font-size: 19px;
 }
 
 ul#menu-social-menu-1 a.footer {
 	color: $textColor;
-	
 }
 
 ul#menu-social-menu-1 a:hover{
 	color: $lightlav;
 }
 
-div.developers-info p{
-	font-size: 14px;
+
+// Contact Info
+
+div.footer-contact-info {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
 }
 
-div.developers-info p a{
-	color: $textColor;
-	text-decoration: none;
-	font-family: $font__main;
-	font-size: 13px;
+div.footer-phone-numb, 
+div.footer-email, 
+div.footer-location {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: flex-end;
+	justify-content: flex-end;
+	font-size: 15px;
 }
 
-div.developers-info p a:hover{
-	color: $lightlav;
-}
 
 // Media Queries
 
 @media screen and (max-width: 767px) {
 
-	div.footer-nav-copyright {
+	div.footer-copyright-developers {
 		display: none;
 	}
 
@@ -107,7 +142,7 @@ div.developers-info p a:hover{
 		display: none;
 	}
 
-	section.inner-container {
+	div.inner-container {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -122,24 +157,6 @@ div.developers-info p a:hover{
 	ul#menu-social-menu-1 li.menu-item {
 		margin: 10px 15px 10px 0;
 	}
-
-	div.developers-info {
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-flow: column wrap;
-		-ms-flex-flow: column wrap;
-		flex-flow: column wrap;
-		align-items: center;
-	}
-
-	div.developers-info p {
-		margin: 4px 0 6px;
-	}
-
-	.mobile-only p {
-		font-size: 13px;
-	}	 
 }
 
 @media screen and (min-width: 768px) {
@@ -160,7 +177,7 @@ div.developers-info p a:hover{
 
 	ul#menu-footer-menu li.menu-item a {
 		color: $textColor;
-		font-size: 18px;
+		font-size: 16px;
 		font-family: $font_heading;
 		font-weight: 600;
 		text-transform: uppercase;
@@ -169,18 +186,5 @@ div.developers-info p a:hover{
 
 	ul#menu-footer-menu li.menu-item a:hover {
 		color: $lightlav;
-	}
-
-	div.developers-info {
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-	}
-
-	p.mobile-only {
-		display: none;
 	}
 }

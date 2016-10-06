@@ -15,26 +15,49 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
 		<div class="container">
-			<section class="inner-container">
+			<section class="footer-main-content">
+				<nav id="footer-navigation" class="footer-navigation">
+			    	<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
+			    </nav>
 
-				<div class="footer-nav-copyright">
-			    	<nav id="footer-navigation" class="footer-navigation">
-			        	<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
-			        </nav>
+				<div class="inner-container">
 
-			        <p class="footer-copyright">&copy; 2016 Kayefung Artistry. All rights reserved.</p>
-				</div><!-- end of .footer-nav-copyright -->
+					<div class="footer-copyright-developers">
+				        <p class="footer-copyright">&copy; 2016 Kayefung Artistry. All rights reserved.</p>
+				        <p class="developers-info">Developed by:&nbsp;&nbsp;<a href="#">Arlene Ata</a>,<a href="#"> Greg Voth</a>, and <a href="#">Sergey Karavaev</a></p>
+					</div><!-- end of .footer-copyright-developers -->
 
-				<div class="social-nav-info">
-					<nav id="footer-social-navigation" class="footer-social-navigation">
+					<nav id="footer-social-navigation" class="	footer-social-navigation">
 						<?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
-				    </nav>
-			    </div><!-- end of .social-nav-info -->
-			</section><!-- end of .footer-inner-container -->
+					</nav>
 
-			<!-- <div class="developers-info">
-				<p>Developed by:&nbsp;&nbsp;<a href="#">Arlene Ata</a>,<a href="#"> Greg Voth</a>, and <a href="#">Sergey Karavaev</a></p>
-			</div> --><!-- .developers-info -->
+					<div class="footer-contact-info">
+						<?php
+						    echo "<div class='footer-email'>";
+								if(get_field('email_footer', 18) ){
+									the_field('email_footer', 18);
+								}
+							echo "</div>";
+						?>
+
+						<?php
+						    echo "<div class='footer-phone-numb'>";
+								if(get_field('telephone_footer', 18) ){
+									the_field('telephone_footer', 18);
+								}
+							echo "</div>";
+						?>
+
+						<?php
+						    echo "<div class='footer-location'>";
+								if(get_field('location_footer', 18) ){
+									the_field('location_footer', 18);
+								}
+							echo "</div>";
+						?>
+				    </div><!-- end of .social-nav-info -->
+				</div><!-- end of .inner-container -->
+			</section><!-- end of .footer-main-content -->
 
 		</div><!-- end of .container -->
 	</footer><!-- #colophon -->
