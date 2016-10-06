@@ -47,15 +47,15 @@ section#search-2 {
 
 // Header Media Queries
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 318px) {
 
 	.logo {
-	    max-width: 78%;
-	    margin: 0 0 30px 5px; 
+	    max-width: 72%;
+	    margin: 0 auto 30px; 
 	}
 
 	.searchbar {
-		margin: 30px 40px 10px ;
+		margin: 30px auto 20px;
 	}
 
 	input.search-field {
@@ -69,72 +69,58 @@ section#search-2 {
 	}
 }
 
-@media screen and (min-width: 420px) {
-
-	.logo {
-	    max-width: 72%;
-	}
-}
-
-@media screen and (min-width: 500px) {
-
-	.logo {
-	    max-width: 68%;
-	    margin: 10px auto 30px; 
-	}
-
-	.searchbar {
-		margin: 40px 50px 15px 40px;
-	}
-
-	input.search-field {
-	    width: 135px;
-	    height: 30px;
-	}
-
-	input.search-submit {
-	    width: 75px;
-	    height: 30px;
-	}
-}
-
-@media screen and (min-width: 570px) {
+@media screen and (min-width: 400px) {
 
 	.logo {
 	    max-width: 65%;
 	}
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 450px) {
 
 	.logo {
-	    max-width: 62%; 
+	    max-width: 60%;
 	}
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 500px) {
 
 	.logo {
-	    max-width: 60%; 
+	    max-width: 55%;
+	    margin: 5px auto 30px; 
+	}
+
+	.searchbar {
+		margin: 30px auto 25px;
+	}
+
+	input.search-field {
+	    width: 135px;
+	    height: 29px;
+	}
+
+	input.search-submit {
+	    width: 75px;
+	    height: 29px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+
+	.logo {
+	    max-width: 52%; 
 	}
 }
 
 @media screen and (min-width: 768px) {
 
 	.logo {
-	    max-width: 52%; 
-	}
-
-	.searchbar {
-		margin: 40px auto 20px;
+	    max-width: 50%;
+	    margin: 0 auto 20px;  
 	}
 }
 
 @media screen and (min-width: 946px) {
-
-	.searchbar {
-		margin: 30px auto 20px;
-	}
 
 	input.search-field {
 		width: 90px;
@@ -151,7 +137,6 @@ section#search-2 {
 
 	.logo {
 		flex: 1;
-
 	}
 	.main-naviation {
 		flex: 1;
@@ -163,6 +148,7 @@ section#search-2 {
 }
 
 @media screen and (max-width: 945px) {
+
 	header .container {
 		flex-direction: column;
 	}

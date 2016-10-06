@@ -88,14 +88,15 @@ span.icon-title {
 .menu-toggle {
 	position: fixed;
 	z-index: 999;
-	bottom: 1.5em;
+	bottom: 1em;
 	left: 1em;
 	font-family: $font_heading;
-	font-size: 17px;
+	font-size: 18px;
 	text-transform: uppercase;
-	background-color: #666;
-	color: $white;
-	border: solid 1.5px #bcbec0;
+	// background-color: $theDarkestlav;
+	background-color: $alertsLinks;
+	color: #fff;
+	border: none; 
 	transition: all ease-out 400ms;
 }
 
@@ -258,25 +259,34 @@ span.icon-title {
 	}
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 318px) {
 
 	ul#menu-social-menu {
-		margin: -14px 45px 15px 20px;
+		margin: -16px auto 0;
+		padding-left: 25px;
 	}
 
 	ul#menu-social-menu li.menu-item a {
-		font-size: 21px;
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 370px) {
+
+	ul#menu-social-menu li.menu-item {
+		margin: 0 22px 0 0;
 	}
 }
 
 @media screen and (min-width: 500px) {
 
 	ul#menu-social-menu {
-		margin: -10px 60px 15px 20px;
+		margin: -20px auto 15px;
+		padding-left: 20px;
 	}
 
 	ul#menu-social-menu li.menu-item a {
-		font-size: 23px;
+		font-size: 22px;
 	}
 }
 
@@ -310,7 +320,7 @@ span.icon-title {
 	}
 
 	ul#menu-social-menu li.menu-item {
-		margin: 0 25px 0 0;
+		margin: 0 27px 0 0;
 	}
 
 	ul#menu-social-menu li.menu-item a {
@@ -319,6 +329,14 @@ span.icon-title {
 }
 
 @media screen and (min-width: 946px) {
+
+	nav.main-navigation {
+		margin: 0;
+	}
+
+	section.inner-head-container {
+		margin: 0 20px;
+	}
 
 	ul#primary-menu li.menu-item {
 		margin: 0 18px 0 0;
@@ -353,6 +371,10 @@ span.icon-title {
 }
 
 @media screen and (min-width: 1020px) {
+
+	section.inner-head-container {
+		margin: 0 30px;
+	}
 
 	ul#primary-menu li.menu-item {
 		margin: 0 20px 0 2px;
