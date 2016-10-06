@@ -25,6 +25,14 @@ ul#menu-blog-menu li.menu-item a {
 	text-decoration: none;
 }
 
+ul#menu-blog-menu li.menu-item a:hover,
+ul#menu-blog-menu li.menu-item a:focus,
+ul#menu-blog-menu li.menu-item a:active {
+	color: #1f2b39;
+    border-bottom: 3px #b5a4d1 solid;
+    text-decoration: none;
+}
+
 ///// Main Blog Layout
 
 .blog-main-page article {
