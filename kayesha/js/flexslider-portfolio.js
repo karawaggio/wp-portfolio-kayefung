@@ -7,7 +7,7 @@ jQuery(document).ready(function($){ 	//no conflict wrapper
     animationLoop: false,
     slideshow: false,
     itemWidth: 210,
-    itemMargin: -10,
+    itemMargin: -70,
     asNavFor: '#slider'
   });
  
