@@ -7,6 +7,14 @@ body.page-id-136 h1.entry-title {
 	display: flex;
     justify-content: center;
 }
+body.page-id-136 .entry-content p a {
+	color: #a864a8;
+}
+
+body.page-id-136 div#content.site-content {
+	display:flex;
+}
+
 
 div.rmc-col-holder {
 	max-width: 750px;
@@ -19,7 +27,8 @@ div.rmc-col-holder {
 }
 
 body.page-id-136 .cta-book a {
-
+	color: #fff;
+	text-decoration: none;
 	background-color: $darklav;
 	padding: 0.75em;
 	box-shadow: 0px 1px 4px black;
