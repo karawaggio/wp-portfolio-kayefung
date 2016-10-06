@@ -15,7 +15,7 @@ get_header(); ?>
 		
 
 			<header class="page-header">
-				<h1 class="page-title">My Portfolio</h1>
+				<h1 class="page-title">Portfolio</h1>
 			</header><!-- .page-header -->
 
 <div class="wrapper-slider">
