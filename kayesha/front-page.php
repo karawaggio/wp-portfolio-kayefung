@@ -53,7 +53,9 @@ get_header(); ?>
 						echo "</div>";
 						echo "<div class='about-link'>";
 						if(get_field('about_link') ){
-							echo "<h3><a href='../about'/>";
+							echo "<h3><a href='";
+							echo get_page_link(27); 
+							echo "'/>";
 							the_field('about_link');
 							echo "</a></h3>";
 						}
@@ -88,7 +90,9 @@ get_header(); ?>
 		               echo "</div>";
 		               echo "<div class='service-link'>";
 						if(get_field('service_link') ){
-							echo "<h3><a href='../services'/>";
+							echo "<h3><a href='";
+							echo get_page_link(136);
+							echo "'/>";
 							the_field('service_link');
 							echo "</a></h3>";
 						}
