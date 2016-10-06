@@ -26,14 +26,18 @@
 }
 
 .specialmessage {
-	background-color: $theDarkestlav;
-	border: 5px solid fuchsia;
-	min-height: 50px;
+	background-color: $alertsLinks; //$theDarkestlav 
+	//border: 5px solid fuchsia;
+	min-height: 30px;
 	width: 100%;
 	text-align: center;
-	margin: auto;
+	margin: 0 auto;
 	//font-weight: bold;
 	color: white;
+}
+
+.specialmessage p {
+	margin: auto;
 }
 
 .contactinfo {
@@ -54,9 +58,13 @@
 	padding: 10px;
 }
 
-.answer p{
+.answer p {
 	padding: 10px;
 	margin: 0;
+}
+
+.faq {
+	margin: 0 100px;
 }
 
 .faq ul {
@@ -103,3 +111,18 @@
 	}
 }
 
+@media screen and (max-width: 679px) {
+
+	.faq {
+		margin: 0 50px;
+	}
+
+}
+
+@media screen and (max-width: 475px) {
+
+	.faq {
+		margin: 0;
+	}
+
+}
