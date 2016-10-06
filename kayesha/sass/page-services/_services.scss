@@ -60,3 +60,21 @@ body.page-id-136 .cta-book {
 .page-id-136 .content-area {
 	margin: auto;
 }
+
+@media screen and (max-width: 545px) {
+	.post-136 {
+		margin: 0.2em;
+	}	
+}
+
+@media screen and (max-width: 422px) {
+	.rmc-holder {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 339px) {
+	.rmc-col-holder .rmc-mask {
+		margin: 0 -28px;
+	}
+}
