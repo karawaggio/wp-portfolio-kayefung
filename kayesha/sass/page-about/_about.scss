@@ -1,9 +1,21 @@
 // About Page Styling
 
 .post-9 {
-  width: 70%;
+  width: 55%;
   float: right;
-  padding-left: 50px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.post-9 h1 {
+	text-align: center;
+	margin: 0;
+}
+
+.post-9 p {
+	padding: 10px;
+	margin: auto;
+	width: 80%;
 }
 
 .page-id-9 #content {
@@ -13,12 +25,19 @@
 .profilepic {
   width: 30%;
   display: inline-block;
-  margin-top: 50px;
+  margin: 100px 50px 50px 50px;
 }
 
 .aboutpagelinks {
-	width: 70%;
+	width: 55%;
 	float: right;
+	display: inline-block;
+	clear: both;
+
+}
+
+.aboutpagelinks a {
+	color: $alertsLinks;
 }
 
 .page-id-9 .portfoliolink {
@@ -33,12 +52,33 @@
 	text-align: center;
 }
 
-@media screen and (max-width: 945px) {
+
+@media screen and (max-width: 767px) {
 
 	.profilepic {
 		width: 100%;
+		margin: 0 auto;
 		text-align: center;
-		margin-top: 0;
+	}
+
+	.profilepic img {
+		width: 60%;
+	}
+
+	.post-9 {
+		width: 100%;
+	}
+
+	.aboutpagelinks {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 566px) {
+
+	.profilepic {
+		width: 100%;
+		margin: 0;
 	}
 
 	.post-9 {
