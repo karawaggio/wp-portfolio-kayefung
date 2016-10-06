@@ -1,7 +1,7 @@
 // Blog Styling
 
 
-// Blog Sub Nav
+///// Blog Sub Nav
 
 ul#menu-blog-menu {
 	display: -webkit-flex;
@@ -25,21 +25,12 @@ ul#menu-blog-menu li.menu-item a {
 	text-decoration: none;
 }
 
-ul#menu-blog-menu li.menu-item a:hover,
-ul#menu-blog-menu li.menu-item a:focus,
-ul#menu-blog-menu li.menu-item a:active {
-	color: #1f2b39;
-    border-bottom: 3px #b5a4d1 solid;
-    text-decoration: none;
-}
-
-// Main Blog Layout
+///// Main Blog Layout
 
 .blog-main-page article {
 	width: 40%;
 	float: right;
 	text-align: center;
-	//background-color: $blogPostsColor;
 	margin: 50px;
 }
 
@@ -70,7 +61,6 @@ ul#menu-blog-menu li.menu-item a:active {
 	display: none;
 }
 
-
 .blog .entry-footer,
 .blog .entry-header,
 .blog .entry-content p  {
@@ -79,17 +69,7 @@ ul#menu-blog-menu li.menu-item a:active {
 	text-align: left;
 }
 
-.blog article:first-child .entry-footer,
-.blog article:first-child .entry-header,
-.blog article:first-child .entry-content p  {
-	width: 60%;
-	margin: auto;
-	text-align: left;
-}
-
-
-
-// Blog Category Layout
+///// Blog Category Layout
 
 .archive article {
 	width: 40%;
@@ -99,48 +79,15 @@ ul#menu-blog-menu li.menu-item a:active {
 	margin: 50px;
 }
 
-// .archive article:first-child {
-// 	text-align: center;
-// 	float: none;
-// 	width: 100%;
-// }
-
 .archive article:nth-child(even) {
 	text-align: center;
 	width: 40%;
 	float: left;
 }
 
-.archive img {
+.category article img {
 	width: 80%;
 }
-
-.archive .entry-footer .comments-link, 
-.archive .posted-on,
-.archive.group-blog .byline  {
-	display: none;
-}
-
-
-.archive .entry-footer,
-.archive .entry-header,
-.archive .entry-content p  {
-	width: 80%;
-	margin: auto;
-	text-align: left;
-}
-
-
-
-.cat-links a {
-	color: $darklav;
-	font-weight: bold;
-}
-
-.cat-links a:hover {
-	color: $lightlav;
-}
-
 
 // Single-Post Blog Layout
 
@@ -165,9 +112,45 @@ ul#menu-blog-menu li.menu-item a:active {
 .comment-list li article {
 	border: 1px solid $lightlav;
 }
-// .single .nav-links {
-// 	display: none;
-// }
+
+/////Category and Tag Links
+
+.archive .entry-footer .comments-link, 
+.archive .posted-on,
+.archive.group-blog .byline  {
+	display: none;
+}
+
+.archive .entry-footer,
+.archive .entry-header,
+.archive .entry-content p  {
+	width: 80%;
+	margin: auto;
+	text-align: left;
+}
+
+.cat-links a {
+	color: $alertsLinks;
+	font-weight: bold;
+}
+
+.tags-links a {
+	color: $alertsLinks;
+}
+
+.tags-links {
+	float: right;
+	width: 50%;
+}
+
+.cat-links a:hover, .tags-links a:hover {
+	color: $lightlav;
+}
+
+.blog article:first-child .tags-links,
+.single article .tags-links {
+	width: auto;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -177,11 +160,3 @@ ul#menu-blog-menu li.menu-item a:active {
 		justify-content: center;
 	}
 }
-
-// Blog Layout
-
-// article#post-164 {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// }
