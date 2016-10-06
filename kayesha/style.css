@@ -564,6 +564,13 @@ a {
   display: none;
   margin-left: 0.8em; }
 
+.main-navigation ul li a:hover,
+.main-navigation ul li a:focus,
+.main-navigation ul li a:active {
+  color: #1f2b39;
+  border-bottom: 3px #b5a4d1 solid;
+  text-decoration: none; }
+
 .main-navigation a {
   text-decoration: none;
   line-height: 1.6;
@@ -1330,9 +1337,19 @@ section.about h2,
 # About Page
 --------------------------------------------------------------*/
 .post-9 {
-  width: 70%;
+  width: 55%;
   float: right;
-  padding-left: 50px; }
+  display: inline-block;
+  padding: 10px; }
+
+.post-9 h1 {
+  text-align: center;
+  margin: 0; }
+
+.post-9 p {
+  padding: 10px;
+  margin: auto;
+  width: 80%; }
 
 .page-id-9 #content {
   min-height: 500px; }
@@ -1340,11 +1357,16 @@ section.about h2,
 .profilepic {
   width: 30%;
   display: inline-block;
-  margin-top: 50px; }
+  margin: 100px 50px 50px 50px; }
 
 .aboutpagelinks {
-  width: 70%;
-  float: right; }
+  width: 55%;
+  float: right;
+  display: inline-block;
+  clear: both; }
+
+.aboutpagelinks a {
+  color: #a864a8; }
 
 .page-id-9 .portfoliolink {
   width: 50%;
@@ -1356,11 +1378,24 @@ section.about h2,
   float: right;
   text-align: center; }
 
-@media screen and (max-width: 945px) {
+@media screen and (max-width: 767px) {
   .profilepic {
     width: 100%;
-    text-align: center;
-    margin-top: 0; }
+    margin: 0 auto;
+    text-align: center; }
+
+  .profilepic img {
+    width: 60%; }
+
+  .post-9 {
+    width: 100%; }
+
+  .aboutpagelinks {
+    width: 100%; } }
+@media screen and (max-width: 566px) {
+  .profilepic {
+    width: 100%;
+    margin: 0; }
 
   .post-9 {
     width: 100%; }
@@ -1387,6 +1422,13 @@ ul#menu-blog-menu li.menu-item a {
   font-size: 17px;
   font-family: "Dosis", Arial, sans-serif;
   text-transform: uppercase;
+  text-decoration: none; }
+
+ul#menu-blog-menu li.menu-item a:hover,
+ul#menu-blog-menu li.menu-item a:focus,
+ul#menu-blog-menu li.menu-item a:active {
+  color: #1f2b39;
+  border-bottom: 3px #b5a4d1 solid;
   text-decoration: none; }
 
 .blog-main-page article {
@@ -1578,6 +1620,12 @@ body.page-id-136 h1.entry-title {
   display: flex;
   justify-content: center; }
 
+body.page-id-136 .entry-content p a {
+  color: #a864a8; }
+
+body.page-id-136 div#content.site-content {
+  display: flex; }
+
 div.rmc-col-holder {
   max-width: 750px;
   margin: auto; }
@@ -1587,6 +1635,8 @@ div.rmc-col-holder {
   margin: 2em; }
 
 body.page-id-136 .cta-book a {
+  color: #fff;
+  text-decoration: none;
   background-color: #b5a4d1;
   padding: 0.75em;
   box-shadow: 0px 1px 4px black; }
