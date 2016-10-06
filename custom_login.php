@@ -45,12 +45,15 @@ function kayesha_login_logo() { ?>
         }
 
         
-            
-
-
-
     </style>
 <?php }
 
 add_action( 'login_enqueue_scripts', 'kayesha_login_logo' );
+
+//change login logo url
+function kayesha_login_logo_url() {
+    return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'kayesha_login_logo_url' );
+
 ?>
