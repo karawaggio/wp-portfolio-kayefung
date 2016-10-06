@@ -1,17 +1,27 @@
 
 body.page-id-136 .services-page-image {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 body.page-id-136 h1.entry-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 body.page-id-136 .entry-content p a {
 	color: #a864a8;
 }
 
 body.page-id-136 div#content.site-content {
+	display:-webkit-box;
+	display:-ms-flexbox;
 	display:flex;
 }
 
@@ -35,8 +45,12 @@ body.page-id-136 .cta-book a {
 }
 
 body.page-id-136 .cta-book {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .rmc-holder {

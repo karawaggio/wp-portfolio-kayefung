@@ -425,8 +425,11 @@ span.icon-title {
 
 	.main-navigation ul,
 	.main-navigation.toggled ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 		margin: 0;
 		padding: .5em 0;
 	}
