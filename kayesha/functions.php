@@ -346,3 +346,17 @@ function kayesha_excerpt_length( $length ) {
         return 0;
 }
 add_filter( 'excerpt_length', 'kayesha_excerpt_length', 999 );
+
+//Remove 'Category' from Category Page Title
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+    if( is_category() ) {
+
+        $title = single_cat_title( '', false );
+
+    }
+
+    return $title;
+
+});
