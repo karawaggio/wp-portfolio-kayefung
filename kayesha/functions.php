@@ -193,6 +193,7 @@ function kayesha_register_custom_post_types() {
             'labels'             => $labels,
             'public'             => true,
             'publicly_queryable' => true,
+             'exclude_from_search' => false,
             'show_ui'            => true,
             'show_in_menu'       => true,
             'show_in_nav_menus'  => true,
@@ -230,6 +231,7 @@ function kayesha_register_custom_post_types() {
             'labels'             => $labels,
             'public'             => true,
             'publicly_queryable' => true,
+             'exclude_from_search' => false,
             'show_ui'            => true,
             'show_in_menu'       => true,
             'show_in_nav_menus'  => true,
@@ -267,6 +269,7 @@ function kayesha_register_custom_post_types() {
             'labels'             => $labels,
             'public'             => true,
             'publicly_queryable' => true,
+             'exclude_from_search' => false,
             'show_ui'            => true,
             'show_in_menu'       => true,
             'show_in_nav_menus'  => true,
@@ -314,6 +317,9 @@ function kayesha_register_custom_post_types() {
         $args = array(
             'hierarchical'      => true,
             'labels'            => $labels,
+            'public'             => true,
+            'publicly_queryable' => true,
+             'exclude_from_search' => false,
             'show_ui'           => true,
             'show_in_menu'      => true,
             'show_in_nav_menu'  => true,
@@ -360,3 +366,68 @@ add_filter( 'get_the_archive_title', function ( $title ) {
     return $title;
 
 });
+
+// function search_filter($query) {
+//   if ( !is_admin() && $query->is_main_query() ) {
+//     if ($query->is_search) {
+//       $query->set('post_type', array( 'post', 'testimonial', 'faq', 'portfolio' ) );
+//     }
+//   }
+// }
+
+// add_action('pre_get_posts','search_filter');
+
+function rc_add_cpts_to_search($query) {
+
+    // Check to verify it's search page
+    if( is_search() ) {
+        // Get post types
+        $post_types = get_post_types(array('public' => true, 'exclude_from_search' => false), 'objects');
+        $searchable_types = array();
+        // Add available post types
+        if( $post_types ) {
+            foreach( $post_types as $type) {
+                $searchable_types[] = $type->name;
+            }
+        }
+        $query->set( 'post_type', $searchable_types );
+    }
+    return $query;
+}
+add_action( 'pre_get_posts', 'rc_add_cpts_to_search' );
+
+
+if( !function_exists('base_extended_editor_mce_buttons') ){
+    function base_extended_editor_mce_buttons($buttons) {
+        // The settings are returned in this array. Customize to suite your needs.
+        return array(
+            'bold', 'italic','bullist', 'numlist', 'link', 'unlink', 'blockquote', 'outdent', 'indent', 'charmap', 'removeformat', 'spellchecker', 'fullscreen', 'wp_help'
+        );
+        /* WordPress Default
+        return array(
+            'bold', 'italic', 'strikethrough', 'separator', 
+            'bullist', 'numlist', 'blockquote', 'separator', 
+            'justifyleft', 'justifycenter', 'justifyright', 'separator', 
+            'link', 'unlink', 'wp_more', 'separator', 
+            'spellchecker', 'fullscreen', 'wp_adv'
+        ); */
+    }
+    add_filter("mce_buttons", "base_extended_editor_mce_buttons", 0);
+}
+
+// TinyMCE: Second line toolbar customizations
+if( !function_exists('base_extended_editor_mce_buttons_2') ){
+    function base_extended_editor_mce_buttons_2($buttons) {
+        // The settings are returned in this array. Customize to suite your needs. An empty array is used here because I remove the second row of icons.
+        return array('underline', 'justifyfull','pastetext', 'pasteword', 'removeformat','undo', 'redo', 'wp_help');
+        /* WordPress Default
+        return array(
+            'formatselect', 'underline', 'justifyfull', 'forecolor', 'separator', 
+            'pastetext', 'pasteword', 'removeformat', 'separator', 
+            'media', 'charmap', 'separator', 
+            'outdent', 'indent', 'separator', 
+            'undo', 'redo', 'wp_help'
+        ); */
+    }
+    add_filter("mce_buttons_2", "base_extended_editor_mce_buttons_2", 0);
+}
