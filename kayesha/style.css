@@ -815,6 +815,9 @@ span.icon-title {
 @media screen and (min-width: 1120px) {
   ul#primary-menu li.menu-item {
     margin: 0 25px 0 5px; } }
+@media screen and (min-width: 1400px) {
+  section.inner-head-container {
+    margin: 0 auto; } }
 @media screen and (min-width: 770px) {
   /* Position the menu in the header */
   .main-navigation,
