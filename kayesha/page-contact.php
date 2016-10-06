@@ -49,17 +49,21 @@ get_header(); ?>
             	if(get_field('phone_number')){
             	echo "<div class='phone'>";
             	echo "<h3> Phone </h3>";
-            	echo "<p>";
+            	echo "<a href='tel:";
                 the_field('phone_number');
-                echo "</p>";
+                echo "'>";
+                the_field('phone_number');
+                echo "</a>";
                 echo "</div>";	
             	}
             	if(get_field('email')){
             	echo "<div class='email'>";
             	echo "<h3> Email </h3>";
-            	echo "<p>";
+            	echo "<a href='mailto:";
                 the_field('email');
-                echo "</p>";
+                echo "'>";
+                the_field('email');
+                echo "</a>";
                 echo "</div>";
                 	
             	}

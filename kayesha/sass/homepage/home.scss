@@ -28,6 +28,12 @@ section.home-page {
 	margin: auto;
 	max-width: 1100px;
 }
+
+.about-link a,
+.service-link a{
+	color: $alertsLinks;
+}
+
 section.services,
 section.about {
 	width: calc(75%/2);
