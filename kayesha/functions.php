@@ -67,10 +67,10 @@ function kayesha_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'kayesha_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
+	// add_theme_support( 'custom-background', apply_filters( 'kayesha_custom_background_args', array(
+	// 	'default-color' => 'ffffff',
+	// 	'default-image' => '',
+	// ) ) );
 }
 endif;
 add_action( 'after_setup_theme', 'kayesha_setup' );
@@ -125,7 +125,7 @@ function kayesha_scripts() {
 	wp_enqueue_script( 'kayesha-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 
-    if( is_front_page() || is_page('portfolio') ) {
+    if( is_front_page() ) {
         wp_enqueue_style('kayesha-flexslider', get_template_directory_uri() . '/css/flexslider.css');
         wp_enqueue_script('kayesha-flexscript', get_template_directory_uri(). '/js/jquery.flexslider-min.js', array('jquery'), '', false );
         wp_enqueue_script('kayesha-flexsettings', get_template_directory_uri(). '/js/flexslider-settings.js', array('kayesha-flexscript'), '20160929', false);
@@ -147,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'kayesha_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
