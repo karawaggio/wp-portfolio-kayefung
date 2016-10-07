@@ -4,7 +4,7 @@ header.site-header {
 	border-bottom: 7px solid $darklav; 
 }
 
-hheader .container {
+header .container {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -74,6 +74,18 @@ section#search-2 {
 	margin: 0;
 	padding: 0 10px 20px 0;
 }
+
+.main-navigation li.current_page_item,
+.main-navigation li.current-menu-item,
+.main-navigation li.current_page_ancestor,
+.main-navigation li.current-menu-ancestor,
+ul#menu-blog-menu li.current_page_item,
+ul#menu-blog-menu li.current-menu-item,
+ul#menu-blog-menu li.current_page_ancestor,
+ul#menu-blog-menu li.current-menu-ancestor {
+	 border-bottom: 3px #b5a4d1 solid;
+}
+
 
 // Header Media Queries
 
