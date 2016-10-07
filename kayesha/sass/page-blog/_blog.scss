@@ -93,7 +93,7 @@ ul#menu-blog-menu li.menu-item a:active {
 	text-align: center;
 	background-color: $blogPostsColor;
 	margin: 50px;
-	padding-bottom: 10px;
+	padding: 25px 0;
 }
 
 .archive article:nth-child(even) {
@@ -176,7 +176,18 @@ ul#menu-blog-menu li.menu-item a:active {
 .single article .tags-links {
 	width: auto;
 }
+.blog a,
+.category a,
+.single-post a {
+	text-decoration: none;
+}
 
+.read-more {
+	color: white;
+	background-color: $darklav;
+    padding: 0.25em;
+    box-shadow: 1px 1px 4px darkgray;
+}
 
 @media screen and (max-width: 1016px) {
 	.category .site-content {
