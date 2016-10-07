@@ -16,6 +16,7 @@
 	padding: 10px;
 	margin: auto;
 	width: 80%;
+	line-height: 2.5;
 }
 
 .page-id-9 #content {
@@ -23,9 +24,9 @@
 }
 
 .profilepic {
-  width: 30%;
+  width: 40%;
   display: inline-block;
-  margin: 100px 50px 50px 50px;
+  margin: 100px 0 50px 50px;
 }
 
 .aboutpagelinks {
@@ -52,6 +53,26 @@
 	text-align: center;
 }
 
+ @media screen and (max-width: 1077px) {
+
+	.aboutpagelinks {
+		width: 40%;
+		float: left;
+		clear: none;
+		margin-left: 50px;
+	}
+}
+
+@media screen and (max-width: 1016px) {
+	.post-9 {
+		width: 50%
+	}
+
+	.post-9 p {
+		width: 100%;
+	}	
+}
+
 
 @media screen and (max-width: 767px) {
 
@@ -62,7 +83,7 @@
 	}
 
 	.profilepic img {
-		width: 60%;
+		width: 80%;
 	}
 
 	.post-9 {
@@ -71,8 +92,10 @@
 
 	.aboutpagelinks {
 		width: 100%;
+		margin-left: 0;
 	}
 }
+
 
 @media screen and (max-width: 566px) {
 
