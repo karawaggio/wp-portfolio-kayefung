@@ -353,8 +353,8 @@ function kayesha_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'kayesha_excerpt_length', 999 );
 
-//Remove 'Category' from Category Page Title
 
+//Remove 'Category' from Category Page Title
 add_filter( 'get_the_archive_title', function ( $title ) {
 
     if( is_category() ) {
@@ -396,7 +396,7 @@ function rc_add_cpts_to_search($query) {
 }
 add_action( 'pre_get_posts', 'rc_add_cpts_to_search' );
 
-
+//tinyMCE base line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons') ){
     function base_extended_editor_mce_buttons($buttons) {
         // The settings are returned in this array. Customize to suite your needs.
@@ -431,3 +431,69 @@ if( !function_exists('base_extended_editor_mce_buttons_2') ){
     }
     add_filter("mce_buttons_2", "base_extended_editor_mce_buttons_2", 0);
 }
+//remove customize submenu from the admin sidebar
+// function as_remove_menus () {
+//       // remove_menu_page('upload.php'); //hide Media
+//        remove_menu_page('link-manager.php'); //hide links
+//       // remove_submenu_page( 'edit.php', 'edit-tags.php' ); //hide tags
+//        global $submenu;
+//         // Appearance Menu
+//         unset($submenu['themes.php'][6]); // Customize
+// }
+// add_action('admin_menu', 'as_remove_menus');
+
+//remove customize 
+function remove_customize() {
+    $customize_url_arr = array();
+    $customize_url_arr[] = 'customize.php'; // 3.x
+    $customize_url = add_query_arg( 'return', urlencode( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'customize.php' );
+    $customize_url_arr[] = $customize_url; // 4.0 & 4.1
+    if ( current_theme_supports( 'custom-header' ) && current_user_can( 'customize') ) {
+        $customize_url_arr[] = add_query_arg( 'autofocus[control]', 'header_image', $customize_url ); // 4.1
+        $customize_url_arr[] = 'custom-header'; // 4.0
+    }
+    if ( current_theme_supports( 'custom-background' ) && current_user_can( 'customize') ) {
+        $customize_url_arr[] = add_query_arg( 'autofocus[control]', 'background_image', $customize_url ); // 4.1
+        $customize_url_arr[] = 'custom-background'; // 4.0
+    }
+    foreach ( $customize_url_arr as $customize_url ) {
+        remove_submenu_page( 'themes.php', $customize_url );
+    }
+}
+add_action( 'admin_menu', 'remove_customize', 999 );
+
+
+//remove all default dashboard widgets
+function kayesha_remove_dashboard_widgets() {
+remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );// Incoming Links
+remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );// Plugins
+remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );// WordPress blog
+remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );// WordPress News
+remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );// Quick Press
+remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );// Recent Drafts
+remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );// Comments
+remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );// Right Now
+remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//Activity
+};
+add_action( 'wp_dashboard_setup', 'kayesha_remove_dashboard_widgets' );
+remove_action( 'welcome_panel', 'wp_welcome_panel' );
+
+//add custom widgets to dash board - welcome and tutorials
+function kayesha_add_dashboard_widgets() {
+wp_add_dashboard_widget( 'kayesha_dashboard_welcome', 'Welcome', 'kayesha_add_welcome_widget'
+);
+wp_add_dashboard_widget( 'kayesha_dashboard_tutorials', 'Tutorials', 'kayesha_add_tutorials_widget' );
+}
+function kayesha_add_welcome_widget(){
+    echo '<h1>Welcome Kayesha </h1>';
+    echo '<p> Here is the custom website for KayeFung MakeUp Artistry</p>';
+}
+function kayesha_add_tutorials_widget() {
+    echo '<h1>Tutuorials </h1>';
+    echo 'Here is how to videos</p>';    
+    echo '<ul>';
+    echo '<li>How to post on the blog</li>';
+    echo '<li>How to add a photo to the portfolio</li>'; 
+    echo '<li>How to add/change/delete a service</li>';  
+}
+add_action( 'wp_dashboard_setup', 'kayesha_add_dashboard_widgets' );
