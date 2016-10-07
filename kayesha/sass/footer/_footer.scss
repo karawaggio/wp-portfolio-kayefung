@@ -9,37 +9,7 @@ footer.site-footer {
 
 footer div.container {
 	margin: 0 auto;
-	padding: 30px 30px 45px;
 }
-
-footer div.container {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-flow: column wrap;
-	-ms-flex-flow: column wrap;
-	flex-flow: column wrap;
-}
-
-section.footer-main-content {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-flow: column wrap;
-	-ms-flex-flow: column wrap;
-	flex-flow: column wrap;
-}
-
-div.inner-container {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: space-between;
-	-ms-flex-pack: space-between;
-	justify-content: space-between;
-	margin-top: 25px;
-}
-
 
 //Footer Copyright and Developers Info
 
@@ -47,9 +17,6 @@ div.footer-copyright-developers {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-justify-content: flex-start;
-	-ms-flex-pack: flex-start;
-	justify-content: flex-start;
 	-webkit-flex-flow: column wrap;
 	-ms-flex-flow: column wrap;
 	flex-flow: column wrap;
@@ -57,15 +24,13 @@ div.footer-copyright-developers {
 
 p.footer-copyright {
 	margin: 0;
-	font-size: 15px;
 }
 
 p.developers-info {
-	font-size: 12px;
 	margin: 0;
 }
 
-p.developers-info a{
+p.developers-info a {
 	color: $textColor;
 	text-decoration: none;
 	font-family: $font__main;
@@ -79,6 +44,12 @@ p.developers-info a:hover{
 
 // Social Navigation
 
+nav#footer-social-navigation {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
 ul#menu-social-menu-1 {
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -87,14 +58,7 @@ ul#menu-social-menu-1 {
 
 ul#menu-social-menu-1 {
 	list-style-type: none;
-	padding-left: 0;
-	margin-top: 25px;
 	line-height: 1;
-}
-
-ul#menu-social-menu-1 li.menu-item {
-	margin: 0 20px 0 0;
-	font-size: 19px;
 }
 
 ul#menu-social-menu-1 a.footer {
@@ -117,51 +81,266 @@ div.footer-contact-info {
 	flex-flow: column wrap;
 }
 
-div.footer-phone-numb, 
-div.footer-email, 
-div.footer-location {
-	display: -webkit-flex;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-justify-content: flex-end;
-	-ms-flex-pack: flex-end;
-	justify-content: flex-end;
-	font-size: 15px;
-}
 
+// Footer Media Queries
 
-// Media Queries
+@media screen and (min-width: 318px) {
 
-@media screen and (max-width: 767px) {
-
-	div.footer-copyright-developers {
-		display: none;
+	footer div.container {
+		padding-bottom: 50px;
 	}
 
-	ul#menu-footer-menu {
-		display: none;
+	section.footer-main-content {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
 	}
 
 	div.inner-container {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-		-webkit-flex-flow: wrap;
-		-ms-flex-flow: wrap;
-		flex-flow: wrap;
+		margin-top: 25px;
+	}
+
+	ul#menu-footer-menu {
+		display: none;
+	}
+
+	p.footer-copyright {
+		font-size: 14px;
+	}
+
+	p.developers-info {
+		font-size: 10px;
+	}
+
+	p.developers-info a {
+		font-size: 10px;
+	}
+
+	ul#menu-social-menu-1 {
+		padding-left: 17px;
 	}
 
 	ul#menu-social-menu-1 li.menu-item {
-		margin: 10px 15px 10px 0;
+		font-size: 22px;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		font-size: 17px;
 	}
 }
 
+
+@media screen and (min-width: 318px) and (max-width: 699px) {
+
+	div.inner-container {
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+		align-items: center;
+	}
+
+	div.footer-copyright-developers {
+		width: 60%;
+	}
+
+	p.footer-copyright {
+		text-align: center;
+		margin-bottom: 18px;
+	}
+
+	p.developers-info {
+		text-align: center;
+		margin-top: 4px;
+	}
+
+	div.footer-contact-info {
+		order: 0;
+	}
+
+	nav#footer-social-navigation {
+		order: 1;
+	}
+
+	div.footer-copyright-developers {
+		order: 2;
+	}
+
+	ul#menu-social-menu-1 {
+		margin: 0 auto;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin: 30px 15px 35px 0;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		margin: 6px auto;
+	}
+
+	div.footer-contact-info {
+		margin: 0 auto;
+	}
+}
+
+
+@media screen and (min-width: 410px) and (max-width: 699px) {
+
+	div.inner-container {
+		margin-top: 30px;
+	}
+
+	div.footer-copyright-developers {
+		width: 65%;
+	}
+
+	ul#menu-social-menu-1 {
+		padding-left: 19px;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin-right: 20px;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+
+	footer div.container {
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (min-width: 700px) {
+
+	footer div.container {
+		padding: 10px 25px 65px;
+	}
+
+	footer div.container {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+	}
+
+	section.footer-main-content {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: column wrap;
+		-ms-flex-flow: column wrap;
+		flex-flow: column wrap;
+	}
+
+	div.inner-container {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: space-between;
+		justify-content: space-between;
+		margin-top: 20px;
+	}
+
+	p.footer-copyright {
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+
+	p.developers-info {
+		font-size: 12px;
+		margin: 4px 0 4px;
+	}
+
+	p.developers-info a {
+		font-size: 12px;
+	}
+
+	div.footer-copyright-developers {
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: flex-start;
+		justify-content: flex-start;
+	}
+
+	ul#menu-social-menu-1 {
+		padding-left: 50px;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin: 0 20px 0 0;
+		font-size: 20px;
+	}
+
+	div.footer-email,
+	div.footer-phone-numb,  
+	div.footer-location {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: flex-end;
+		justify-content: flex-end;
+		font-size: 16px;
+	}
+
+	div.footer-email {
+		margin-bottom: 5px;
+	}
+ 
+	div.footer-phone-numb,	 
+	div.footer-location {
+		margin: 5px 0;
+	}
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 850px) {
+
+	nav#footer-social-navigation {
+		flex: 2;
+	}
+
+	div.footer-contact-info {
+		flex: 1;
+	}
+
+	div.footer-copyright-developers {
+		flex: 2;
+	}
+}
+
+
 @media screen and (min-width: 768px) {
 
-	div.menu-footer-menu-container ul {
+	footer div.container {
+		padding: 30px 30px 40px;
+	}
+
+	div.inner-container {
+		margin-top: 35px;
+	}
+
+	ul#menu-footer-menu {
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -187,4 +366,95 @@ div.footer-location {
 	ul#menu-footer-menu li.menu-item a:hover {
 		color: $lightlav;
 	}
+
+	p.footer-copyright {
+		font-size: 15px;
+	}
+
+	p.developers-info {
+		font-size: 12px;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin: 0 20px 0 0;
+		font-size: 19px;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		font-size: 15px;
+	}
+}
+
+@media screen and (min-width: 1020px) {
+
+	footer div.container {
+		padding: 35px 30px 40px;
+	}
+
+
+	ul#menu-footer-menu li.menu-item a {
+		font-size: 18px;
+	}
+
+	p.footer-copyright {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+
+	p.developers-info {
+		font-size: 13px;
+		margin: 7px 0 5px;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin: 0 30px 0 0;
+		font-size: 20px;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		font-size: 16px;
+	}
+
+}
+
+@media screen and (min-width: 1400px) {
+
+	ul#menu-footer-menu li.menu-item a {
+		font-size: 19px;
+	}
+
+	p.footer-copyright {
+		font-size: 17px;
+		margin-bottom: 12px;
+	}
+
+	p.developers-info {
+		font-size: 14px;
+		margin: 9px 0 8px;
+	}
+
+	ul#menu-social-menu-1 li.menu-item {
+		margin: 0 35px 0 0;
+		font-size: 22px;
+	}
+
+	div.footer-phone-numb, 
+	div.footer-email, 
+	div.footer-location {
+		font-size: 17px;
+	}
+
+	div.footer-email {
+		margin-bottom: 8px;
+	}
+ 
+	div.footer-phone-numb,	 
+	div.footer-location {
+		margin: 8px 0;
+	}
+
 }
