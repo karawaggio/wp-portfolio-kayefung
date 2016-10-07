@@ -117,6 +117,10 @@ ul#menu-blog-menu li.menu-item a:active {
 	margin: auto;
 }
 
+.single article p {
+	line-height: 2.5;
+}
+
 .comments-title {
 	width: 60%;
 	margin: 50px auto;
@@ -212,6 +216,13 @@ ul#menu-blog-menu li.menu-item a:active {
 }
 
 
+@media screen and (max-width: 767px) {
+	.single article {
+		width: 80%;
+	}
+}
+
+
 @media screen and (max-width: 677px) {
 	.blog-main-page article:nth-child(1n+2),
 	.archive article:nth-child(even),
@@ -245,6 +256,18 @@ ul#menu-blog-menu li.menu-item a:active {
 		width: 100%;
 		text-align: center;
 	}
+
+	.single article {
+		width: 100%;
+	}
+
+	.single article p {
+		padding: 0 16px;
+ }
+
+ 	.single .entry-header {
+ 		text-align: center;
+ 	}
 
 }
 
