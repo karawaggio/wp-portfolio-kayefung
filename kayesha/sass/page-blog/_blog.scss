@@ -35,11 +35,11 @@ ul#menu-blog-menu li.menu-item a:active {
 
 ///// Main Blog Layout
 
-.blog-main-page article {
+.blog-main-page article:nth-child(2n+3) {
 	width: 40%;
 	float: right;
 	text-align: center;
-	margin: 50px;
+	margin: 50px 50px 50px 0;
 }
 
 .blog-main-page article:first-child {
@@ -49,10 +49,11 @@ ul#menu-blog-menu li.menu-item a:active {
 	margin: 0;
 }
 
-.blog-main-page article:nth-child(even) {
+.blog-main-page article:nth-child(2n+2) {
 	text-align: center;
 	width: 40%;
 	float: left;
+	margin: 50px 0 50px 50px ;
 }
 
 .blog #content img {
@@ -79,22 +80,30 @@ ul#menu-blog-menu li.menu-item a:active {
 
 ///// Blog Category Layout
 
+.archive #content {
+	padding: 0;
+}
+
 .category .page-title {
 	text-align: center;
 }
 
 .archive article {
 	width: 40%;
-	float: right;
 	text-align: center;
 	background-color: $blogPostsColor;
 	margin: 50px;
+	padding-bottom: 10px;
 }
 
 .archive article:nth-child(even) {
-	text-align: center;
-	width: 40%;
 	float: left;
+	margin: 50px 0 50px 50px;
+}
+
+.archive article:nth-child(odd) {
+	float: right;
+	margin: 50px 50px 50px 0;
 }
 
 .category article img {
@@ -164,6 +173,82 @@ ul#menu-blog-menu li.menu-item a:active {
 	width: auto;
 }
 
+
+@media screen and (max-width: 1016px) {
+	.category .site-content {
+		padding: 0 50px;
+	}
+
+	.blog article,
+	.archive article {
+		margin: 50px auto;
+	}
+}
+
+
+@media screen and (max-width: 940px) {
+	.cat-links a,
+	.tags-links a,
+	.read-more a {
+		font-size: 14px ;
+	}
+
+	.entry-title a {
+		font-size: 20px;
+	}
+	
+	.blog-main-page article:nth-child(1n+2){
+	width: 50%;
+	margin: 50px auto;
+	}
+
+	.archive article:nth-child(even),
+	.archive article:nth-child(odd) {
+		width: 50%;
+		margin: 50px auto;
+		background: none;
+	}
+
+}
+
+
+@media screen and (max-width: 677px) {
+	.blog-main-page article:nth-child(1n+2),
+	.archive article:nth-child(even),
+	.archive article:nth-child(odd){
+		width: 100%;
+	}
+
+	.tags-links {
+		display: none;
+	}
+	
+}
+
+
+@media screen and (max-width: 515px) {
+	.blog #content img,
+	.archive article img {
+		width: 100%;
+	}
+
+	.blog .entry-footer,
+	.blog .entry-header,
+	.blog .entry-content p {
+		width: 100%;
+		text-align: center;
+	}
+
+	.archive .entry-footer,
+	.archive .entry-header,
+	.archive .entry-content p {
+		width: 100%;
+		text-align: center;
+	}
+
+}
+
+
 @media screen and (min-width: 768px) {
 
 	ul#menu-blog-menu {
@@ -172,3 +257,4 @@ ul#menu-blog-menu li.menu-item a:active {
 		justify-content: center;
 	}
 }
+
