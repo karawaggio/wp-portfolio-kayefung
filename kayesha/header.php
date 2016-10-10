@@ -15,8 +15,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>KayeFung | Artistry</title>
-<meta name="description" content="KayeFung Artustry by Kayesha Fung is a website about makeup, beauty and fashion"/>
+<title>KayeFung Artistry | Makeup, Beauty and Fashion</title>
+<meta name="description" content="KayeFung Artistry by Vancouver based makeup artist Kayesha Fung is a website and blog about makeup, beauty and fashion"/>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href= rel="stylesheet">
