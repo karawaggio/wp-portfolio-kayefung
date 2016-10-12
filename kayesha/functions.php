@@ -396,6 +396,17 @@ function rc_add_cpts_to_search($query) {
 }
 add_action( 'pre_get_posts', 'rc_add_cpts_to_search' );
 
+
+// remove placeholder text on search bar
+function tachp_search_form($html) {
+
+    $html = str_replace('placeholder="Search ', 'placeholder="', $html);
+
+    return $html;
+}
+add_filter('get_search_form', 'tachp_search_form');
+
+
 //tinyMCE base line toolbar customizations
 if( !function_exists('base_extended_editor_mce_buttons') ){
     function base_extended_editor_mce_buttons($buttons) {
@@ -492,9 +503,11 @@ function kayesha_add_tutorials_widget() {
     echo '<h1>Tutuorials </h1>';
     echo 'Here is how to videos</p>';    
     echo '<ul>';
-    echo '<li>How to post on the blog</li>';
-    echo '<li>How to add a photo to the portfolio</li>'; 
-    echo '<li>How to add/change/delete a service</li>';  
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/addblogpost">How to add/change/delete a post on the blog</a></li>';
+    echo '<li>How to add/change/delete  a photo on the portfolio</li>'; 
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/deleteservice">How to add/change/delete a service</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/">How to add/change/delete testimonials</a></li>';
+
 }
 add_action( 'wp_dashboard_setup', 'kayesha_add_dashboard_widgets' );
 
