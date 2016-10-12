@@ -500,13 +500,26 @@ function kayesha_add_welcome_widget(){
     echo '<p> Here is the custom website for KayeFung MakeUp Artistry</p>';
 }
 function kayesha_add_tutorials_widget() {
-    echo '<h1>Tutuorials </h1>';
-    echo 'Here is how to videos</p>';    
+   
+    echo '<h2>PDF Tutorials : </h2>';
     echo '<ul>';
-    echo '<li><a href="http://kayefung.htpwebdesign.ca/addblogpost">How to add/change/delete a post on the blog</a></li>';
-    echo '<li>How to add/change/delete  a photo on the portfolio</li>'; 
-    echo '<li><a href="http://kayefung.htpwebdesign.ca/deleteservice">How to add/change/delete a service</a></li>';
-    echo '<li><a href="http://kayefung.htpwebdesign.ca/">How to add/change/delete testimonials</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-Homepage-Footer.pdf" target="_blank">Homepage and footer explained in detail</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-About.pdf" target="_blank">About Page</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-Services.pdf" target="_blank">Services Page</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-Portfolio.pdf" target="_blank">Portfolio Page</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-Blog.pdf" target="_blank">Blog Page</a></li>';
+     echo '<li><a href="http://kayefung.htpwebdesign.ca/wp-content/uploads/2016/10/Tutorial-Contact.pdf" target="_blank">Contact Page</a></li>';
+      echo '</ul>';
+
+    echo '<h2>Video Tutorials :  </h2>';    
+    echo '<ul>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/addblog" target="_blank">How to add/change/delete a post on the blog</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/editportfolio" target="_blank">How to add/change/delete  a photo on the portfolio</a></li>'; 
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/addserviceorder" target="_blank">How to add/change and order services</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/deleteservice" target="_blank">How to delete a service</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/edit-testimonials" target="_blank">How to add/change/delete testimonials</a></li>';
+     echo '<li><a href="http://kayefung.htpwebdesign.ca/special-message" target="_blank">How to add/change a special message</a></li>';
+     echo '</ul>';
 
 }
 add_action( 'wp_dashboard_setup', 'kayesha_add_dashboard_widgets' );
@@ -530,3 +543,32 @@ echo '<meta name="msapplication-TileImage" content="'. get_template_directory_ur
 echo '<meta name="msapplication-TileColor" content="#000000">';
  }
 add_action('wp_head', 'kayesha_favicon');
+
+
+// function rename_header_to_logo( $translated, $original, $domain ) {
+
+// $strings = array(
+//     'Service List' => 'Services Lists',
+//     // 'Custom Header' => 'Custom Stall'
+// );
+
+// if ( isset( $strings[$original] ) && is_admin() ) {
+//     $translations = &get_translations_for_domain( $domain );
+//     $translated = $translations->translate( $strings[$original] );
+// }
+
+//   return $translated;
+// }
+
+// add_filter( 'gettext', 'rename_header_to_logo', 10, 3 );
+
+// function my_text_strings( $translated_text, $text, $domain ) {
+// switch ( $translated_text ) {
+//     case 'Service List' :
+//         $translated_text = __( 'Service', 'Service List' );
+//         break;
+// }
+// return $translated_text;
+// }
+// add_filter( 'gettext', 'my_text_strings', 20, 3 );
+
