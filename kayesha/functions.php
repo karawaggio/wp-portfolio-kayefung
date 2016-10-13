@@ -518,8 +518,9 @@ function kayesha_add_tutorials_widget() {
     echo '<li><a href="http://kayefung.htpwebdesign.ca/addserviceorder" target="_blank">How to add/change and order services</a></li>';
     echo '<li><a href="http://kayefung.htpwebdesign.ca/deleteservice" target="_blank">How to delete a service</a></li>';
     echo '<li><a href="http://kayefung.htpwebdesign.ca/edit-testimonials" target="_blank">How to add/change/delete testimonials</a></li>';
-     echo '<li><a href="http://kayefung.htpwebdesign.ca/special-message" target="_blank">How to add/change a special message</a></li>';
-     echo '</ul>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/edit-contacts-faq" target="_blank">How to add/change contact info and faq</a></li>';
+    echo '<li><a href="http://kayefung.htpwebdesign.ca/special-message" target="_blank">How to add/change a special message</a></li>';
+    echo '</ul>';
 
 }
 add_action( 'wp_dashboard_setup', 'kayesha_add_dashboard_widgets' );
