@@ -579,7 +579,7 @@ add_filter( 'gettext', 'my_text_strings', 20, 3 );
 
 
 
-function wpfstop_change_default_title( $title ) {
+function testimonials_change_default_title( $title ) {
     $screen = get_current_screen();
     if( isset( $screen->post_type ) ) {
         if ( 'testimonial' == $screen->post_type ) {
@@ -588,4 +588,4 @@ function wpfstop_change_default_title( $title ) {
     }
     return $title;
 }
-add_filter( 'enter_title_here', 'wpfstop_change_default_title' );
+add_filter( 'enter_title_here', 'testimonials_change_default_title' );
