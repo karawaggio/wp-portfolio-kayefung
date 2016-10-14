@@ -37,9 +37,7 @@ get_header(); ?>
 						//show image with ID return value : able to display a certain size 
 						$about_image = get_field('about_feature_image');							
 						$size = 'medium';
-							// echo '<pre>';
-							// var_dump( $about_image );
-							// echo '</pre>';
+							
 						if ($about_image){
 							echo wp_get_attachment_image( $about_image, $size);
 						}
@@ -72,9 +70,7 @@ get_header(); ?>
 							//show image with ID return value : able to display a certain size 
 							$services_image = get_field('services_feature_image');							
 							$size = 'medium';
-								// echo '<pre>';
-								// var_dump( $about_image );
-								// echo '</pre>';
+								
 							if ($about_image){
 								echo wp_get_attachment_image( $services_image, $size);
 						}
@@ -135,9 +131,8 @@ get_header(); ?>
                                 }
                               
                                 echo "<figcaption>";
-                                if(get_field('compliment_author')){
-                                  the_field('compliment_author');
-                                } 
+                                the_title();
+                               
                                 echo "</figcaption>";
                                 echo "</figure>";
                                 echo "</blockquote>";

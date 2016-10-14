@@ -207,7 +207,7 @@ function kayesha_register_custom_post_types() {
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 5,
-            'supports'           => array( 'title', 'editor', 'thumbnail' ),
+            'supports'           => array( 'title', 'editor' ),
             'menu_icon'          => 'dashicons-info',
         );
         register_post_type( 'faq', $args );
@@ -283,7 +283,7 @@ function kayesha_register_custom_post_types() {
             'has_archive'        => true,
             'hierarchical'       => false,
             'menu_position'      => 5,
-            'supports'           => array( 'editor' ),
+            'supports'           => array( 'editor', 'title' ),
             'menu_icon'          => 'dashicons-format-chat',
         );
         register_post_type( 'testimonial', $args );
@@ -291,13 +291,13 @@ function kayesha_register_custom_post_types() {
     add_action( 'init', 'kayesha_register_custom_post_types' );
 
 
-    function kayesha_rewrite_flush() {
+    // function kayesha_rewrite_flush() {
 
-    	//this should match your CPT registration name
-        kayesha_register_custom_post_types();
-        flush_rewrite_rules();
-    }
-    register_activation_hook( __FILE__, 'kayesha_rewrite_flush' );
+    // 	//this should match your CPT registration name
+    //     kayesha_register_custom_post_types();
+    //     flush_rewrite_rules();
+    // }
+    // register_activation_hook( __FILE__, 'kayesha_rewrite_flush' );
 
     // TAXONOMIES
 
@@ -371,15 +371,6 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 
 });
 
-// function search_filter($query) {
-//   if ( !is_admin() && $query->is_main_query() ) {
-//     if ($query->is_search) {
-//       $query->set('post_type', array( 'post', 'testimonial', 'faq', 'portfolio' ) );
-//     }
-//   }
-// }
-
-// add_action('pre_get_posts','search_filter');
 
 function rc_add_cpts_to_search($query) {
 
@@ -556,7 +547,7 @@ echo '<meta name="msapplication-TileColor" content="#000000">';
 add_action('wp_head', 'kayesha_favicon');
 
 
-
+//change name of Menu card plugin to services
 function rename_menu_card( $translated, $original, $domain ) {
 $strings = array(
     'Menu Card' => 'Services List',
@@ -584,3 +575,17 @@ return $translated_text;
 }
 add_filter( 'gettext', 'my_text_strings', 20, 3 );
 
+
+
+
+
+function wpfstop_change_default_title( $title ) {
+    $screen = get_current_screen();
+    if( isset( $screen->post_type ) ) {
+        if ( 'testimonial' == $screen->post_type ) {
+            $title = 'Compliment Author';
+        }
+    }
+    return $title;
+}
+add_filter( 'enter_title_here', 'wpfstop_change_default_title' );
