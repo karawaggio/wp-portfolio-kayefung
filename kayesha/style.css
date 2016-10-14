@@ -1180,6 +1180,16 @@ footer.site-footer {
 footer div.container {
   margin: 0 auto; }
 
+.topbutton {
+  height: 55px;
+  width: 55px;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  z-index: 1;
+  background-repeat: no-repeat;
+  display: none; }
+
 div.footer-copyright-developers {
   display: -webkit-flex;
   display: -ms-flexbox;

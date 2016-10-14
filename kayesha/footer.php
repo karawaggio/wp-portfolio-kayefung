@@ -55,6 +55,11 @@
 								}
 							echo "</div>";
 						?>
+
+						<a href="#">
+							<img class="topbutton" src="<?php echo get_template_directory_uri(); ?>/images//scrolltop.png" alt="Back to top arrow" />
+						</a> 
+
 				    </div><!-- end of .social-nav-info -->
 				</div><!-- end of .inner-container -->
 			</section><!-- end of .footer-main-content -->

@@ -126,7 +126,9 @@ function kayesha_scripts() {
 
 	wp_enqueue_script( 'kayesha-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+    wp_enqueue_script( 'back-to-top-button', get_template_directory_uri() . '/js/topbutton.js', array( 'jquery' ));
 
+            
     if( is_front_page() ) {
         wp_enqueue_style('kayesha-flexslider', get_template_directory_uri() . '/css/flexslider.css');
         wp_enqueue_script('kayesha-flexscript', get_template_directory_uri(). '/js/jquery.flexslider-min.js', array('jquery'), '', false );
@@ -455,6 +457,7 @@ if( !function_exists('base_extended_editor_mce_buttons_2') ){
 // }
 // add_action('admin_menu', 'as_remove_menus');
 
+
 //remove customize 
 function remove_customize() {
     $customize_url_arr = array();
@@ -491,16 +494,21 @@ remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//Activity
 add_action( 'wp_dashboard_setup', 'kayesha_remove_dashboard_widgets' );
 remove_action( 'welcome_panel', 'wp_welcome_panel' );
 
+
 //add custom widgets to dash board - welcome and tutorials
 function kayesha_add_dashboard_widgets() {
 wp_add_dashboard_widget( 'kayesha_dashboard_welcome', 'Welcome', 'kayesha_add_welcome_widget'
 );
 wp_add_dashboard_widget( 'kayesha_dashboard_tutorials', 'Tutorials', 'kayesha_add_tutorials_widget' );
 }
+
+
 function kayesha_add_welcome_widget(){
     echo '<h1>Welcome Kayesha </h1>';
     echo '<p> Here is the custom website for KayeFung MakeUp Artistry</p>';
 }
+
+
 function kayesha_add_tutorials_widget() {
    
     echo '<h2>PDF Tutorials : </h2>';
@@ -526,6 +534,7 @@ function kayesha_add_tutorials_widget() {
 }
 add_action( 'wp_dashboard_setup', 'kayesha_add_dashboard_widgets' );
 
+
 //Add Favicon
 function kayesha_favicon() { 
 //echo '<link href="'. get_template_directory_uri().'/favicon.ico" rel="shortcut icon" type="image/x-icon">';
@@ -547,8 +556,8 @@ echo '<meta name="msapplication-TileColor" content="#000000">';
 add_action('wp_head', 'kayesha_favicon');
 
 
-function rename_menu_card( $translated, $original, $domain ) {
 
+function rename_menu_card( $translated, $original, $domain ) {
 $strings = array(
     'Menu Card' => 'Services List',
     // 'Custom Header' => 'Custom Stall'
@@ -563,6 +572,7 @@ if ( isset( $strings[$original] ) && is_admin() ) {
 }
 
 add_filter( 'gettext', 'rename_menu_card', 10, 3 );
+
 
 function my_text_strings( $translated_text, $text, $domain ) {
 switch ( $translated_text ) {
