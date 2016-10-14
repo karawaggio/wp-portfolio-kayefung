@@ -65,9 +65,13 @@ get_header(); ?>
                 the_field('email');
                 echo "</a>";
                 echo "</div>";
-                	
             	}
         	}
+            ?>
+                <nav id="social-navigation" class="social-navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'mainsocialmenu') ); ?>
+                </nav>  
+            <?php
         	echo "</div>";
         	echo "</div>";
     		?>

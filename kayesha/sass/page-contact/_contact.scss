@@ -75,6 +75,34 @@
 	margin-top: 10px;
 }
 
+// Social Menu 
+
+ul#menu-social-menu {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: 50px auto 20px; 
+}
+
+ul#menu-social-menu li.menu-item {
+	margin: 0 20px 0 0;
+}
+
+ul#menu-social-menu li.menu-item a {
+	color: $darklav;
+}
+
+ul#menu-social-menu li.menu-item a:hover {
+	color: $lightlav;
+}
+
+span.icon-title {
+	display: none;
+}
+
 @media screen and (max-width: 767px) {
 
 	.contactimage {

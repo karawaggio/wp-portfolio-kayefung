@@ -640,9 +640,6 @@ ul#menu-header-social {
   justify-content: center;
   margin: -20px auto 20px; }
 
-ul#menu-header-social {
-  margin: -20px auto 20px; }
-
 ul#menu-header-social li.menu-item {
   margin: 0 20px 0 0; }
 
@@ -1983,6 +1980,27 @@ ul#menu-blog-menu li.current-menu-ancestor a {
 
 .faq li {
   margin-top: 10px; }
+
+ul#menu-social-menu {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 50px auto 20px; }
+
+ul#menu-social-menu li.menu-item {
+  margin: 0 20px 0 0; }
+
+ul#menu-social-menu li.menu-item a {
+  color: #b5a4d1; }
+
+ul#menu-social-menu li.menu-item a:hover {
+  color: #d1cee9; }
+
+span.icon-title {
+  display: none; }
 
 @media screen and (max-width: 767px) {
   .contactimage {
