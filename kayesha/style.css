@@ -1712,7 +1712,7 @@ ul#menu-blog-menu {
   margin: 30px auto 80px; }
 
 ul#menu-blog-menu li.menu-item {
-  margin: 0 30px 0 0;
+  margin: 0 28px;
   line-height: 3; }
 
 ul#menu-blog-menu li.menu-item a {
@@ -1720,14 +1720,23 @@ ul#menu-blog-menu li.menu-item a {
   font-size: 18px;
   font-family: "Dosis", Arial, sans-serif;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 0 0 15px;
+  color: #b2b8bf; }
 
 ul#menu-blog-menu li.menu-item a:hover,
 ul#menu-blog-menu li.menu-item a:focus,
 ul#menu-blog-menu li.menu-item a:active {
   color: #1f2b39;
   border-bottom: 3px #b5a4d1 solid;
+  padding: 0 0 15px;
   text-decoration: none; }
+
+ul#menu-blog-menu li.current_page_item a,
+ul#menu-blog-menu li.current-menu-item a,
+ul#menu-blog-menu li.current_page_ancestor a,
+ul#menu-blog-menu li.current-menu-ancestor a {
+  color: #1f2b39; }
 
 .blog-main-page article:nth-child(2n+3) {
   width: 40%;

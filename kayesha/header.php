@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>KayeFung Artistry | Makeup, Beauty and Fashion</title>
-<meta name="description" content="KayeFung Artistry by Vancouver based makeup artist Kayesha Fung is a website and blog about makeup, beauty and fashion"/>
+<meta name="description" content="KayeFung Artistry by Kayesha Fung is a website about makeup, beauty and fashion. Kayesha Fung is a freelance makeup artist based in Vancouver BC"/>
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link href= rel="stylesheet">
