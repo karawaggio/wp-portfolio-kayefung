@@ -96,7 +96,7 @@
 
 				<div class="searchbar-social-nav">
 					<nav id="social-navigation" class="social-navigation">
-					    <?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
+					    <?php wp_nav_menu( array( 'theme_location' => 'socialheader') ); ?>
 				    </nav>
 
 					<div class="searchbar">

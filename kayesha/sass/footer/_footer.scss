@@ -50,22 +50,22 @@ nav#footer-social-navigation {
 	display: flex;
 }
 
-ul#menu-social-menu-1 {
+ul#menu-footer-social {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
 }
 
-ul#menu-social-menu-1 {
+ul#menu-footer-social {
 	list-style-type: none;
 	line-height: 1;
 }
 
-ul#menu-social-menu-1 a.footer {
+ul#menu-footer-social a.footer {
 	color: $textColor;
 }
 
-ul#menu-social-menu-1 a:hover{
+ul#menu-footer-social a:hover{
 	color: $lightlav;
 }
 
@@ -122,12 +122,12 @@ div.footer-contact-info {
 		font-size: 10px;
 	}
 
-	ul#menu-social-menu-1 {
+	ul#menu-footer-social {
 		padding-left: 17px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
-		font-size: 22px;
+	ul#menu-footer-social li.menu-item {
+		font-size: 21px;
 	}
 
 	div.footer-phone-numb, 
@@ -176,11 +176,11 @@ div.footer-contact-info {
 		order: 2;
 	}
 
-	ul#menu-social-menu-1 {
+	ul#menu-footer-social {
 		margin: 0 auto;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin: 30px 15px 35px 0;
 	}
 
@@ -206,11 +206,11 @@ div.footer-contact-info {
 		width: 65%;
 	}
 
-	ul#menu-social-menu-1 {
+	ul#menu-footer-social {
 		padding-left: 19px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin-right: 20px;
 	}
 
@@ -282,11 +282,11 @@ div.footer-contact-info {
 		justify-content: flex-start;
 	}
 
-	ul#menu-social-menu-1 {
+	ul#menu-footer-social {
 		padding-left: 50px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin: 0 20px 0 0;
 		font-size: 20px;
 	}
@@ -375,7 +375,7 @@ div.footer-contact-info {
 		font-size: 12px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin: 0 20px 0 0;
 		font-size: 19px;
 	}
@@ -408,7 +408,7 @@ div.footer-contact-info {
 		margin: 7px 0 5px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin: 0 30px 0 0;
 		font-size: 20px;
 	}
@@ -418,7 +418,6 @@ div.footer-contact-info {
 	div.footer-location {
 		font-size: 16px;
 	}
-
 }
 
 @media screen and (min-width: 1400px) {
@@ -437,7 +436,7 @@ div.footer-contact-info {
 		margin: 9px 0 8px;
 	}
 
-	ul#menu-social-menu-1 li.menu-item {
+	ul#menu-footer-social li.menu-item {
 		margin: 0 35px 0 0;
 		font-size: 22px;
 	}
@@ -456,5 +455,4 @@ div.footer-contact-info {
 	div.footer-location {
 		margin: 8px 0;
 	}
-
 }

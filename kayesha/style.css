@@ -631,7 +631,7 @@ a {
   font-family: "Dosis", Arial, sans-serif;
   text-transform: uppercase; }
 
-ul#menu-social-menu {
+ul#menu-header-social {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -640,16 +640,16 @@ ul#menu-social-menu {
   justify-content: center;
   margin: -20px auto 20px; }
 
-ul#menu-social-menu {
+ul#menu-header-social {
   margin: -20px auto 20px; }
 
-ul#menu-social-menu li.menu-item {
+ul#menu-header-social li.menu-item {
   margin: 0 20px 0 0; }
 
-ul#menu-social-menu li.menu-item a {
+ul#menu-header-social li.menu-item a {
   color: #b5a4d1; }
 
-ul#menu-social-menu li.menu-item a:hover {
+ul#menu-header-social li.menu-item a:hover {
   color: #d1cee9; }
 
 span.icon-title {
@@ -795,21 +795,21 @@ span.icon-title {
   .no-js .main-navigation ul ul {
     display: block; } }
 @media screen and (min-width: 318px) {
-  ul#menu-social-menu {
+  ul#menu-header-social {
     margin: -16px auto 0;
     padding-left: 25px; }
 
-  ul#menu-social-menu li.menu-item a {
+  ul#menu-header-social li.menu-item a {
     font-size: 20px; } }
 @media screen and (min-width: 370px) {
-  ul#menu-social-menu li.menu-item {
+  ul#menu-header-social li.menu-item {
     margin: 0 22px 0 0; } }
 @media screen and (min-width: 500px) {
-  ul#menu-social-menu {
+  ul#menu-header-social {
     margin: -20px auto 15px;
     padding-left: 20px; }
 
-  ul#menu-social-menu li.menu-item a {
+  ul#menu-header-social li.menu-item a {
     font-size: 22px; } }
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -831,13 +831,13 @@ span.icon-title {
   ul#primary-menu li.menu-item a {
     font-size: 20px; }
 
-  ul#menu-social-menu {
+  ul#menu-header-social {
     margin: -5px auto 50px; }
 
-  ul#menu-social-menu li.menu-item {
+  ul#menu-header-social li.menu-item {
     margin: 0 27px 0 0; }
 
-  ul#menu-social-menu li.menu-item a {
+  ul#menu-header-social li.menu-item a {
     font-size: 21px; } }
 @media screen and (min-width: 946px) {
   nav.main-navigation {
@@ -852,19 +852,19 @@ span.icon-title {
   ul#primary-menu li.menu-item a {
     font-size: 19.2px; }
 
-  ul#menu-social-menu {
+  ul#menu-header-social {
     margin: 10px auto 20px; }
 
-  ul#menu-social-menu li.menu-item {
+  ul#menu-header-social li.menu-item {
     margin: 0 20px 0 0; }
 
-  ul#menu-social-menu li.menu-item a {
+  ul#menu-header-social li.menu-item a {
     font-size: 19px; } }
 @media screen and (min-width: 1000px) {
   ul#primary-menu li.menu-item a {
     font-size: 20px; }
 
-  ul#menu-social-menu li.menu-item a {
+  ul#menu-header-social li.menu-item a {
     font-size: 20px; } }
 @media screen and (min-width: 1020px) {
   section.inner-head-container {

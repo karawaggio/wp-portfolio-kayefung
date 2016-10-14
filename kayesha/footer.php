@@ -28,7 +28,7 @@
 					</div><!-- end of .footer-copyright-developers -->
 
 					<nav id="footer-social-navigation" class="	footer-social-navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'socialmenu') ); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'socialfooter') ); ?>
 					</nav>
 
 					<div class="footer-contact-info">
