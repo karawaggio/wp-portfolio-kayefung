@@ -17,9 +17,11 @@
 	<div class="entry-content">
 
 		<div class="cta-book"> 
-			<a href="http://localhost/fung/contact/">Book an Appt</a>
+			<a href="http://kayefung.htpwebdesign.ca/contact/">Book an Appt</a>
 		</div>
 		
+		<?php echo do_shortcode( '[menu-card]' ); ?>
+
 		<?php the_content(); ?>
 
 		<?php
