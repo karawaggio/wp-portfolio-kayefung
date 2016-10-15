@@ -3,7 +3,7 @@
 
 ///// Blog Sub Nav
 
-ul#menu-blog-menu {
+.blog-navigation ul {
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
@@ -13,12 +13,12 @@ ul#menu-blog-menu {
 	margin: 30px auto 80px; 
 }
 
-ul#menu-blog-menu li.menu-item {
+.blog-navigation ul li {
 	margin: 0 28px;
 	line-height: 3;
 }
 
-ul#menu-blog-menu li.menu-item a {
+.blog-navigation ul li a {
 	color: $textColor;		
 	font-size: 18px;
 	font-family: $font_heading;
@@ -28,22 +28,15 @@ ul#menu-blog-menu li.menu-item a {
 	color: #b2b8bf;
 }
 
-ul#menu-blog-menu li.menu-item a:hover,
-ul#menu-blog-menu li.menu-item a:focus,
-ul#menu-blog-menu li.menu-item a:active {
+.blog-navigation ul li a:hover,
+.blog-navigation ul li a:focus,
+.blog-navigation ul li a:active {
 	color: #1f2b39;
     border-bottom: 3px #b5a4d1 solid;
     padding: 0 0 15px;
     text-decoration: none;
 }
 
-ul#menu-blog-menu li.current_page_item a,
-ul#menu-blog-menu li.current-menu-item a,
-ul#menu-blog-menu li.current_page_ancestor a,
-ul#menu-blog-menu li.current-menu-ancestor a{
-
-	color: #1f2b39;
-}
 
 ///// Main Blog Layout
 

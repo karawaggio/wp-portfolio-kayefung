@@ -15,9 +15,24 @@
 get_header(); ?>
     
     <section class="blog-navigation">
-		<nav id="blog-sub-nav" class="blog-sub-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'blogmenu') ); ?>
-		</nav>
+
+		<?php
+
+		$categories = get_categories( array(
+			    'orderby' => 'name',
+			    'parent'  => 0
+			) );
+			 
+			 	echo "<ul>";
+			foreach ( $categories as $category ) {
+			    printf( '<li><a href="%1$s">%2$s</a></li>',
+			        esc_url( get_category_link( $category->term_id ) ),
+			        esc_html( $category->name )
+			    );    
+			}
+				echo "</ul>";
+		 ?>
+		 
 	</section>
 
 	<div id="primary" class="content-area">
