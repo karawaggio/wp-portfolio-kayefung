@@ -7,6 +7,9 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	-webkit-flex-flow: wrap;
 	-ms-flex-flow: wrap;
 	flex-flow: wrap;
@@ -298,15 +301,5 @@
  	.single .entry-header {
  		text-align: center;
  	}
-}
-
-
-@media screen and (min-width: 768px) {
-
-	ul#menu-blog-menu {
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-	}
 }
 
