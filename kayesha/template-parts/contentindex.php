@@ -12,7 +12,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<?php the_post_thumbnail('', array('class' => 'center')); ?>
+		<?php
+		echo "<div class='blogimagecontainer'>"; 
+		the_post_thumbnail('', array('class' => 'center'));
+		echo "</div>"; 
+		?>
 
 		<footer class="entry-footer">
 		<?php kayesha_entry_footer(); ?>
