@@ -88,27 +88,12 @@ add_action( 'after_setup_theme', 'kayesha_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 
-// function kayesha_widgets_init() {
-// 	register_sidebar( array(
-// 		'name'          => esc_html__( 'Sidebar', 'kayesha' ),
-// 		'id'            => 'sidebar-1',
-// 		'description'   => esc_html__( 'Add widgets here.', 'kayesha' ),
-// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-// 		'after_widget'  => '</section>',
-// 		'before_title'  => '<h2 class="widget-title">',
-// 		'after_title'   => '</h2>',
-// 	) );
-// }
-// add_action( 'widgets_init', 'kayesha_widgets_init' );
+// add widgets function here
 
 /**
  * Enqueue scripts and styles.
  */
 require get_template_directory() . '/inc/enqueue-function.php';
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -129,7 +114,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
 
 /**
  * Custom Post Types and Custom Taxonomies for this theme
@@ -156,6 +140,10 @@ require get_template_directory() . '/inc/excerpt.php';
  */
 require get_template_directory() . '/inc/favicon.php';
 
+/**
+ * Return menu to the search.php page
+ */
+require get_template_directory() . '/inc/search-menu.php';
 
 
 
