@@ -1828,10 +1828,12 @@ section.about h2,
 .tags-links {
   display: none; }
 
-.blog .entry-footer,
 .blog .entry-header,
 .blog .entry-content p {
   margin: auto; }
+
+.blog .entry-footer {
+  margin: 15px auto 0; }
 
 .archive #content {
   padding: 0; }

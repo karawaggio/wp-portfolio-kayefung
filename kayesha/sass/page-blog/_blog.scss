@@ -91,10 +91,13 @@
 	display: none;
 }
 
-.blog .entry-footer,
 .blog .entry-header,
 .blog .entry-content p  {
 	margin: auto;
+}
+
+.blog .entry-footer {
+	margin: 15px auto 0;
 }
 
 ///// Blog Category Layout
