@@ -57,10 +57,6 @@ ul#menu-blog-menu li.menu-item a:active {
 	margin: 50px 0 50px 50px ;
 }
 
-// .blogimagecontainer {
-// 	height: 320px;
-// }
-
 .blog-main-page article:first-child .blogimagecontainer {
 	height: auto;
 }
@@ -91,9 +87,7 @@ ul#menu-blog-menu li.menu-item a:active {
 .blog .entry-footer,
 .blog .entry-header,
 .blog .entry-content p  {
-	//width: 80%;
 	margin: auto;
-	//text-align: left;
 }
 
 ///// Blog Category Layout
@@ -172,9 +166,7 @@ ul#menu-blog-menu li.menu-item a:active {
 .archive .entry-footer,
 .archive .entry-header,
 .archive .entry-content p  {
-	//width: 80%;
 	margin: auto;
-	//text-align: left;
 }
 
 .cat-links a {
@@ -200,6 +192,7 @@ ul#menu-blog-menu li.menu-item a:active {
 .single article .tags-links {
 	width: auto;
 }
+
 .blog a,
 .category a,
 .single-post a {
@@ -241,18 +234,9 @@ ul#menu-blog-menu li.menu-item a:active {
     	
 	}
 	
-	// .blog-main-page article:nth-child(1n+2){
-	// width: 50%;
-	// margin: 50px auto;
-	// }
-
 	.archive article:nth-child(even),
 	.archive article:nth-child(odd) {
-		//width: 50%;
-		//margin: 50px auto;
-		//background: none;
 	}
-
 }
 
 
@@ -260,11 +244,7 @@ ul#menu-blog-menu li.menu-item a:active {
 	.single article,
 	.single #comments {
 		width: 80%;
-	}
-
-	
-
-	
+	}	
 }
 
 
@@ -281,18 +261,12 @@ ul#menu-blog-menu li.menu-item a:active {
 	}
 
 	.blogimagecontainer {
-    	height: initial;
-    	
-	}
-	
+    	height: initial;	
+	}	
 }
 
 
 @media screen and (max-width: 515px) {
-	.blog #content img,
-	.archive article img {
-		//width: 100%;
-	}
 
 	.blog .entry-footer,
 	.blog .entry-header,
@@ -320,7 +294,6 @@ ul#menu-blog-menu li.menu-item a:active {
  	.single .entry-header {
  		text-align: center;
  	}
-
 }
 
 
