@@ -51,6 +51,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "normalize";
 
 /*--------------------------------------------------------------
+# Errors
+--------------------------------------------------------------*/
+@import "errorpages";
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 @import "typography/typography";

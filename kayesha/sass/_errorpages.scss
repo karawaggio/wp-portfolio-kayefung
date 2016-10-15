@@ -1,0 +1,69 @@
+// Search Page and 404 Page
+
+
+// 404 Page
+
+	.error-404 {
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-flow: column wrap;
+			-ms-flex-flow: column wrap;
+			flex-flow: column wrap;
+			-webkit-box-align: center;
+    		-ms-flex-align: center;
+        	align-items: center;
+			margin-top: 70px;
+			margin-bottom: 70px;
+
+		.page404-content {
+
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-flex-flow: column wrap;
+			-ms-flex-flow: column wrap;
+			flex-flow: column wrap;
+			-webkit-box-align: center;
+    		-ms-flex-align: center;
+        	align-items: center;
+
+        	.kayefung-logo {
+        		margin-bottom: 35px;
+        	}
+
+			.page404-title {
+				margin: 0 auto;
+			}
+
+			.page404-link {
+				text-decoration: none;
+				font-weight: 600;
+			}
+
+			.page404-text {
+				font-size: 17.5px;
+				text-align: center;
+			}
+
+			input[type="search"] {
+				width: 60%;
+				margin-top: 30px;
+	    		height: 45px;
+			}
+
+			input[type="submit"] {
+			    width: 80px;
+			    height: 45px;
+			}
+
+
+			@media screen and (max-width: 630px) { 
+				width: 30%; 
+			}
+		}
+	}
+
+
+// Search Page
+

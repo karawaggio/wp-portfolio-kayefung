@@ -217,6 +217,52 @@ th {
   padding: 0; }
 
 /*--------------------------------------------------------------
+# Errors
+--------------------------------------------------------------*/
+.error-404 {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 70px; }
+  .error-404 .page404-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .error-404 .page404-content .kayefung-logo {
+      margin-bottom: 35px; }
+    .error-404 .page404-content .page404-title {
+      margin: 0 auto; }
+    .error-404 .page404-content .page404-link {
+      text-decoration: none;
+      font-weight: 600; }
+    .error-404 .page404-content .page404-text {
+      font-size: 17.5px;
+      text-align: center; }
+    .error-404 .page404-content input[type="search"] {
+      width: 60%;
+      margin-top: 30px;
+      height: 45px; }
+    .error-404 .page404-content input[type="submit"] {
+      width: 80px;
+      height: 45px; }
+    @media screen and (max-width: 630px) {
+      .error-404 .page404-content {
+        width: 30%; } }
+
+/*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
 body,
@@ -1709,7 +1755,7 @@ section.about h2,
 /*--------------------------------------------------------------
 # Blog Page
 --------------------------------------------------------------*/
-ul#menu-blog-menu {
+.blog-navigation ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1718,11 +1764,11 @@ ul#menu-blog-menu {
   flex-flow: wrap;
   margin: 30px auto 80px; }
 
-ul#menu-blog-menu li.menu-item {
+.blog-navigation ul li {
   margin: 0 28px;
   line-height: 3; }
 
-ul#menu-blog-menu li.menu-item a {
+.blog-navigation ul li a {
   color: #38353b;
   font-size: 18px;
   font-family: "Dosis", Arial, sans-serif;
@@ -1731,19 +1777,13 @@ ul#menu-blog-menu li.menu-item a {
   padding: 0 0 15px;
   color: #b2b8bf; }
 
-ul#menu-blog-menu li.menu-item a:hover,
-ul#menu-blog-menu li.menu-item a:focus,
-ul#menu-blog-menu li.menu-item a:active {
+.blog-navigation ul li a:hover,
+.blog-navigation ul li a:focus,
+.blog-navigation ul li a:active {
   color: #1f2b39;
   border-bottom: 3px #b5a4d1 solid;
   padding: 0 0 15px;
   text-decoration: none; }
-
-ul#menu-blog-menu li.current_page_item a,
-ul#menu-blog-menu li.current-menu-item a,
-ul#menu-blog-menu li.current_page_ancestor a,
-ul#menu-blog-menu li.current-menu-ancestor a {
-  color: #1f2b39; }
 
 .blog-main-page article:nth-child(2n+3) {
   width: 40%;
@@ -1763,23 +1803,32 @@ ul#menu-blog-menu li.current-menu-ancestor a {
   float: left;
   margin: 50px 0 50px 50px; }
 
-.blog #content img {
-  width: 80%; }
+.blog-main-page article:first-child .blogimagecontainer {
+  height: auto; }
+
+.blogimagecontainer {
+  height: 320px;
+  overflow: hidden; }
+
+.blog article img {
+  max-height: 320px;
+  width: auto; }
 
 .blog article:first-child img {
-  width: 60%; }
+  height: 500px;
+  width: auto;
+  max-height: inherit; }
 
 .blog .entry-footer .comments-link,
 .blog .posted-on,
-.entry-meta .byline {
+.entry-meta .byline,
+.tags-links {
   display: none; }
 
 .blog .entry-footer,
 .blog .entry-header,
 .blog .entry-content p {
-  width: 80%;
-  margin: auto;
-  text-align: left; }
+  margin: auto; }
 
 .archive #content {
   padding: 0; }
@@ -1810,7 +1859,11 @@ ul#menu-blog-menu li.current-menu-ancestor a {
   margin: auto; }
 
 .single article p {
-  line-height: 2.2; }
+  line-height: 2.5; }
+
+.single #comments {
+  width: 60%;
+  margin: auto; }
 
 .comments-title {
   width: 60%;
@@ -1833,9 +1886,7 @@ ul#menu-blog-menu li.current-menu-ancestor a {
 .archive .entry-footer,
 .archive .entry-header,
 .archive .entry-content p {
-  width: 80%;
-  margin: auto;
-  text-align: left; }
+  margin: auto; }
 
 .cat-links a {
   color: #a864a8;
@@ -1846,7 +1897,8 @@ ul#menu-blog-menu li.current-menu-ancestor a {
 
 .tags-links {
   float: right;
-  width: 50%; }
+  width: 50%;
+  display: none; }
 
 .cat-links a:hover, .tags-links a:hover {
   color: #d1cee9; }
@@ -1882,31 +1934,25 @@ ul#menu-blog-menu li.current-menu-ancestor a {
   .entry-title a {
     font-size: 20px; }
 
-  .blog-main-page article:nth-child(1n+2) {
-    width: 50%;
-    margin: 50px auto; }
-
-  .archive article:nth-child(even),
-  .archive article:nth-child(odd) {
-    width: 50%;
-    margin: 50px auto;
-    background: none; } }
+  .blogimagecontainer {
+    height: 200px; } }
 @media screen and (max-width: 767px) {
-  .single article {
+  .single article,
+  .single #comments {
     width: 80%; } }
 @media screen and (max-width: 677px) {
   .blog-main-page article:nth-child(1n+2),
   .archive article:nth-child(even),
   .archive article:nth-child(odd) {
-    width: 100%; }
+    width: 100%;
+    margin: 50px auto; }
 
   .tags-links {
-    display: none; } }
-@media screen and (max-width: 515px) {
-  .blog #content img,
-  .archive article img {
-    width: 100%; }
+    display: none; }
 
+  .blogimagecontainer {
+    height: initial; } }
+@media screen and (max-width: 515px) {
   .blog .entry-footer,
   .blog .entry-header,
   .blog .entry-content p {
@@ -1919,7 +1965,8 @@ ul#menu-blog-menu li.current-menu-ancestor a {
     width: 100%;
     text-align: center; }
 
-  .single article {
+  .single article,
+  .single #comments {
     width: 100%; }
 
   .single article p {
