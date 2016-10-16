@@ -10,6 +10,7 @@
 ?>
 
 <section class="no-results not-found">
+	<img class="kayefung-logo" src="<?php echo get_template_directory_uri(); ?>/images/kaye-small-logo.png" alt="" />
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'kayesha' ); ?></h1>
 	</header><!-- .page-header -->
@@ -22,12 +23,13 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kayesha' ); ?></p>
-			<?php
-				get_search_form();
+			<p class="error-message"><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kayesha' ); ?></p>
 
-		else : ?>
+			<div class="searchform">
+				<?php get_search_form(); ?>
+			</div>
 
+		<?php else : ?>
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kayesha' ); ?></p>
 			<?php
 				get_search_form();

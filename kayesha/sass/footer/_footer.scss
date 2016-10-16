@@ -13,14 +13,18 @@ footer div.container {
 
 //Scroll to top button styles
 .topbutton {
-	height:55px;
-	width:55px;
+	height:50px;
+	width:50px;
+	background-color: #a864a8;
 	position:fixed;
 	right:15px;
 	bottom:20px;
 	z-index:1;
 	background-repeat:no-repeat;
 	display:none;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 //Footer Copyright and Developers Info
@@ -396,6 +400,14 @@ div.footer-contact-info {
 	div.footer-email, 
 	div.footer-location {
 		font-size: 15px;
+	}
+
+	div.footer-email,
+	div.footer-phone-numb,  
+	div.footer-location {
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 }
 

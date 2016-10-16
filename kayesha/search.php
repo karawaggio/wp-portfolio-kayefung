@@ -12,6 +12,8 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<section class="search-page">
+
 		<?php
 		if ( have_posts() ) : ?>
 
@@ -39,6 +41,8 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
+
+		</section>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

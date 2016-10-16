@@ -15,7 +15,7 @@ get_header(); ?>
 			<section class="error-404 not-found">
 
 				<div class="page404-content">
-				<img class="kayefung-logo" src="<?php echo get_template_directory_uri(); ?>/images/kaye-small-logo-2.png" alt="" />
+				<img class="kayefung-logo" src="<?php echo get_template_directory_uri(); ?>/images/kaye-small-logo.png" alt="" />
 					<h1 class="page404-title"><?php esc_html_e( '404: Sorry, the page you are looking for cannot be found.', 'kayesha' ); ?></h1>
 
 					<ul>
