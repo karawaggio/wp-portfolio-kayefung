@@ -7,6 +7,7 @@ body.page-id-136 .services-page-image {
         -ms-flex-pack: center;
             justify-content: center;
 }
+
 body.page-id-136 h1.entry-title {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -15,6 +16,7 @@ body.page-id-136 h1.entry-title {
         -ms-flex-pack: center;
             justify-content: center;
 }
+
 body.page-id-136 .entry-content p a {
 	color: #a864a8;
 }
@@ -59,6 +61,32 @@ body.page-id-136 .cta-book {
 
 .page-id-136 .content-area {
 	margin: auto;
+}
+
+.services-message {
+	text-align: center;
+}
+
+a.services-link {
+	font-weight: 600;
+}
+
+
+//Media Queries
+
+@media screen and (min-width: 318px) {
+
+	body.page-id-136 .cta-book {
+		margin-bottom: 40px;
+	}
+}
+
+@media screen and (min-width: 440px) {
+
+	body.page-id-136 .cta-book {
+		margin-bottom: 20px;
+	}
+
 }
 
 @media screen and (max-width: 545px) {

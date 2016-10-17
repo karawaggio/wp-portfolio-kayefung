@@ -14,23 +14,29 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<section class="services-content">
+		<div class="entry-content">
 
-		<div class="cta-book"> 
-			<a href="http://kayefung.htpwebdesign.ca/contact/">Book an Appt</a>
-		</div>
-		
-		<?php echo do_shortcode( '[menu-card]' ); ?>
+			<div class="cta-book"> 
+				<a href="http://kayefung.htpwebdesign.ca/contact/">Book an Appt</a>
+			</div>
+			
+			<?php echo do_shortcode( '[menu-card]' ); ?>
 
-		<?php the_content(); ?>
+			<p class="services-message">Don't see what you are looking for? Check out my <a class="services-link" href="<?php echo get_page_link(20); ?>">FAQ</a> or <a class="services-link" href="<?php echo get_page_link(20); ?>">Contact Me</a>.</p>
 
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kayesha' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+			<p class="services-message">*&nbsp;<em>Please note prices may vary...based on travel and complexity please consult first if possible</em></p>
+
+			<!--  <?php the_content(); ?> --><!-- wysiwyg editor text will appear here if uncomment -->
+
+			<?php
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kayesha' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+	</section>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

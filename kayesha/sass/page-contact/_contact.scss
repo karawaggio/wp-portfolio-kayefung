@@ -41,7 +41,6 @@
 }
 
 .contactinfo {
-	//margin-top: 24px;
 	text-align: center;
 	width: 50%;
 	float: left;
@@ -75,7 +74,7 @@
 	margin-top: 10px;
 }
 
-// Social Menu 
+// Social Menu
 
 ul#menu-social-menu {
 	display: -webkit-flex;
@@ -93,6 +92,7 @@ ul#menu-social-menu li.menu-item {
 
 ul#menu-social-menu li.menu-item a {
 	color: $darklav;
+	font-size: 20px;
 }
 
 ul#menu-social-menu li.menu-item a:hover {
@@ -102,6 +102,32 @@ ul#menu-social-menu li.menu-item a:hover {
 span.icon-title {
 	display: none;
 }
+
+@media screen and (min-width: 318px) {
+
+	#contact-social-navigation {
+		margin-top: 160px;
+	}
+
+	ul#menu-social-menu li.menu-item a {
+		font-size: 20px;
+	}
+}
+
+@media screen and (min-width: 600px) {
+
+	#contact-social-navigation {
+		margin-top: 190px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	#contact-social-navigation {
+		margin-top: 0px;
+	}
+}
+
 
 @media screen and (max-width: 767px) {
 

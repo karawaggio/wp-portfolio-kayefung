@@ -68,13 +68,13 @@ get_header(); ?>
             	}
         	}
             ?>
-                <nav id="social-navigation" class="social-navigation">
+                <nav id="contact-social-navigation" class="contact-social-navigation">
                     <?php wp_nav_menu( array( 'theme_location' => 'mainsocialmenu') ); ?>
                 </nav>  
-            <?php
-        	echo "</div>";
-        	echo "</div>";
-    		?>
+
+            <?php echo "</div>"; ?>
+            <?php echo "</div>"; ?>
+
 
 			<?php
                 $args = array (

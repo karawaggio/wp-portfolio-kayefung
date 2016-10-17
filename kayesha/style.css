@@ -1,8 +1,8 @@
 /*!
 Theme Name: Kayesha
-Theme URI: http://underscores.me/
-Author: Arlena Ata, Greg Voth, Sergey Karavaev
-Author URI: http://underscores.me/
+Theme URI: 
+Authors: Arlena Ata, Greg Voth, Sergey Karavaev
+Author URI: 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -2184,7 +2184,8 @@ ul#menu-social-menu li.menu-item {
   margin: 0 20px 0 0; }
 
 ul#menu-social-menu li.menu-item a {
-  color: #b5a4d1; }
+  color: #b5a4d1;
+  font-size: 20px; }
 
 ul#menu-social-menu li.menu-item a:hover {
   color: #d1cee9; }
@@ -2192,6 +2193,18 @@ ul#menu-social-menu li.menu-item a:hover {
 span.icon-title {
   display: none; }
 
+@media screen and (min-width: 318px) {
+  #contact-social-navigation {
+    margin-top: 160px; }
+
+  ul#menu-social-menu li.menu-item a {
+    font-size: 20px; } }
+@media screen and (min-width: 600px) {
+  #contact-social-navigation {
+    margin-top: 190px; } }
+@media screen and (min-width: 768px) {
+  #contact-social-navigation {
+    margin-top: 0px; } }
 @media screen and (max-width: 767px) {
   .contactimage {
     display: none; }
@@ -2280,6 +2293,18 @@ body.page-id-136 .cta-book {
 .page-id-136 .content-area {
   margin: auto; }
 
+.services-message {
+  text-align: center; }
+
+a.services-link {
+  font-weight: 600; }
+
+@media screen and (min-width: 318px) {
+  body.page-id-136 .cta-book {
+    margin-bottom: 40px; } }
+@media screen and (min-width: 440px) {
+  body.page-id-136 .cta-book {
+    margin-bottom: 20px; } }
 @media screen and (max-width: 545px) {
   .post-136 {
     margin: 0.2em; } }
