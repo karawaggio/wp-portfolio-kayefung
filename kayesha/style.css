@@ -1749,6 +1749,10 @@ section.home-page {
 .service-link a {
   color: #a864a8; }
 
+.about-link h3,
+.service-link h3 {
+  text-align: center; }
+
 section.services,
 section.about {
   width: calc(75%/2);

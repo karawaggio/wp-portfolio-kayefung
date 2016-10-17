@@ -50,6 +50,11 @@ section.home-page {
 	color: $alertsLinks;
 }
 
+.about-link h3,
+.service-link h3{
+	text-align: center;
+}
+
 section.services,
 section.about {
 	width: calc(75%/2);
