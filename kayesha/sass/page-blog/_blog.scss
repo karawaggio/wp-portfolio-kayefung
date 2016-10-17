@@ -172,7 +172,7 @@
 	border: 1px solid $lightlav;
 }
 
-/////Category and Tag Links
+/////Category, Tag Links and Comments
 
 .archive .entry-footer .comments-link, 
 .archive .posted-on,
@@ -221,6 +221,13 @@
 	background-color: $darklav;
     padding: 0.25em;
     box-shadow: 1px 1px 4px darkgray;
+}
+
+#comments {
+	input#submit {
+		height: 33px;
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 1016px) {
@@ -283,7 +290,7 @@
 }
 
 
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 620px) {
 
 	.blog .entry-footer,
 	.blog .entry-header,
@@ -299,17 +306,29 @@
 		text-align: center;
 	}
 
-	.single article,
 	.single #comments {
-		width: 100%;
+		padding: 0 16px;
 	}
 
 	.single article p {
 		padding: 0 16px;
- }
+ 	}
 
  	.single .entry-header {
  		text-align: center;
  	}
+
+ 	footer.entry-footer {
+		text-align: center;
+	}
+
+	div.ssba-wrap div{
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
 }
 

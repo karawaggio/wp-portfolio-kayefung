@@ -1,8 +1,8 @@
 /*!
 Theme Name: Kayesha
-Theme URI: http://underscores.me/
-Author: Arlena Ata, Greg Voth, Sergey Karavaev
-Author URI: http://underscores.me/
+Theme URI: 
+Authors: Arlena Ata, Greg Voth, Sergey Karavaev
+Author URI: 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -663,7 +663,6 @@ ul#menu-blog-menu li.current-menu-ancestor {
 
 @media screen and (min-width: 318px) {
   .logo {
-    width: 72%;
     max-width: 72%;
     margin: 0 auto 10px; }
 
@@ -679,15 +678,12 @@ ul#menu-blog-menu li.current-menu-ancestor {
     height: 28px; } }
 @media screen and (min-width: 400px) {
   .logo {
-    width: 65%;
     max-width: 65%; } }
 @media screen and (min-width: 450px) {
   .logo {
-    width: 60%;
     max-width: 60%; } }
 @media screen and (min-width: 500px) {
   .logo {
-    width: 55%;
     max-width: 55%;
     margin: 5px auto 10px; }
 
@@ -703,11 +699,9 @@ ul#menu-blog-menu li.current-menu-ancestor {
     height: 29px; } }
 @media screen and (min-width: 600px) {
   .logo {
-    width: 52%;
     max-width: 52%; } }
 @media screen and (min-width: 768px) {
   .logo {
-    width: 50%;
     max-width: 50%;
     margin: 0 auto 20px; } }
 @media screen and (min-width: 946px) {
@@ -2069,6 +2063,10 @@ section.about h2,
   padding: 0.25em;
   box-shadow: 1px 1px 4px darkgray; }
 
+#comments input#submit {
+  height: 33px;
+  font-size: 14px; }
+
 @media screen and (max-width: 1016px) {
   .category .site-content {
     padding: 0 50px; }
@@ -2103,7 +2101,7 @@ section.about h2,
 
   .blogimagecontainer {
     height: initial; } }
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 620px) {
   .blog .entry-footer,
   .blog .entry-header,
   .blog .entry-content p {
@@ -2116,15 +2114,25 @@ section.about h2,
     width: 100%;
     text-align: center; }
 
-  .single article,
   .single #comments {
-    width: 100%; }
+    padding: 0 16px; }
 
   .single article p {
     padding: 0 16px; }
 
   .single .entry-header {
-    text-align: center; } }
+    text-align: center; }
+
+  footer.entry-footer {
+    text-align: center; }
+
+  div.ssba-wrap div {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/

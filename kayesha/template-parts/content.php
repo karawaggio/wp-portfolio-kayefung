@@ -14,6 +14,10 @@
 	<div class="entry-content">
 		<?php the_post_thumbnail(); ?>
 
+		<footer class="entry-footer">
+			<?php kayesha_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+
 		<header class="entry-header">
 			<?php
 			if ( is_single() ) :
@@ -47,7 +51,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php kayesha_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
