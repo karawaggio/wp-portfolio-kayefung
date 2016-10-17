@@ -39,7 +39,11 @@ get_header(); ?>
 						$size = 'medium';
 							
 						if ($about_image){
+							echo "<a href='";
+							echo get_page_link(27); 
+							echo "'/>";
 							echo wp_get_attachment_image( $about_image, $size);
+							echo "</a>";
 						}
 					
 						echo "</div>";
@@ -72,7 +76,11 @@ get_header(); ?>
 							$size = 'medium';
 								
 							if ($about_image){
+								echo "<a href='";
+								echo get_page_link(136);
+								echo "'/>";
 								echo wp_get_attachment_image( $services_image, $size);
+								echo "</a>";
 						}
 					
 						echo "</div>";
