@@ -69,7 +69,7 @@ ul#menu-header-social {
 	-webkit-justify-content: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	margin: -20px auto 20px; 
+	margin: 0 auto 20px; 
 }
 
 ul#menu-header-social li.menu-item {
@@ -268,7 +268,7 @@ span.icon-title {
 @media screen and (min-width: 318px) {
 
 	ul#menu-header-social {
-		margin: -16px auto 0;
+		margin: 0 auto;
 		padding-left: 25px;
 	}
 
@@ -287,7 +287,7 @@ span.icon-title {
 @media screen and (min-width: 500px) {
 
 	ul#menu-header-social {
-		margin: -20px auto 15px;
+		margin: 0 auto 15px;
 		padding-left: 20px;
 	}
 
@@ -322,7 +322,7 @@ span.icon-title {
 	}
 
 	ul#menu-header-social {
-		margin: -5px auto 50px;
+		margin: 0 auto 50px;
 	}
 
 	ul#menu-header-social li.menu-item {

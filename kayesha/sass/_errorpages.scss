@@ -4,20 +4,10 @@
 // 404 Page
 
 	.error-404 {
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-flex-flow: column wrap;
-			-ms-flex-flow: column wrap;
-			flex-flow: column wrap;
-			-webkit-box-align: center;
-    		-ms-flex-align: center;
-        	align-items: center;
 			margin-top: 70px;
 			margin-bottom: 70px;
 
 		.page404-content {
-
 			display: -webkit-flex;
 			display: -ms-flexbox;
 			display: flex;
@@ -29,11 +19,17 @@
         	align-items: center;
 
         	.kayefung-logo {
-        		margin-bottom: 35px;
+        		margin-bottom: 40px;
         	}
 
 			.page404-title {
 				margin: 0 auto;
+				text-align: center;
+			}
+
+			.page404-list {
+				padding-left: 0;
+				margin: 10px auto 0;
 			}
 
 			.page404-link {
@@ -42,7 +38,6 @@
 			}
 
 			.page404-text {
-				font-size: 17.5px;
 				text-align: center;
 			}
 
@@ -56,13 +51,89 @@
 			    width: 80px;
 			    height: 40px;
 			}
+		}
+	}
 
 
-			@media screen and (max-width: 630px) { 
-				width: 30%; 
+// 404 Page Media Queries
+
+@media screen and (min-width: 318px) {
+
+	.error-404 {
+		margin-top: 0;
+		margin-bottom: 20px;
+
+		.page404-content {
+			margin: 0 30px;
+
+			.kayefung-logo {
+        		margin-bottom: 20px;
+        	}
+
+			.page404-title {
+				font-size: 24px;
+			}
+
+			.page404-text {
+				font-size: 16px;
 			}
 		}
 	}
+}
+
+@media screen and (min-width: 520px) {
+
+	.error-404 {
+		margin-top: 0;
+		margin-bottom: 20px;
+
+		.page404-content {
+			margin: 0 50px;
+		}	
+	}
+
+}
+
+@media screen and (min-width: 720px) {
+
+	.error-404 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+
+		.kayefung-logo {
+        	margin-bottom: 30px;
+        }
+
+		.page404-title {
+			font-size: 26px;
+		}
+	}
+}
+
+
+@media screen and (min-width: 1100px) {
+
+	.error-404 {
+		margin-top: 70px;
+		margin-bottom: 70px;
+
+		.page404-content {
+			margin: 0;
+
+			.kayefung-logo {
+        		margin-bottom: 30px;
+        	}
+
+			.page404-title {
+				font-size: 32px;
+			}
+
+			.page404-text {
+				font-size: 17.5px;
+			}
+		}
+	}
+}
 
 
 // Search Page
@@ -99,6 +170,10 @@
 	    align-items: center;
 	}
 
+	.entry-footer {
+		text-align: center;
+	}
+
 	input[type="search"] {
 		width: 61%;
 		margin-top: 30px;
@@ -109,8 +184,9 @@
 		width: 80px;
 		height: 40px;
 	}
-
 }	
+
+// No results
 
 .no-results {
 	display: -webkit-flex;
@@ -123,17 +199,12 @@
 	-ms-flex-align: center;
 	align-items: center;
 
-	.page-title {
-		margin: 40px 0 0;
+	.page-content {
+		margin: 0;
 	}
 
 	.error-message {
-		margin: 20px 0 10px;
-		font-size: 17.5px;
-	}
-
-	.page-content {
-		margin: 0;
+		text-align: center;
 	}
 
 	.searchform {
@@ -147,4 +218,79 @@
 		-ms-flex-align: center;
 		align-items: center;
 	}
+}
+
+// Search Media Queries
+
+@media screen and (min-width: 318px) {
+
+	.search-page {
+	    margin: 0 auto;
+	}
+
+}
+
+@media screen and (min-width: 1120px) {
+
+	.search-page {
+	    margin: 50px auto 100px;
+	}
+
+}
+  
+
+// Search: No results - Media Queries
+
+@media screen and (min-width: 318px) {
+
+	.no-results {
+		margin: 0 30px;
+
+		.page-title {
+			margin: 20px 0 0;
+			font-size: 24px;
+		}
+
+		.error-message {
+			margin: 10px 0 10px;
+			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (min-width: 520px) {
+
+	.no-results {
+		margin: 0 50px;
+
+	}
+
+}
+
+@media screen and (min-width: 720px) {
+
+	.no-results {
+
+		.page-title {
+			font-size: 26px;
+		}
+	}
+}
+
+
+@media screen and (min-width: 1020px) {
+
+	.no-results {
+
+		.page-title {
+			font-size: 32px;
+			margin: 40px 0 0;
+		}
+
+		.error-message {
+			margin: 20px 0 10px;
+			font-size: 17.5px;
+		}
+	}
+
 }
