@@ -35,7 +35,11 @@
 						<?php
 						    echo "<div class='footer-email'>";
 								if(get_field('email_footer', 18) ){
+									echo "<a href='mailto:";
 									the_field('email_footer', 18);
+									echo "'>";
+									the_field('email_footer', 18);
+									echo "</a>";
 								}
 							echo "</div>";
 						?>
@@ -43,7 +47,11 @@
 						<?php
 						    echo "<div class='footer-phone-numb'>";
 								if(get_field('telephone_footer', 18) ){
+									echo "<a href='tel:";
 									the_field('telephone_footer', 18);
+									echo "'>";
+									the_field('telephone_footer', 18);
+									echo "</a>";
 								}
 							echo "</div>";
 						?>

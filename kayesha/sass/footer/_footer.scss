@@ -154,6 +154,12 @@ div.footer-contact-info {
 		display: flex;
 		font-size: 17px;
 	}
+
+	div.footer-phone-numb a, 
+	div.footer-email a, 
+	div.footer-location a {
+		text-decoration: none;
+	}
 }
 
 

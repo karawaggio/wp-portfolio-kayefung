@@ -50,7 +50,6 @@ function kayesha_setup() {
         'socialheader' => esc_html__( 'Social Header Menu', 'kayesha' ),
         'mainsocialmenu' => esc_html__( 'Social Main Menu', 'kayesha' ),
         'socialfooter' => esc_html__( 'Social Footer Menu', 'kayesha' ),
-        'blogmenu' => esc_html__( 'Blog Menu', 'kayesha' ),
 	) );
 
 	/*

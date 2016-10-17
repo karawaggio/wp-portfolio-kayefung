@@ -1394,7 +1394,12 @@ div.footer-contact-info {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    font-size: 17px; } }
+    font-size: 17px; }
+
+  div.footer-phone-numb a,
+  div.footer-email a,
+  div.footer-location a {
+    text-decoration: none; } }
 @media screen and (min-width: 318px) and (max-width: 699px) {
   div.inner-container {
     -webkit-flex-flow: column wrap;
