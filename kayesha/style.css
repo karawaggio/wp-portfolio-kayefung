@@ -663,6 +663,7 @@ ul#menu-blog-menu li.current-menu-ancestor {
 
 @media screen and (min-width: 318px) {
   .logo {
+    width: 72%;
     max-width: 72%;
     margin: 0 auto 10px; }
 
@@ -678,12 +679,15 @@ ul#menu-blog-menu li.current-menu-ancestor {
     height: 28px; } }
 @media screen and (min-width: 400px) {
   .logo {
+    width: 65%;
     max-width: 65%; } }
 @media screen and (min-width: 450px) {
   .logo {
+    width: 60%;
     max-width: 60%; } }
 @media screen and (min-width: 500px) {
   .logo {
+    width: 55%;
     max-width: 55%;
     margin: 5px auto 10px; }
 
@@ -699,9 +703,11 @@ ul#menu-blog-menu li.current-menu-ancestor {
     height: 29px; } }
 @media screen and (min-width: 600px) {
   .logo {
+    width: 52%;
     max-width: 52%; } }
 @media screen and (min-width: 768px) {
   .logo {
+    width: 50%;
     max-width: 50%;
     margin: 0 auto 20px; } }
 @media screen and (min-width: 946px) {
@@ -1967,6 +1973,9 @@ section.about h2,
 
 .blog .entry-footer {
   margin: 15px auto 0; }
+
+.blogpage h2 {
+  text-transform: capitalize; }
 
 .archive #content {
   padding: 0; }
