@@ -112,12 +112,34 @@ span.icon-title {
 	ul#menu-social-menu li.menu-item a {
 		font-size: 20px;
 	}
+
+	.contactinfo a {
+		font-size: 11px;
+	}
+}
+
+@media screen and (min-width: 370px) {
+
+	.contactinfo a {
+		font-size: 13px;
+	}
+}
+
+@media screen and (min-width: 420px) {
+
+	.contactinfo a {
+		font-size: 14.5px;
+	}
 }
 
 @media screen and (min-width: 600px) {
 
 	#contact-social-navigation {
 		margin-top: 190px;
+	}
+
+	.contactinfo a {
+		font-size: 16px;
 	}
 }
 

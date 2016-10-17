@@ -1,8 +1,8 @@
 /*!
 Theme Name: Kayesha
-Theme URI: 
-Authors: Arlena Ata, Greg Voth, Sergey Karavaev
-Author URI: 
+Theme URI: http://underscores.me/
+Author: Arlena Ata, Greg Voth, Sergey Karavaev
+Author URI: http://underscores.me/
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -2198,10 +2198,22 @@ span.icon-title {
     margin-top: 160px; }
 
   ul#menu-social-menu li.menu-item a {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .contactinfo a {
+    font-size: 11px; } }
+@media screen and (min-width: 370px) {
+  .contactinfo a {
+    font-size: 13px; } }
+@media screen and (min-width: 420px) {
+  .contactinfo a {
+    font-size: 14.5px; } }
 @media screen and (min-width: 600px) {
   #contact-social-navigation {
-    margin-top: 190px; } }
+    margin-top: 190px; }
+
+  .contactinfo a {
+    font-size: 16px; } }
 @media screen and (min-width: 768px) {
   #contact-social-navigation {
     margin-top: 0px; } }

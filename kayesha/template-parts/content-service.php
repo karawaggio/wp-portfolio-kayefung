@@ -25,7 +25,7 @@
 
 			<p class="services-message">Don't see what you are looking for? Check out my <a class="services-link" href="<?php echo get_page_link(20); ?>">FAQ</a> or <a class="services-link" href="<?php echo get_page_link(20); ?>">Contact Me</a>.</p>
 
-			<p class="services-message">*&nbsp;<em>Please note prices may vary...based on travel and complexity please consult first if possible</em></p>
+			<p class="services-message">*&nbsp;<em>Please note prices may vary based on travel and complexity. Please consult first if possible</em></p>
 
 			<!--  <?php the_content(); ?> --><!-- wysiwyg editor text will appear here if uncomment -->
 
